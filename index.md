@@ -1,5 +1,5 @@
-Here you can say lots of fun things about your site.
+This is my personal blogging website.
 
-Maybe say a some things about yourself.
+I love reading, thinking, and writing.
 
-Or maybe what you plan to blog about.
+The goal is to share my thoughts and get feedback. 
