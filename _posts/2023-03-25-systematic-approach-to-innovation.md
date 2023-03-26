@@ -1,6 +1,7 @@
 # A Systematic Approach to Innovation
 
 This weekend, I'd like to jot down some random thoughts once more. This time, the topic is innovation. Allow me to first express my perspective: innovation is not mysterious, and there exists a set of rules-based and systematic methods that can facilitate innovation. This viewpoint may differ from that of many people. I'm going to use Elon Musk's first principles to conduct a thought experiment, beginning with the interpretation of the word "innovation," relating it to the biological innovation process, and extending it to how we can systematically innovate in other areas.
+
 This thought experiment commences with an interpretation of the word "innovation," which is to "create something new." This term encompasses three concepts: creation, novelty, and substance (everything). How can something we create be deemed new? To answer this question, consider how the essential information of an object can be represented. This representation can accurately capture the distinctions between new and old items, and it can also guide the design of innovative methods.
 
 
@@ -9,9 +10,9 @@ This thought experiment commences with an interpretation of the word "innovation
 The most complex entities in this world are living beings. If one day we can arbitrarily create new creatures with specific purposes (such as redesigning human beings for superior intelligence), it would be the greatest manifestation of human innovation. Fortunately, biology has already revealed the way to express biological information: genes (and the corresponding container: chromosomes), and also directly explained how new species are created based on the fusion and mutation of several genes. Let's briefly outline the representation of biological information and the corresponding innovation process.
 
 First, we should clarify a few potentially confusing concepts:
- - Deoxyribonucleic acid (DNA) is the molecule that carries genetic information, and DNA forms the basis of genetic data.
- - A gene is a specific segment of DNA and a distinct unit of information in DNA. It contains instructions for making proteins. A gene is the fundamental unit of heredity. Genes carry information that determines individual traits, such as eye color, height, and susceptibility to certain diseases.
- - Chromosomes contain genes, which are the physical structures in the nucleus that house DNA and genes, the genetic information of an organism.
+1. Deoxyribonucleic acid (DNA) is the molecule that carries genetic information, and DNA forms the basis of genetic data.
+2. A gene is a specific segment of DNA and a distinct unit of information in DNA. It contains instructions for making proteins. A gene is the fundamental unit of heredity. Genes carry information that determines individual traits, such as eye color, height, and susceptibility to certain diseases.
+3. Chromosomes contain genes, which are the physical structures in the nucleus that house DNA and genes, the genetic information of an organism.
 Simply put, various characteristic information of organisms is stored in genes, and chromosomes are containers that collect multiple genes. The mathematically corresponding expression format is a feature vector.
 
 For example, a person's chromosomes can be understood as a very long
@@ -24,14 +25,17 @@ Each person can have their own feature vector, corresponding to their own values
 Bob's feature vector = {1.70 meters, 70 kg, yellow skin, IQ 120, stamina 100, obedience -100 (very defiant), ...}.
 
 Interestingly, this kind of vector also represents a multi-dimensional space, and each person's characteristics are combined into a point in the space.
+
 In the process of reproduction of the next generation of bisexual organisms, the chromosomes of the parents come together, and the combination of genetic information (genes) from both parents produces a unique individual with a unique combination of characteristics. This is why children often resemble both parents, but are not exactly the same. The process of inheritance is complex and involves many factors, including dominant genes and recessive genes, as well as the interaction between different genes. There are also mutations in the chromosomes themselves during this process.
+
 Every child is unique and represents a degree of innovation based on their parents. Therefore, the process of biological innovation can be abstracted into the following process:
+
 The fusion of two feature vectors (chromosomes) + the mutation of a value on a certain feature (gene mutation) ==> a new feature vector generated, corresponding to a new organism.
 
 According to the feature vector of a person just mentioned = {height, weight, skin color, intelligence, endurance, obedience, ...}, specific examples are:
- - Father's feature vector = {height=1.70 meters, weight=70 kg, skin color=yellow skin, IQ=120, endurance=100, obedience=-100 (one barman), ...}
- - Mother's feature vector = {height=1.60 meters, weight=60 kg, skin color=yellow skin, IQ=100, endurance=90, obedience=100 (gentle and virtuous), ...}
- - Son's feature vector = {height=1.80 meters, weight=80 kg, skin color=yellow skin, IQ=140, endurance=95, obedience=0 (neutral), ...}
+1. Father's feature vector = {height=1.70 meters, weight=70 kg, skin color=yellow skin, IQ=120, endurance=100, obedience=-100 (one barman), ...}
+2. Mother's feature vector = {height=1.60 meters, weight=60 kg, skin color=yellow skin, IQ=100, endurance=90, obedience=100 (gentle and virtuous), ...}
+3. Son's feature vector = {height=1.80 meters, weight=80 kg, skin color=yellow skin, IQ=140, endurance=95, obedience=0 (neutral), ...}
 It seems that the child's IQ characteristic has undergone a significant variation, resulting in high intelligence. Other traits were inherited from one parent, or a compromise between traits from both parents
 
 
@@ -46,26 +50,29 @@ Quantitative changes in biological traits accumulate over multiple generations, 
 By understanding the characteristic expression and innovation processes of organisms, we can apply the same concepts to the innovation process of everything. The first step is to identify the expressions (feature vectors) of various features of the thing in question. 
 For instance, a bottle of bottled water may have the following feature vectors: color (transparent), weight (900 grams), composition (pure water), number of uses (disposable), recyclable or not (yes), bottle material (plastic), bottle shape (cylinder shape), opening size (small diameter), temperature (room temperature), and so on.
 Based on these feature vectors, we can realize three categories of innovations:
- - "Parthenogenesis" innovation involves changing the feature vector of a single thing itself. This innovation occurs by selecting a feature and varying its value, such as changing the color of the bottle to a different color. Multiple features can also be changed simultaneously.
- - "Gender reproduction" innovation involves fusing the feature vectors of two existing things. This type of innovation can occur through compromise or by selecting one of the conflicting feature vectors. This results in a moderate level of innovation.
- - "Polysexual reproduction" innovation involves selecting the feature vectors of three or more things for innovation. This type of innovation is more complex and challenging to achieve.
+1. "Parthenogenesis" innovation involves changing the feature vector of a single thing itself. This innovation occurs by selecting a feature and varying its value, such as changing the color of the bottle to a different color. Multiple features can also be changed simultaneously.
+2. "Gender reproduction" innovation involves fusing the feature vectors of two existing things. This type of innovation can occur through compromise or by selecting one of the conflicting feature vectors. This results in a moderate level of innovation.
+3. "Polysexual reproduction" innovation involves selecting the feature vectors of three or more things for innovation. This type of innovation is more complex and challenging to achieve.
 
 
 ### Difficulties in Innovation
 
 Even with the use of feature vectors to guide innovation, there are still many challenges. 
- - The first is that things have a complex architecture, and there can be corresponding feature vectors to express information and innovation opportunities at different levels, from the overall architecture to specific local details. For instance, a car can be innovated on the feature vector of its overall structure, or a certain local component, such as the tire feature vector, can be focused on for innovation.
- - The second challenge is that even with a level of focus, it's not easy to find unique, feasible, and valuable features to change. Often, people are so accustomed to a thing that they overlook its characteristics, or they may not realize that a certain characteristic can be used to describe it. Neglecting a habitual feature that can be improved is a common problem in the innovation process. One solution is to involve a layman or an expert from another field to help identify areas for improvement and eliminate blind spots.
- - The third challenge is that there are many characteristics that can be changed. With about 80,000 nouns in English, and assuming 1% of them can be used to describe the characteristics of something, each thing can have as many as 800 features. Moreover, new nouns are constantly being created, and it can be difficult to know which feature is an effective improvement option. If multiple features are considered to be innovated at the same time, the number of permutations and combinations can be overwhelming.
- - The fourth challenge is that even if the dimension to innovate is known, it can still be difficult to realize. For instance, everything can have an inherent feature of "creator," which records who created it. If we want to change the value of this feature to "machine," we want to make a machine that can automatically produce the item, which is a challenging task.
- - Lastly, choosing multiple things that can be blended is a challenge due to the large search space.
+1. The first is that things have a complex architecture, and there can be corresponding feature vectors to express information and innovation opportunities at different levels, from the overall architecture to specific local details. For instance, a car can be innovated on the feature vector of its overall structure, or a certain local component, such as the tire feature vector, can be focused on for innovation.
+2. The second challenge is that even with a level of focus, it's not easy to find unique, feasible, and valuable features to change. Often, people are so accustomed to a thing that they overlook its characteristics, or they may not realize that a certain characteristic can be used to describe it. Neglecting a habitual feature that can be improved is a common problem in the innovation process. One solution is to involve a layman or an expert from another field to help identify areas for improvement and eliminate blind spots.
+3. The third challenge is that there are many characteristics that can be changed. With about 80,000 nouns in English, and assuming 1% of them can be used to describe the characteristics of something, each thing can have as many as 800 features. Moreover, new nouns are constantly being created, and it can be difficult to know which feature is an effective improvement option. If multiple features are considered to be innovated at the same time, the number of permutations and combinations can be overwhelming.
+4. The fourth challenge is that even if the dimension to innovate is known, it can still be difficult to realize. For instance, everything can have an inherent feature of "creator," which records who created it. If we want to change the value of this feature to "machine," we want to make a machine that can automatically produce the item, which is a challenging task.
+5. Lastly, choosing multiple things that can be blended is a challenge due to the large search space.
+
 Overall, the innovation process requires careful consideration of multiple factors, and overcoming these challenges can lead to successful innovations.
 
 
 ### Measuring Degrees of Innovation
 
 Mathematically, the distance or similarity between two feature vectors can be easily calculated to measure the degree of innovation. For instance, consider two feature vectors, a large change in the value of a feature represents a greater innovation than a small change. Changes associated with multiple features are also larger than changes of only one feature.
+
 With the concept of vector distance in mind, you can evaluate whether your innovation is too big or too small. When creating new products, services, processes, algorithms, or ideas for scientific research projects, consider how far the feature vector is between what you want to achieve and the closest existing one. Avoid strides that are too large or too small. The general lesson is that newcomers are often too ambitious, attempting to improve many features at once. Experienced innovators understand that "less is more" and only innovate on one or two key features to reduce risks and increase controllability. Sometimes, it can also be very difficult to change just one important feature, as in the example of recoverable rockets that will be mentioned later.
+
 Overall, measuring the degree of innovation is essential for ensuring the success and feasibility of an innovation. By carefully evaluating the feature vectors and considering the distance between them, innovators can determine the appropriate scope and level of their innovation efforts.
 
 ## Examples of practical innovations
@@ -73,36 +80,43 @@ Overall, measuring the degree of innovation is essential for ensuring the succes
 
 Feature vectors of things have many characteristics, and only a small subset of variations are truly feasible and beneficial. Some common beneficial characteristic changes include faster completion of useful functions, less energy consumption, smarter operation according to the environment, more personalization according to the user, automation of production, and so on.
 For instance, different levels of technological innovation can be achieved by continuously upgrading the "creator" feature of a hamburger:
- - First, making hamburgers is manually done by a person as the creator (hamburger = {creator: person}).
- - Second, the creator of the hamburger is replaced with a software program, which enables people to write software and allows the software to replace manual labor in making hamburgers (hamburger = {creator: software}, software = {creator: person}).
- - Third, the creator of the software that can make hamburgers is replaced with a program written by another person, creating a higher-level software that can write other software to make hamburgers. Now we have (hamburger = {creator: software}, software = {creator: advanced software}, advanced software = {creator: people}).
- - Fourth, a super software that automatically generates advanced software on the next level is currently unknown, but someone must have considered and even tried to develop it.
+1. First, making hamburgers is manually done by a person as the creator (hamburger = {creator: person}).
+2. Second, the creator of the hamburger is replaced with a software program, which enables people to write software and allows the software to replace manual labor in making hamburgers (hamburger = {creator: software}, software = {creator: person}).
+3. Third, the creator of the software that can make hamburgers is replaced with a program written by another person, creating a higher-level software that can write other software to make hamburgers. Now we have (hamburger = {creator: software}, software = {creator: advanced software}, advanced software = {creator: people}).
+4. Fourth, a super software that automatically generates advanced software on the next level is currently unknown, but someone must have considered and even tried to develop it.
+5. 
 This entire process represents an upgrade in the level of technological development. The third step of advanced software is currently the hottest generative artificial intelligence software, such as ChatGPT, which can write other programs to help people complete various tasks. The higher the technology level, the more powerful it becomes. Technology on the lower layers is the dimensionality reduction hit of science fiction, which is why all countries and major technical companies are investing in its development. By replacing the hamburger with any products or services generated by repeated labor, the second and third layers of innovative software can be developed.
+
 In conclusion, the feature vector view of innovation processes can explain past innovations and produce new ones. Specific examples can be used to verify the effectiveness of this process.
 
 
 Explaining Existing Innovations:
- - SpaceX Rocket: The selected innovation feature for Musk's SpaceX rocket is "number of uses." The corresponding feature vector of a traditional rocket has a value of 1 for this feature, i.e., {..., number of uses = 1, ...}. However, Musk's rocket has a much higher value, as seen in the Falcon 9 booster that can re-fly up to 100 times, and the corresponding feature vector becomes {..., number of uses = 100, ...}. This innovation greatly reduces costs, but it is also challenging to achieve.
- - Starlink: The main innovative feature of Musk's Starlink is "deployment location." The traditional large-scale communication systems deploy on the ground, but Starlink changed the value of this feature to "satellite." With the help of reusable rockets to launch satellites, low-cost global coverage is possible, and the corresponding feature vector changes from {..., deployment site = ground, ...} to {..., deployment site = satellite, ...}.
+1. SpaceX Rocket: The selected innovation feature for Musk's SpaceX rocket is "number of uses." The corresponding feature vector of a traditional rocket has a value of 1 for this feature, i.e., {..., number of uses = 1, ...}. However, Musk's rocket has a much higher value, as seen in the Falcon 9 booster that can re-fly up to 100 times, and the corresponding feature vector becomes {..., number of uses = 100, ...}. This innovation greatly reduces costs, but it is also challenging to achieve.
+2. Starlink: The main innovative feature of Musk's Starlink is "deployment location." The traditional large-scale communication systems deploy on the ground, but Starlink changed the value of this feature to "satellite." With the help of reusable rockets to launch satellites, low-cost global coverage is possible, and the corresponding feature vector changes from {..., deployment site = ground, ...} to {..., deployment site = satellite, ...}.
 
 For New Innovations:
 
 Bottled water can be used as an example to explore the features that can be changed for innovations. Bottled water has many characteristics, such as packaging method, weight, water composition, transportation method, and so on. 
+
 The feature vector of bottled water can be represented as {color = transparent, weight = 900g, ingredient = purified water, number of uses = disposable, recyclable = yes, bottle material = plastic, bottle shape = cylindrical, opening size = small diameter, temperature = room temperature, transportation method = manual, ...}.
 
 Starting from the water ingredient, one can change the value to common pure water, mineral water, or add vitamins to become vitamin water, and further develop intelligent and personalized water that includes different vitamins and health care products according to the physical health and mood of the drinker.
+
 One can also innovate by combining the feature vector of bottled water with the feature vector of other things, such as DJI drones' main feature of "can fly." This can lead to the development of bottled water that does not need to be carried by people and can fly by itself, reducing the load for people who travel long distances. The feature vector of flying bottled water becomes {..., transportation = fly yourself, ...}.
 
 
 ## Can We Automate Innovations?
 I believe it is possible to use computer software to simulate the representation of a thing's feature vector, and then simulate confusion and mutation of the corresponding feature vector to systematically generate new feature vectors and corresponding new things in large quantities. If this simulation program can also test the feasibility and advantages and disadvantages of new things, a closed circle of automated innovation can be formed.
+
 A recent example of this is Deepmind's innovation of matrix manipulation algorithms using machine learning: AlphaTensor, the first artificial intelligence (AI) system to discover novel, efficient, and provably correct algorithms for fundamental tasks such as matrix multiplication. The innovative and focused feature of this automatic algorithm is the decomposition method of the matrix, which is a complex sequence of values. Further details have been omitted here.
 
 ## Conclusion
 
 The truth of the universe can be described by mathematics. Any problem that can be effectively expressed mathematically often has a corresponding solution. The problem of innovation can be explained through the process of hybridization and mutation of feature vectors, which can be realized mathematically. The thought experiment presented in this article can be summarized as follows:
-Analysis of the semantics of innovation: Three core concepts - creation, newness, and things. The best example is the creation of new biological creatures. By understanding how organisms express genetic information and enable innovation through the fusion and mutation of genes in chromosomes, we can see that the effects of many generations are superimposed, and quantitative changes produce qualitative changes, leading to biological innovations.
-A chromosome and the genes it contains can be represented mathematically as a feature vector: a container (sequence) of values corresponding to different features. By extending the feature vector to represent anything in daily life, we can realize the hybridization and mutation of feature vectors of anything for innovation.
-Using feature vectors to think about the differences and connections between things can help evaluate the similarity and distance of things, similar to the close relationship between two organisms in the biosphere. In this way, the degree of innovation can be roughly assessed. It is generally recommended to focus on a key feature that addresses user pain points and transform it, rather than being too greedy when innovating.
+
+1. Analysis of the semantics of innovation: Three core concepts - creation, newness, and things. The best example is the creation of new biological creatures. By understanding how organisms express genetic information and enable innovation through the fusion and mutation of genes in chromosomes, we can see that the effects of many generations are superimposed, and quantitative changes produce qualitative changes, leading to biological innovations.
+2. A chromosome and the genes it contains can be represented mathematically as a feature vector: a container (sequence) of values corresponding to different features. By extending the feature vector to represent anything in daily life, we can realize the hybridization and mutation of feature vectors of anything for innovation.
+3. Using feature vectors to think about the differences and connections between things can help evaluate the similarity and distance of things, similar to the close relationship between two organisms in the biosphere. In this way, the degree of innovation can be roughly assessed. It is generally recommended to focus on a key feature that addresses user pain points and transform it, rather than being too greedy when innovating.
+
 Lastly, I would like to point out that humans have two major abilities: physical strength and mental strength. So far, the tools produced by various innovations have mainly been designed to expand human physical strength. Tools to expand human mental strength are rare. For the first time, the large language models in machine learning (e.g. ChatGPT) have given people a glimpse of artificial intelligence with certain intellectual abilities, which can assist in the thinking process, such as finding logical loopholes in a statement. Therefore, developing new tools to assist human brain function and thinking is a promising and innovative direction.
 
