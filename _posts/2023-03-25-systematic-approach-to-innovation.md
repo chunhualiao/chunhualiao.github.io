@@ -5,7 +5,7 @@ This weekend, I'd like to jot down some random thoughts once more. This time, th
 This thought experiment commences with an interpretation of the word "innovation," which is to "create something new." This term encompasses three concepts: creation, novelty, and substance (everything). How can something we create be deemed new? To answer this question, consider how the essential information of an object can be represented. This representation can accurately capture the distinctions between new and old items, and it can also guide the design of innovative methods.
 
 
-## Biological Information Representation and Innovation Process
+## Biological Information Representation and Innovation Processes
 
 The most complex entities in this world are living beings. If one day we can arbitrarily create new creatures with specific purposes (such as redesigning human beings for superior intelligence), it would be the greatest manifestation of human innovation. Fortunately, biology has already revealed the way to express biological information: genes (and the corresponding container: chromosomes), and also directly explained how new species are created based on the fusion and mutation of several genes. Let's briefly outline the representation of biological information and the corresponding innovation process.
 
@@ -53,7 +53,7 @@ The famous example of Darwin's finches is a prime illustration of this phenomeno
 
 Quantitative changes in biological traits accumulate over multiple generations, ultimately leading to qualitative changes that result in new species. Whether the change is quantitative or qualitative, the process of feature vector transformation is the same.
 
-## Extending biological information expression and innovation processes to everything
+## Extending Biological Innovation Processes to Everything
 
 By understanding the characteristic expression and innovation processes of organisms, we can apply the same concepts to the innovation process of everything. The first step is to identify the expressions (feature vectors) of various features of the thing in question. 
 For instance, a bottle of bottled water may have the following feature vectors: color (transparent), weight (900 grams), composition (pure water), number of uses (disposable), recyclable or not (yes), bottle material (plastic), bottle shape (cylinder shape), opening size (small diameter), temperature (room temperature), and so on.
@@ -91,7 +91,7 @@ With the concept of vector distance in mind, you can evaluate whether your innov
 
 Overall, measuring the degree of innovation is essential for ensuring the success and feasibility of an innovation. By carefully evaluating the feature vectors and considering the distance between them, innovators can determine the appropriate scope and level of their innovation efforts.
 
-## Examples of practical innovations
+## Example Innovations
 
 
 Feature vectors of things have many characteristics, and only a small subset of variations are truly feasible and beneficial. Some common beneficial characteristic changes include faster completion of useful functions, less energy consumption, smarter operation according to the environment, more personalization according to the user, automation of production, and so on.
@@ -128,6 +128,7 @@ One can also innovate by combining the feature vector of bottled water with the 
 
 
 ## Can We Automate Innovations?
+
 I believe it is possible to use computer software to simulate the representation of a thing's feature vector, and then simulate confusion and mutation of the corresponding feature vector to systematically generate new feature vectors and corresponding new things in large quantities. If this simulation program can also test the feasibility and advantages and disadvantages of new things, a closed circle of automated innovation can be formed.
 
 A recent example of this is Deepmind's innovation of matrix manipulation algorithms using machine learning: AlphaTensor, the first artificial intelligence (AI) system to discover novel, efficient, and provably correct algorithms for fundamental tasks such as matrix multiplication. The innovative and focused feature of this automatic algorithm is the decomposition method of the matrix, which is a complex sequence of values. Further details have been omitted here.
