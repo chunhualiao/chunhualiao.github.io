@@ -401,3 +401,5 @@ Reading this “For Dummies” book was tough but rewarding. Key takeaways:
     
 
 Finally, I have found that **ChatGPT** can now provide pretty good critical analyses of historical arguments — sometimes even surpassing my own. But its performance on **real-time, complex controversies** (e.g., COVID vaccines, war narratives) remains to be fully tested.
+
+Original Chinese version: [https://mp.weixin.qq.com/s/kUr2jwbTCOzzm0cXi-1BXw](https://mp.weixin.qq.com/s/kUr2jwbTCOzzm0cXi-1BXw)
