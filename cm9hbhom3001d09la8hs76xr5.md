@@ -3,7 +3,7 @@ title: "Thinking About the Nature of Intelligence for Education and Self-Improve
 datePublished: Sun Dec 22 2019 20:00:00 GMT+0000 (Coordinated Universal Time)
 cuid: cm9hbhom3001d09la8hs76xr5
 slug: thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-1
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1744650819682/b80ebd7f-cc65-4f23-b048-cb60a179c56e.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1744651370825/65772fe3-0335-4aac-a610-2576ffe68bab.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1744650968378/270850a8-b10c-4e01-a682-bc61310c09b6.png
 tags: learning, intelligence, goal-setting
 
