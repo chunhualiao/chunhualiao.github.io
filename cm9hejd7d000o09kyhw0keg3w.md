@@ -106,3 +106,5 @@ The book *Principles* (《原则》) dedicates a separate chapter to a very deta
 》To Be Continued《
 
 The next article is the final one in this series, exploring the assessment and improvement of execution ability.
+
+Original Chinese version of this article: [https://mp.weixin.qq.com/s/qE0eHbZzDqWkwJS8aUzMDw](https://mp.weixin.qq.com/s/qE0eHbZzDqWkwJS8aUzMDw)
