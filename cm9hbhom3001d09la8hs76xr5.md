@@ -106,3 +106,7 @@ Duration of Learning
 Learning should be lifelong. Even after obtaining advanced degrees, ongoing learning of new knowledge, tools, and skills remains essential. Regularly allocating weekly study time ensures continual personal and professional growth, avoiding stagnation.
 
 Successful individuals universally practice lifelong learning, exemplified by Buffett, Munger, and Bill Gates, who regularly promotes reading and continuous learning through his influential platforms.
+
+TO BE CONTINUED
+
+Original Chinese version of this article: [https://mp.weixin.qq.com/s/xKJpj68Ag3rwEt0-c5\_lng](https://mp.weixin.qq.com/s/xKJpj68Ag3rwEt0-c5_lng)
