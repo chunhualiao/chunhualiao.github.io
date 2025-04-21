@@ -9,7 +9,7 @@ tags: mars, constitution, first-principles
 
 ---
 
-Assume that enough humans have migrated to Mars, they need to form an independent colony with a perfect Constitution. Please use first principle thinking to draft the complete constitution for them to maximize their freedom, foster peace and innovation , while best counter the flaws and dark sides of humans.
+Question: **Assume that a sufficient number of humans have migrated to Mars and now need to form an independent colony with a perfect Constitution. Please use first principles thinking to draft a complete Constitution that maximizes freedom, fosters peace and innovation, and best counteracts the flaws and darker sides of human nature.**
 
 Answer from ChatGPT o3
 
