@@ -11,7 +11,7 @@ tags: healthcare, freemarket
 
 I don’t go to the doctor often. But when I do, I expect to be able to see one without waiting nearly a month.
 
-Unfortunately, that’s not the case with **Kaiser Permanente in Northern California**, where I get my healthcare coverage through my employer. Despite paying **$2,770 every month** for health insurance covering a family of four members — yes, you read that right — I routinely wait **3 to 4 weeks** to see even a primary care physician now in east bayarea. Before COVID, I could usually see my physician within a few days.
+Unfortunately, that’s not the case with **Kaiser Permanente in Northern California**, where I get my healthcare coverage through my employer. Despite paying **$2,770 every month** for health insurance covering a family of four members — yes, you read that right — I routinely wait **3 to 4 weeks** to see even a primary care physician now in east bayarea. Before COVID, I could usually see my physicians within a few days or at most 2 weeks.
 
 So what exactly am I — and millions of others — paying for?
 
