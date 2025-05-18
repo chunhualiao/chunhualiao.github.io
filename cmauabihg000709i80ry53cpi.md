@@ -59,7 +59,7 @@ This isn’t a personal grudge. It’s a widespread failure of a high-cost, low-
 
 ## **🧠 Why Is This Happening?**
 
-Several **root causes** are behind this contradiction between high cost and low service:
+Several **causes** are behind this contradiction between high cost and low service:
 
 1. **Administrative Cost Bloat**:
     
