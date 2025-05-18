@@ -67,7 +67,7 @@ Several **causes** are behind this contradiction between high cost and low servi
     
 2. **Provider Shortages**:
     
-    The U.S. faces a growing shortage of primary care physicians (PCPs), projected to reach 17,800–48,000 by 2034 (Association of American Medical Colleges, 2020). Northern California has a **primary care desert**, even in affluent suburbs like mine (east bay area). The Permanente Medical Group (TPMG)'s 9,000+ physicians in Northern California (as of 2024) serve 4.5 million members, but the ratio ( ~1 PCP per 2,000 members) strains capacity during demand spikes.
+    The U.S. faces a growing shortage of primary care physicians (PCPs), projected to reach 17,800–48,000 by 2034 (Association of American Medical Colleges, 2020). Northern California has a **primary care desert**, even in affluent suburbs like mine (east bay area). The Permanente Medical Group (TPMG)'s 9,000+ physicians in Northern California (as of 2024) serve 4.5 million members, but the ratio ( <mark>~1 PCP per 2,000 members</mark>) strains capacity during demand spikes.
     
 3. **Population Growth and Aging**:
     
@@ -78,7 +78,7 @@ Several **causes** are behind this contradiction between high cost and low servi
 
 ## **🧩 Why the Free Market Hasn’t Fixed Healthcare (Yet)**
 
-In theory, the free market solves inefficiencies through competition, innovation, and consumer choice. But U.S. healthcare is *not* a functioning free market — it’s a heavily distorted quasi-market where normal rules of supply and demand are suspended.
+In theory, the free market solves inefficiencies through competition, innovation, and consumer choice. But <mark>U.S. healthcare is </mark> *<mark>not</mark>* <mark> a functioning free market</mark> — it’s a heavily distorted quasi-market where normal rules of supply and demand are suspended.
 
 Here are the **core distortions** through a free-market lens:
 
@@ -108,11 +108,11 @@ In a functioning market, consumers know prices and can compare value. In U.S. he
 
 ### **❌ 3. Entry Barriers Prevent New Supply**
 
-* New hospitals or clinics often require government approval via **Certificate of Need (CON)** laws — anti-competitive relics that **protect incumbents**.
+* New hospitals or clinics often require government approval via **Certificate of Need (CON)** laws — anti-competitive relics that **protect incumbents**. Critics-including the U.S. Department of Justice and Federal Trade Commission-argue that CON laws create barriers to entry, protect incumbent providers, stifle innovation, and limit consumer choice. Incumbent providers can often participate in the CON process and object to new entrants, which can delay or block competition and maintain local monopolies.
     
-* State-by-state **medical licensing** restricts skilled providers (like nurse practitioners) from practicing to their full training.
+* Medical residency slots are capped by federal funding, **artificially limiting physician supply** despite demand. The cap was established by Congress in 1997, effectively freezing the number of Medicare-funded residency positions at that time. Since then, only small, incremental increases have been approved, such as the addition of 1,000 new slots in recent years, distributed at a rate of no more than 200 per year. This cap means that even as medical school enrollment has increased, the number of residency positions has not kept pace, leaving some medical graduates unable to complete the required training to become practicing physicians. As a result, the supply of new doctors entering the workforce is constrained by federal funding limits, not by the actual demand for physicians or the capacity of medical schools to produce graduates.
     
-* Medical residency slots are capped by federal funding, **artificially limiting physician supply** despite demand.
+* State-by-state **medical licensing** restricts skilled providers (like nurse practitioners) from practicing to their full training. California, for example, is a restricted practice state, meaning NPs there cannot practice to their full training without physician oversight. These state-by-state variations mean that many NPs face legal barriers that prevent them from delivering care at the level they are trained for, particularly in states with reduced or restricted practice environments
     
 
 🧠 **Market theory insight**: Supply is artificially constrained — **entry barriers destroy competition**.
@@ -121,7 +121,7 @@ In a functioning market, consumers know prices and can compare value. In U.S. he
 
 * When someone else (insurer or government) pays for your care, **you lose the incentive to shop for value**.
     
-* Providers cater to insurers — not patients — and billing is optimized for insurance reimbursement, not efficiency or outcome.
+* Providers cater to insurers — not patients — and <mark>billing is optimized for insurance reimbursement</mark>, not efficiency or outcome.
     
 
 🧠 **Market theory insight**: Third-party payment introduces **moral hazard** and **eliminates price discipline**.
