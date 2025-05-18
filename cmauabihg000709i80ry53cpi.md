@@ -16,7 +16,7 @@ So what exactly am I — and millions of others — paying for?
 
 ---
 
-### **🔍 The Numbers: How Bad Is It Really?**
+## **🔍 The Numbers: How Bad Is It Really?**
 
 Let’s break it down.
 
@@ -41,7 +41,7 @@ Let’s break it down.
 
 ---
 
-### **🧯 This Isn’t Just Me — It’s a Systemic Problem**
+## **🧯 This Isn’t Just Me — It’s a Systemic Problem**
 
 This isn’t a personal grudge. It’s a widespread failure of a high-cost, low-access system:
 
@@ -56,7 +56,7 @@ This isn’t a personal grudge. It’s a widespread failure of a high-cost, low-
 
 ---
 
-### **🧠 Why Is This Happening?**
+## **🧠 Why Is This Happening?**
 
 Several **root causes** are behind this contradiction between high cost and low service:
 
@@ -75,13 +75,13 @@ Several **root causes** are behind this contradiction between high cost and low 
 
 ---
 
-### **🧩 Why the Free Market Hasn’t Fixed Healthcare (Yet)**
+## **🧩 Why the Free Market Hasn’t Fixed Healthcare (Yet)**
 
 In theory, the free market solves inefficiencies through competition, innovation, and consumer choice. But U.S. healthcare is *not* a functioning free market — it’s a heavily distorted quasi-market where normal rules of supply and demand are suspended.
 
 Here are the **core distortions** through a free-market lens:
 
-#### **❌ 1. No Price Discovery**
+### **❌ 1. No Price Discovery**
 
 In a functioning market, consumers know prices and can compare value. In U.S. healthcare:
 
@@ -94,7 +94,7 @@ In a functioning market, consumers know prices and can compare value. In U.S. he
 
 🧠 **Market theory insight**: Without transparent prices, **competition cannot function**.
 
-#### **❌ 2. Consumer Cannot Act as Rational Agent**
+### **❌ 2. Consumer Cannot Act as Rational Agent**
 
 * Most patients don’t choose their insurance — their **employer does**.
     
@@ -105,7 +105,7 @@ In a functioning market, consumers know prices and can compare value. In U.S. he
 
 🧠 **Market theory insight**: Without real consumer agency, **demand signals are weak or misaligned**.
 
-#### **❌ 3. Entry Barriers Prevent New Supply**
+### **❌ 3. Entry Barriers Prevent New Supply**
 
 * New hospitals or clinics often require government approval via **Certificate of Need (CON)** laws — anti-competitive relics that **protect incumbents**.
     
@@ -116,7 +116,7 @@ In a functioning market, consumers know prices and can compare value. In U.S. he
 
 🧠 **Market theory insight**: Supply is artificially constrained — **entry barriers destroy competition**.
 
-#### **❌ 4. Third-Party Payer Problem**
+### **❌ 4. Third-Party Payer Problem**
 
 * When someone else (insurer or government) pays for your care, **you lose the incentive to shop for value**.
     
@@ -125,7 +125,7 @@ In a functioning market, consumers know prices and can compare value. In U.S. he
 
 🧠 **Market theory insight**: Third-party payment introduces **moral hazard** and **eliminates price discipline**.
 
-#### **❌ 5. Consolidation and Monopoly Power**
+### **❌ 5. Consolidation and Monopoly Power**
 
 * Hospital mergers, insurer mergers, and vertically integrated systems (like Kaiser) **reduce competition** and raise prices.
     
@@ -200,13 +200,13 @@ To fix healthcare, we must **restore market conditions**: price transparency, co
 
 🎯 **Outcome**: Incentives drive real results, not volume.
 
-### **🚨 This Is a Wake-Up Call**
+## **🚨 This Is a Wake-Up Call**
 
 We are reaching a breaking point: middle-class professionals are paying thousands per month and still can’t see a doctor in a reasonable time frame. This isn’t sustainable, and it isn’t fair.
 
 ---
 
-### **📣 Join the Fight for Smarter Healthcare**
+## **📣 Join the Fight for Smarter Healthcare**
 
 I’m writing this not just to vent, but to **call on engineers, doctors, entrepreneurs, and policymakers** to take this seriously.
 
