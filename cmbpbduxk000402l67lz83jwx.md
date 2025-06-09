@@ -3,7 +3,7 @@ title: "Rethinking Success: How Young People Can Build Their Future Outside Univ
 datePublished: Mon Jun 09 2025 16:36:32 GMT+0000 (Coordinated Universal Time)
 cuid: cmbpbduxk000402l67lz83jwx
 slug: rethinking-success-how-young-people-can-build-their-future-outside-university-walls
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1749486793092/18a88962-7b06-4a17-af19-862e2771770a.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1749487230570/a8e7d059-5602-4de5-95bf-281c7b613dde.jpeg
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1749486971123/a239cdc3-e2c7-4395-8a38-760450d9553a.jpeg
 tags: entrepreneurship, university
 
