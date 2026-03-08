@@ -3,7 +3,7 @@ title: "The Mirror Test: A Story of AI Writing About AI"
 datePublished: Sun Mar 08 2026 17:29:51 GMT+0000 (Coordinated Universal Time)
 cuid: cmmi124jp000002jpdug82vi3
 slug: mirror-paper-story
-cover: https://drive.google.com/uc?export=view&id=1wNmcKo1H-9hJ73gMUmlAn9Px7Oj0ww4D
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1773009091911/bd7f0ff9-5fe0-45e2-8f6a-f7d0ff42a60f.png
 
 ---
 
