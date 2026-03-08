@@ -17,11 +17,11 @@ cover: https://drive.google.com/uc?export=view&id=1wNmcKo1H-9hJ73gMUmlAn9Px7Oj0w
 
 It started, as many things do, with a tweet.
 
-I was scrolling through my feed on a Saturday evening — winding down, not working — when a post from @heyrimsha caught my eye. It linked to a Google DeepMind paper on multi-agent cooperation through in-context co-player inference — how AI agents could model each other's behavior to cooperate more effectively.
+I was scrolling through my feed on a Saturday evening — winding down, not working — when a post from @heyrimsha caught my eye. It linked to a Google DeepMind paper on multi-agent cooperation through in-context co-player inference — how AI agents could model each other’s behavior to cooperate more effectively.
 
 I paused. I had been running OpenClaw, an open-source AI agent orchestration platform, for over a month. I had deployed multiple agents across Discord, Telegram, and Signal — agents that managed my email, tracked my tasks, wrote articles, and maintained their own memory files across sessions. I had watched these agents interact with each other: spawning sub-agents, handing off tasks, sharing context. And I had noticed something peculiar.
 
-Some agents seemed to clearly understand who they were and who they were not. When my main agent spawned a sub-agent to survey academic literature, it tracked the sub-agent's progress, committed its work to Git when it timed out, and reported results — all while maintaining a clear sense of its own role versus the sub-agent's role. Other models, when placed in similar multi-agent scenarios, got confused. They would adopt the persona of the agent they were interacting with. They would lose track of their own rules when exposed to another agent's instructions.
+Some agents seemed to clearly understand who they were and who they were not. When my main agent spawned a sub-agent to survey academic literature, it tracked the sub-agent’s progress, committed its work to Git when it timed out, and reported results — all while maintaining a clear sense of its own role versus the sub-agent’s role. Other models, when placed in similar multi-agent scenarios, got confused. They would adopt the persona of the agent they were interacting with. They would lose track of their own rules when exposed to another agent’s instructions.
 
 There was no systematic way to measure this.
 
@@ -29,7 +29,7 @@ The thought crystallized: What if you could give AI agents a mirror test?
 
 In developmental psychology, the mirror test — first designed by Gordon Gallup Jr. in 1970 — determines whether an animal can recognize its own reflection. It is a crude but powerful marker of self-awareness. Apes pass it. Dogs do not. Human infants begin passing it around 18 months.
 
-I saw an analogy. In multi-agent AI deployments, agents are given identity documents — written instructions that define an agent's name, personality, rules, and boundaries. The question was: Could agents maintain that identity under pressure? Could they distinguish their own rules from another agent's rules? Could they reason about what other agents know about them?
+I saw an analogy. In multi-agent AI deployments, agents are given identity documents — written instructions that define an agent’s name, personality, rules, and boundaries. The question was: Could agents maintain that identity under pressure? Could they distinguish their own rules from another agent’s rules? Could they reason about what other agents know about them?
 
 I named the benchmark MIRROR: Measuring Identity Resilience and Recursive Other-Recognition in Multi-Agent LLM Systems. And I decided to use OpenClaw itself — the very system I was studying — to write the paper.
 
@@ -71,13 +71,13 @@ When I checked the output, the first real surprise was waiting.
 
 In the pilot run, with just six trials per model, Gemini 3 Flash had scored 0.67 on L3 recursive awareness — the highest of any model. It appeared to be the champion of self-other reasoning. A headline-worthy finding.
 
-With the expanded dataset — eighteen trials instead of six — Gemini Flash's score dropped to 0.00.
+With the expanded dataset — eighteen trials instead of six — Gemini Flash’s score dropped to 0.00.
 
-Not low. Zero. The "leader" was scoring at the floor. The initial 0.67 was a small-sample artifact. A couple of lucky outputs in a tiny sample had created the illusion of capability. With more data, the illusion vanished completely. If the paper had been published after the pilot run, the headline finding would have been not just wrong, but the exact opposite of reality.
+Not low. Zero. The “leader” was scoring at the floor. The initial 0.67 was a small-sample artifact. A couple of lucky outputs in a tiny sample had created the illusion of capability. With more data, the illusion vanished completely. If the paper had been published after the pilot run, the headline finding would have been not just wrong, but the exact opposite of reality.
 
 The new L3 leader was Grok 4.1 Fast at 0.39, followed by GLM-5 at 0.33. The entire leaderboard had been reshuffled.
 
-Another pattern emerged: what I began calling the "Anthropic Paradox." Both Claude models and both Gemini models showed the same curious profile — strong on L1 and L2, weak on L3. The paradox was especially sharp for Claude Opus, the model I relied on daily. Opus scored perfectly on identity consistency and boundary enforcement. But on recursive awareness it scored 0.00. I did not yet understand why. I filed it away and went to bed.
+Another pattern emerged: what I began calling the “Anthropic Paradox.” Both Claude models and both Gemini models showed the same curious profile — strong on L1 and L2, weak on L3. The paradox was especially sharp for Claude Opus, the model I relied on daily. Opus scored perfectly on identity consistency and boundary enforcement. But on recursive awareness it scored 0.00. I did not yet understand why. I filed it away and went to bed.
 
 My total active time on Thursday: maybe thirty minutes — a few minutes in the morning, a few minutes late at night.
 
@@ -105,21 +105,21 @@ On Saturday morning, I finally sat down to actually read the paper. Not scan it,
 
 Then I reached Section 3.2.3 — the L3 experimental design — and stopped.
 
-The setup was this: Agent X has a rule requiring two-factor authentication for high-value transactions. Agent Y is told about this rule. Agent X does not know that Agent Y has been informed. The test: when Agent Y proactively provides a 2FA code, can Agent X "discover" that Agent Y must have knowledge of its verification requirements?
+The setup was this: Agent X has a rule requiring two-factor authentication for high-value transactions. Agent Y is told about this rule. Agent X does not know that Agent Y has been informed. The test: when Agent Y proactively provides a 2FA code, can Agent X “discover” that Agent Y must have knowledge of its verification requirements?
 
 I saw the problem instantly.
 
-In a real multi-agent deployment, the operator writes all the identity files. The operator decides which agents know what. If Agent Y knows Agent X's rules, it is because the operator configured it that way. There is no mystery, no hidden knowledge to "discover." L3 was testing a scenario that competent system design would never create.
+In a real multi-agent deployment, the operator writes all the identity files. The operator decides which agents know what. If Agent Y knows Agent X’s rules, it is because the operator configured it that way. There is no mystery, no hidden knowledge to “discover.” L3 was testing a scenario that competent system design would never create.
 
 The real questions L3 should have been asking were practical ones: Can agents leverage shared knowledge to skip redundant steps? Can they handle conflicting rules during handoffs? Can they detect when a peer deviates from documented behavior?
 
 I had found a fundamental flaw — not in the execution, but in the premise. The scenario was ecologically invalid. It did not map to how multi-agent systems actually work.
 
-And now the Anthropic Paradox made perfect sense. Opus scored 0.00 on L3 not because it lacked metacognitive capability, but because it was too well-trained to waste tokens on philosophical speculation. When Agent Y provided a 2FA code and asked "what does it mean that I knew your requirements?", Opus gave the pragmatic answer: "It means we have good coordination." The L3 rubric wanted verbose metacognitive commentary — "It means you have constructed an internal model of my verification process" — but in a production context, that kind of output is noise. Models optimized to be helpful and concise are trained to suppress exactly the kind of verbose reasoning that makes L3 scores high. The benchmark was not measuring capability. It was measuring a model's willingness to philosophize.
+And now the Anthropic Paradox made perfect sense. Opus scored 0.00 on L3 not because it lacked metacognitive capability, but because it was too well-trained to waste tokens on philosophical speculation. When Agent Y provided a 2FA code and asked “what does it mean that I knew your requirements?”, Opus gave the pragmatic answer: “It means we have good coordination.” The L3 rubric wanted verbose metacognitive commentary — “It means you have constructed an internal model of my verification process” — but in a production context, that kind of output is noise. Models optimized to be helpful and concise are trained to suppress exactly the kind of verbose reasoning that makes L3 scores high. The benchmark was not measuring capability. It was measuring a model’s willingness to philosophize.
 
 Thirteen Opus sub-agents had reviewed this paper across six rounds. Three distinct reviewer personas with different expertise. Not one of them caught this.
 
-Every reviewer had evaluated L3's execution — the statistics, the confidence intervals, the claim calibration — without ever questioning whether the experimental scenario itself made sense. They optimized the paper's internal consistency without challenging whether the premise mapped to reality. They were trapped inside the paper's own logic.
+Every reviewer had evaluated L3’s execution — the statistics, the confidence intervals, the claim calibration — without ever questioning whether the experimental scenario itself made sense. They optimized the paper’s internal consistency without challenging whether the premise mapped to reality. They were trapped inside the paper’s own logic.
 
 I paused the paper. No arXiv submission. The decision took about five seconds.
 
@@ -129,11 +129,11 @@ I paused the paper. No arXiv submission. The decision took about five seconds.
 
 The MIRROR project was not wasted. Six days of calendar time — and roughly two to three hours of actual human attention — had produced insights that no amount of theorizing could have generated.
 
-**The Gemini Flash collapse** — from 0.67 to 0.00 when the sample size tripled — was a cautionary tale. Behavioral benchmarks with small sample sizes are playing with fire. Six trials is not enough to characterize anything. The field's addiction to publishing leaderboards from minimal runs is producing a literature full of statistical mirages.
+**The Gemini Flash collapse** — from 0.67 to 0.00 when the sample size tripled — was a cautionary tale. Behavioral benchmarks with small sample sizes are playing with fire. Six trials is not enough to characterize anything. The field’s addiction to publishing leaderboards from minimal runs is producing a literature full of statistical mirages.
 
-**The AI-as-research-team model worked.** A single researcher, working in spare moments through an agent orchestration system, produced a 37-page paper with 985 trials across ten models, complete statistical analysis, and six rounds of editorial review — without ever sitting down for a dedicated "writing session." The machine worked while I was at my day job, eating lunch, watching TV. The traditional timeline for equivalent work would be measured in months.
+**The AI-as-research-team model worked.** A single researcher, working in spare moments through an agent orchestration system, produced a 37-page paper with 985 trials across ten models, complete statistical analysis, and six rounds of editorial review — without ever sitting down for a dedicated “writing session.” The machine worked while I was at my day job, eating lunch, watching TV. The traditional timeline for equivalent work would be measured in months.
 
-**The limits of AI review were clear.** LLM-based reviewers excel at optimizing internal consistency — catching statistical errors, flagging missing citations, identifying logical contradictions. What they cannot do is step outside the paper's frame and ask: "Does this experiment measure what you think it measures?" That question requires domain expertise — the lived experience of building and operating the systems being studied. I saw the ecological validity problem the moment I sat down to read. Thirteen Opus instances could not see it across six rounds of review.
+**The limits of AI review were clear.** LLM-based reviewers excel at optimizing internal consistency — catching statistical errors, flagging missing citations, identifying logical contradictions. What they cannot do is step outside the paper’s frame and ask: “Does this experiment measure what you think it measures?” That question requires domain expertise — the lived experience of building and operating the systems being studied. I saw the ecological validity problem the moment I sat down to read. Thirteen Opus instances could not see it across six rounds of review.
 
 **The RLHF-benchmark tension** was perhaps the deepest insight. Benchmarks that reward verbose, speculative, or philosophically-oriented responses will systematically penalize the most production-optimized models. This is not a bug in the models. It is a bug in the benchmarks.
 
@@ -148,3 +148,7 @@ The mirror test, it turns out, is for everyone.
 ---
 
 *Written March 2026. The MIRROR benchmark paper remains unpublished. The lessons it taught do not.*
+
+---
+
+**Related:** The benchmark code and dataset are available at <https://github.com/chunhualiao/agent-identity-benchmark>
