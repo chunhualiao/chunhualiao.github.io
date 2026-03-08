@@ -6,26 +6,11 @@ slug: blog-filtering-trap
 
 ---
 
----
-title: "The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management"
-subtitle: "LLMs are lossy encoders. Every time your primary agent 'digests' information before passing it to a subagent, critical details vanish — silently, confidently, and catastrophically."
-tags:
-  - name: "AI"
-    slug: "ai"
-  - name: "Multi-Agent Systems"
-    slug: "multi-agent-systems"
-  - name: "LLM"
-    slug: "llm"
-  - name: "Software Architecture"
-    slug: "software-architecture"
-coverImage: "https://drive.google.com/uc?export=view&id=1ny0FBdFd8mCKjYymnOvMunox-d1BnhMX"
----
-
 # The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management
 
 ## The Incident That Changed How I Think About Agent Architectures
 
-Earlier this year, I watched a simple task go sideways in the worst possible way.
+Earlier this year, I watched a simple task go sideways in the worst possible way — on **OpenClaw 2026.2.26**, running **Claude Opus 4.6** (Anthropic) as the main agent.
 
 A user asked their AI assistant to do something trivial: take an existing technical article about configuring a messaging platform's developer settings (API credentials and IP whitelisting), extract the relevant steps, and write a quick how-to guide for a colleague. Five minutes of work, tops.
 
@@ -42,6 +27,8 @@ Let me walk through the failure in detail, because the devil is very much in the
 ### The Architecture
 
 The system uses a common multi-agent pattern: a **primary agent** (the "main" agent) handles user conversation, understands intent, plans tasks, and spawns **subagents** to do the actual work — writing documents, calling APIs, processing data. This is a perfectly reasonable architecture. It's how most sophisticated AI agent platforms work.
+
+In this case, the platform was **OpenClaw** — a multi-agent orchestration system where a primary Claude Opus 4.6 agent spawns task-specific subagents. The writing subagent dispatched for this task was running **Claude Sonnet 4.6**. Both are Anthropic models, both are capable — and yet the architecture itself created the failure.
 
 ### Failure #1: Scope Creep
 
@@ -63,9 +50,9 @@ The source article contained a specific, critical sentence:
 
 This URL was the entire point of the how-to guide. Without it, a reader has no idea where to go to get the credentials. The guide is useless.
 
-The primary agent read the source article. It understood this information. Then it wrote a "refined" set of instructions for the subagent — and in that process, **the URL disappeared**.
+The primary agent (Claude Opus 4.6) read the source article. It understood this information. Then it wrote a "refined" set of instructions for the subagent — and in that process, **the URL disappeared**.
 
-The subagent, working only from the primary agent's instructions, produced a document that looked polished and complete. It had proper formatting, clear step numbering, professional language. But the most important piece of information — the URL — was simply absent.
+The subagent (Claude Sonnet 4.6), working only from the primary agent's instructions, produced a document that looked polished and complete. It had proper formatting, clear step numbering, professional language. But the most important piece of information — the URL — was simply absent.
 
 The user caught it and was furious: *"Why didn't you just give the full article to the subagent? Why did you summarize it first?"*
 
@@ -139,7 +126,7 @@ This distinction matters enormously for how we address the problem:
 
 You cannot "fix" an LLM's summarization tendency, because summarization is precisely what makes it useful. What you *can* do is design your multi-agent architecture so that the primary agent's role is **dispatch and relay**, not **comprehend and retell**.
 
-This is an architecture problem, not a model problem.
+This is an architecture problem, not a model problem. Swapping Claude Opus 4.6 for any other frontier model would not have prevented this failure — the trap is structural, not model-specific.
 
 ## 5 Whys: Tracing to the Root
 
@@ -172,10 +159,10 @@ When information passes through an LLM, it isn't "transmitted." It's **understoo
 
 In a single-agent system, this lossy encoding happens once: User → LLM → Output. One round of lossy processing is usually acceptable.
 
-In a multi-agent system, lossy encoding happens at every node:
+In a multi-agent system like OpenClaw — where a primary Claude Opus 4.6 agent orchestrates one or more Claude Sonnet 4.6 subagents — lossy encoding happens at every node:
 
 ```
-User → Agent A (lossy) → Agent B (lossy) → Agent C (lossy) → Output
+User → Primary Agent/Opus 4.6 (lossy) → Subagent/Sonnet 4.6 (lossy) → Output
 ```
 
 This is exactly like serial translation: translate a Chinese article to English, then to Japanese, then back to Chinese. What you get back is not the original. Each translation is a lossy encoding, and the cumulative result is significant information degradation.
@@ -283,9 +270,9 @@ If you're designing or operating multi-agent systems, here are the core principl
 
 ## Conclusion
 
-This article grew out of a real incident. A trivial task exposed a deep architectural trap in multi-agent systems.
+This article grew out of a real incident — observed firsthand on OpenClaw 2026.2.26, with Claude Opus 4.6 as the orchestrating primary agent and Claude Sonnet 4.6 as the writing subagent. A trivial task exposed a deep architectural trap in multi-agent systems.
 
-The trap is dangerous precisely because it isn't an obvious bug — it's a side effect of LLMs' most fundamental capability (understanding and generating text) operating within a delegation architecture. You can't "fix" it. You can only **architect around it**.
+The trap is dangerous precisely because it isn't an obvious bug — it's a side effect of LLMs' most fundamental capability (understanding and generating text) operating within a delegation architecture. You can't "fix" it by upgrading models. You can only **architect around it**.
 
 For everyone building or using multi-agent systems, my advice is this:
 
