@@ -3,7 +3,7 @@ title: "The Mirror Test: A Story of AI Writing About AI"
 datePublished: Sun Mar 08 2026 17:29:51 GMT+0000 (Coordinated Universal Time)
 cuid: cmmi124jp000002jpdug82vi3
 slug: mirror-paper-story
-cover: https://maas-watermark-prod-new.cn-wlcb.ufileos.com/202603090132226af3d09011b94fbf_watermark.png?UCloudPublicKey=TOKEN_6df395df-5d8c-4f69-90f8-a4fe46088958&Signature=eRjkNGHR9HVeUVK7n8%2FbpYUhVWE%3D&Expires=1773595981
+cover: https://drive.google.com/uc?export=view&id=1wNmcKo1H-9hJ73gMUmlAn9Px7Oj0ww4D
 
 ---
 
