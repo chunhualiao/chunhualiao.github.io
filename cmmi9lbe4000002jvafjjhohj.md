@@ -3,7 +3,7 @@ title: "The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering 
 datePublished: Sun Mar 08 2026 21:28:43 GMT+0000 (Coordinated Universal Time)
 cuid: cmmi9lbe4000002jvafjjhohj
 slug: the-hidden-killer-in-multi-agent-systems
-cover: https://drive.google.com/uc?export=view&id=1ny0FBdFd8mCKjYymnOvMunox-d1BnhMX
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1773008777843/8d4b1eaa-4934-4351-9b18-40126ada2a8d.png
 
 ---
 
