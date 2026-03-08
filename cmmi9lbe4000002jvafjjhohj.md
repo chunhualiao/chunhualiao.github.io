@@ -10,11 +10,11 @@ slug: blog-filtering-trap
 
 ## The Incident That Changed How I Think About Agent Architectures
 
-Earlier this year, I watched a simple task go sideways in the worst possible way — on **OpenClaw 2026.2.26**, running **Claude Opus 4.6** (Anthropic) as the main agent.
+Just a few days ago, I asked my AI agent to do something trivial — and watched it go sideways in the worst possible way. I'm running **OpenClaw 2026.2.26** with **Claude Opus 4.6** (Anthropic) as my main agent.
 
-A user asked their AI assistant to do something trivial: take an existing technical article about configuring a messaging platform's developer settings (API credentials and IP whitelisting), extract the relevant steps, and write a quick how-to guide for a colleague. Five minutes of work, tops.
+I had an existing technical article about configuring a messaging platform's developer settings (API credentials and IP whitelisting). All I needed was for my agent to extract the relevant steps and write a quick how-to guide I could share with a colleague. Five minutes of work, tops.
 
-What actually happened: the generated document covered seven steps instead of four, the single most critical URL — the one telling the reader *where to actually obtain the API credentials* — was silently dropped, and the user had to manually fix the output twice. A five-minute task turned into a thirty-minute exercise in frustration.
+What actually happened: the generated document covered seven steps instead of four, the single most critical URL — the one telling the reader *where to actually obtain the API credentials* — was silently dropped, and I had to manually fix the output twice. A five-minute task turned into a thirty-minute exercise in frustration.
 
 This wasn't a fluke. It wasn't a hallucination. It wasn't even a bug in the traditional sense.
 
@@ -32,13 +32,13 @@ In this case, the platform was **OpenClaw** — a multi-agent orchestration syst
 
 ### Failure #1: Scope Creep
 
-The user wanted steps for configuring API credentials and IP whitelisting. The primary agent read the source article, decided the user needed a comprehensive seven-step guide, and dispatched a subagent with those instructions. The subagent faithfully produced all seven steps.
+I wanted steps for configuring API credentials and IP whitelisting. My primary agent read the source article, decided I needed a comprehensive seven-step guide, and dispatched a subagent with those instructions. The subagent faithfully produced all seven steps.
 
-The user opened the document and immediately said: *"I don't need steps 5 through 7. Delete them."*
+I opened the document and immediately said: *"I don't need steps 5 through 7. Delete them."*
 
-But the subagent had already exited. The user had to manually edit the Google Doc themselves.
+But the subagent had already exited. I had to manually open the Google Doc and delete the extra sections myself.
 
-**Root cause:** The primary agent never confirmed scope with the user before spawning the subagent. It *assumed* it understood the requirement.
+**Root cause:** The primary agent never confirmed scope with me before spawning the subagent. It *assumed* it understood my requirement.
 
 ### Failure #2: The Critical Information That Vanished
 
@@ -50,11 +50,11 @@ The source article contained a specific, critical sentence:
 
 This URL was the entire point of the how-to guide. Without it, a reader has no idea where to go to get the credentials. The guide is useless.
 
-The primary agent (Claude Opus 4.6) read the source article. It understood this information. Then it wrote a "refined" set of instructions for the subagent — and in that process, **the URL disappeared**.
+My primary agent (Claude Opus 4.6) read the source article. It understood this information. Then it wrote a "refined" set of instructions for the subagent — and in that process, **the URL disappeared**.
 
 The subagent (Claude Sonnet 4.6), working only from the primary agent's instructions, produced a document that looked polished and complete. It had proper formatting, clear step numbering, professional language. But the most important piece of information — the URL — was simply absent.
 
-The user caught it and was furious: *"Why didn't you just give the full article to the subagent? Why did you summarize it first?"*
+I caught it and was furious: *"Why didn't you just give the full article to the subagent? Why did you summarize it first?"*
 
 That question cut straight to the heart of a deep architectural problem.
 
@@ -230,7 +230,7 @@ For document-generation tasks, the primary agent should produce an outline for u
 4. Primary agent spawns subagent with confirmed scope
 5. Subagent executes
 
-This checkpoint catches understanding gaps early. In the incident above, if the primary agent had shown a 7-step outline first, the user would have immediately said "only the first 4 steps" — avoiding all downstream rework.
+This checkpoint catches understanding gaps early. In my incident, if the primary agent had shown a 7-step outline first, I would have immediately said "only the first 4 steps" — avoiding all downstream rework.
 
 ### 5. Pre-Spawn Checklist: 3 Seconds of Prevention
 
@@ -270,7 +270,7 @@ If you're designing or operating multi-agent systems, here are the core principl
 
 ## Conclusion
 
-This article grew out of a real incident — observed firsthand on OpenClaw 2026.2.26, with Claude Opus 4.6 as the orchestrating primary agent and Claude Sonnet 4.6 as the writing subagent. A trivial task exposed a deep architectural trap in multi-agent systems.
+I wrote this because of what happened to me just days ago — running OpenClaw 2026.2.26, with Claude Opus 4.6 as my primary agent and Claude Sonnet 4.6 as the writing subagent. A trivial task exposed a deep architectural trap in multi-agent systems.
 
 The trap is dangerous precisely because it isn't an obvious bug — it's a side effect of LLMs' most fundamental capability (understanding and generating text) operating within a delegation architecture. You can't "fix" it by upgrading models. You can only **architect around it**.
 
@@ -280,7 +280,7 @@ For everyone building or using multi-agent systems, my advice is this:
 
 Information is the most valuable cargo in your system. Every unnecessary round of "understanding" and "rewriting" is a lossy operation on that cargo. Reducing the number of lossy operations is the core strategy for improving system reliability.
 
-Remember the user's devastating question: *"Why didn't you just give the full article to the subagent? Why did you summarize it first?"*
+Remember my question to the agent that day: *"Why didn't you just give the full article to the subagent? Why did you summarize it first?"*
 
 The answer to that question is the key to solving multi-agent information loss.
 
