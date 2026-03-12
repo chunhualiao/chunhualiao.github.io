@@ -6,7 +6,7 @@ slug: introducing-telegram-codex-bridge-talk-to-a-local-codex-cli-from-telegram
 
 ---
 
-Sometimes I want to say “Codex, do the thing on my machine” while I’m away from my desk, on my phone, in a taxi, or between meetings. That was the whole reason I built [**telegram-codex-bridge**](https://github.com/chunhualiao/telegram-codex-bridge): I wanted Telegram to feel like a lightweight remote control for a **local** Codex CLI session running on a computer I control. [Source](https://github.com/chunhualiao/telegram-codex-bridge)
+Sometimes I want to say “Codex, do the thing on my machine” while I’m away from my desk, on my phone, in a taxi, or between meetings. That was the whole reason I built [**telegram-codex-bridge**](https://github.com/chunhualiao/telegram-codex-bridge): I wanted Telegram to feel like a lightweight remote control for a **local** Codex CLI session running on a computer I control.
 
 The motivation came directly from **OpenClaw**. I really like the feel of a message app interface where I can just talk to an AI agent naturally, and that led me to a simple question: could I get the same experience for a command-line coding agent like **Codex CLI**?
 
@@ -20,9 +20,9 @@ So I opened up **Codex with GPT-5.4** and vibe-coded this tool in **less than tw
 
 ## **What [telegram-codex-bridge](https://github.com/chunhualiao/telegram-codex-bridge) is (and what it isn’t)**
 
-At its core, this is a small Python “bridge” that **polls Telegram messages**, forwards them into **local `codex exec`**, and relays both **progress** and the **final reply** back into Telegram. I built it for a **single authorized user** talking to **one local Codex environment**, not as a hosted multi-user service. [Source](https://github.com/chunhualiao/telegram-codex-bridge)
+At its core, this is a small Python “bridge” that **polls Telegram messages**, forwards them into **local `codex exec`**, and relays both **progress** and the **final reply** back into Telegram. I built it for a **single authorized user** talking to **one local Codex environment**, not as a hosted multi-user service.
 
-I also added support for **Telegram voice/audio messages** by downloading the audio, converting it with **ffmpeg**, and transcribing it via OpenAI before sending the transcript into Codex. That part mattered to me because voice is often the most natural interface when I’m away from my desk. [Source](https://github.com/chunhualiao/telegram-codex-bridge/blob/main/SETUP_AND_USAGE.md)
+I also added support for **Telegram voice/audio messages** by downloading the audio, converting it with **ffmpeg**, and transcribing it via OpenAI before sending the transcript into Codex. That part mattered to me because voice is often the most natural interface when I’m away from my desk.
 
 ---
 
@@ -65,7 +65,7 @@ flowchart TD
     C -. lock file .-> O[state/bridge.lock]
 ```
 
-Under the hood, I store operational state on disk, things like the Telegram update offset and the Codex thread ID, so the bridge can run continuously without replaying old messages and can pick the conversation back up cleanly. [Source](https://github.com/chunhualiao/telegram-codex-bridge/blob/main/SETUP_AND_USAGE.md)
+Under the hood, I store operational state on disk, things like the Telegram update offset and the Codex thread ID, so the bridge can run continuously without replaying old messages and can pick the conversation back up cleanly.
 
 ---
 
@@ -73,7 +73,7 @@ Under the hood, I store operational state on disk, things like the Telegram upda
 
 The setup flow I recommend is very pragmatic:
 
-First, verify the basics: Python 3, `codex` installed and logged in, and outbound network access. Then create a Telegram bot via BotFather, send it a test message so Telegram exposes a `chat.id`, fill out `.env` from `.env.example`, and **run `python3 bridge.py` in the foreground first** before attempting background or LaunchAgent setups. [Source](https://github.com/chunhualiao/telegram-codex-bridge/blob/main/SETUP_AND_USAGE.md)
+First, verify the basics: Python 3, `codex` installed and logged in, and outbound network access. Then create a Telegram bot via BotFather, send it a test message so Telegram exposes a `chat.id`, fill out `.env` from `.env.example`, and **run `python3 bridge.py` in the foreground first** before attempting background or LaunchAgent setups.
 
 The `.env.example` is straightforward: Telegram credentials, allowlist IDs, a passphrase, Codex runtime knobs, and optional OpenAI transcription settings for voice. 
 
@@ -83,9 +83,9 @@ The `.env.example` is straightforward: Telegram credentials, allowlist IDs, a pa
 
 I kept the command set intentionally small:
 
-`/start` returns a readiness message, `/status` tells you whether there’s a saved Codex thread and which workdir is configured, and `/reset` clears the saved thread so the next prompt starts fresh. [Source](https://github.com/chunhualiao/telegram-codex-bridge/blob/main/SETUP_AND_USAGE.md)
+`/start` returns a readiness message, `/status` tells you whether there’s a saved Codex thread and which workdir is configured, and `/reset` clears the saved thread so the next prompt starts fresh.
 
-Everything else is treated as a normal prompt and forwarded into Codex, so I can ask things like “review this repo,” “run tests,” or “create a script,” assuming my local Codex is allowed to do that and my `CODEX_FLAGS` support the workflow I want. That simplicity was part of the point. [Source](https://github.com/chunhualiao/telegram-codex-bridge)
+Everything else is treated as a normal prompt and forwarded into Codex, so I can ask things like “review this repo,” “run tests,” or “create a script,” assuming my local Codex is allowed to do that and my `CODEX_FLAGS` support the workflow I want. That simplicity was part of the point.
 
 ---
 
@@ -103,9 +103,9 @@ This repo is powerful enough to be dangerous if I run it casually, because it ca
 
 The safety model is simple:
 
-It only accepts messages from one allowed Telegram chat or user, keeps the bot token in `.env`, and includes an inactivity lock that forces the configured passphrase after a timeout. It also explicitly warns that `--full-auto` reduces approval friction and is not appropriate for untrusted environments, so I think about this as remote control for my own machine, not a shared bot. [Source](https://github.com/chunhualiao/telegram-codex-bridge) [Source](https://github.com/chunhualiao/telegram-codex-bridge/blob/main/SETUP_AND_USAGE.md) [Source](https://github.com/chunhualiao/telegram-codex-bridge/blob/main/bridge.py)
+It only accepts messages from one allowed Telegram chat or user, keeps the bot token in `.env`, and includes an inactivity lock that forces the configured passphrase after a timeout. It also explicitly warns that `--full-auto` reduces approval friction and is not appropriate for untrusted environments, so I think about this as remote control for my own machine, not a shared bot.
 
-If the bot token leaks, someone can interact with the bot via the Telegram API until it is rotated, so I treat `.env` like a password vault entry. [Source](https://github.com/chunhualiao/telegram-codex-bridge/blob/main/SETUP_AND_USAGE.md)
+If the bot token leaks, someone can interact with the bot via the Telegram API until it is rotated, so I treat `.env` like a password vault entry.
 
 ---
 
@@ -113,10 +113,10 @@ If the bot token leaks, someone can interact with the bot via the Telegram API u
 
 Two details have already saved me real time:
 
-I use a PID lock file (`state/bridge.lock`) to avoid multiple pollers, because Telegram can respond with **409 Conflict** if more than one process polls `getUpdates`. I also recommend foreground runs first so I can debug real network and CLI issues before adding background or `launchd` complexity. It is one of those cases where the boring operational details matter more than the flashy part. [Source](https://github.com/chunhualiao/telegram-codex-bridge/blob/main/SETUP_AND_USAGE.md) [Source](https://github.com/chunhualiao/telegram-codex-bridge/blob/main/bridge.py)
+I use a PID lock file (`state/bridge.lock`) to avoid multiple pollers, because Telegram can respond with **409 Conflict** if more than one process polls `getUpdates`. I also recommend foreground runs first so I can debug real network and CLI issues before adding background or `launchd` complexity. It is one of those cases where the boring operational details matter more than the flashy part.
 
 ---
 
 ## **License**
 
-I released the repository under the **MIT License**. [Source](https://github.com/chunhualiao/telegram-codex-bridge/blob/main/LICENSE)
+I released the repository under the **MIT License**.
