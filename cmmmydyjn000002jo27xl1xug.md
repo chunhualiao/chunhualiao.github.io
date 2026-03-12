@@ -3,6 +3,7 @@ title: "Introducing telegram-codex-bridge: talk to a local Codex CLI from Telegr
 datePublished: Thu Mar 12 2026 04:13:55 GMT+0000 (Coordinated Universal Time)
 cuid: cmmmydyjn000002jo27xl1xug
 slug: introducing-telegram-codex-bridge-talk-to-a-local-codex-cli-from-telegram
+cover: https://raw.githubusercontent.com/chunhualiao/telegram-codex-bridge/main/assets/hashnode-cover.png
 
 ---
 
