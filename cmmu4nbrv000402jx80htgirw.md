@@ -3,8 +3,7 @@ title: "Your AI Assistant Should Not Also Be Your Autocrat"
 datePublished: Tue Mar 17 2026 04:43:33 GMT+0000 (Coordinated Universal Time)
 cuid: cmmu4nbrv000402jx80htgirw
 slug: your-ai-assistant-should-not-also-be-your-autocrat
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1773722611794/4a78073a-97be-4d47-b77b-58d76e899a4b.png
-tags: ai, security, ai-agents
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1773723744093/e468f3d1-0775-4f0c-88d7-d34897386f31.png
 
 ---
 
