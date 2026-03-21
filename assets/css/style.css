@@ -1847,17 +1847,16 @@ a.research-card-link:hover .research-card .learn-more {
 .work-card {
   display: block;
   padding: 1.25rem;
-  background: rgba(255,255,255,0.06);
+  background: var(--surface);
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .work-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  background: rgba(255,255,255,0.1);
+  box-shadow: var(--shadow);
 }
 .work-icon {
   font-size: 1.8rem;
@@ -1867,12 +1866,12 @@ a.research-card-link:hover .research-card .learn-more {
   font-size: 1.05rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
-  color: var(--cream, #f8fafc);
+  color: var(--text-dark);
 }
 .work-card p {
   font-size: 0.9rem;
   line-height: 1.5;
-  color: rgba(253,250,247,0.75);
+  color: var(--text-body);
   margin: 0;
 }
 .featured-project {
@@ -1885,7 +1884,7 @@ a.research-card-link:hover .research-card .learn-more {
 .subsection-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
-  color: var(--cream, #f8fafc);
+  color: var(--text-dark);
   margin-top: 2.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
