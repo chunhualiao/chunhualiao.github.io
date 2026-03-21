@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <a href="#post-content" class="sr-only skip-link">Skip to main content</a>
+  {% include header.html %}
+  <main id="top">
+    <section class="post-header-section">
+      <div class="container post-header-inner">
+        <a href="{{ '/blog.html' | relative_url }}" class="back-to-blog">&larr; Back to Blog</a>
+        <div class="post-header-meta">
+          <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="post-date">{{ page.date | date: "%B %d, %Y" }}</time>
+          {% if page.category == 'tech' %}
+          <span class="category-badge cat-tech">Tech & AI</span>
+          {% else %}
+          <span class="category-badge cat-thoughts">Life & Thoughts</span>
+          {% endif %}
+        </div>
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.tags and page.tags.size > 0 %}
+        <div class="post-tags">
+          {% for tag in page.tags %}
+          <span class="tag-pill">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </section>
+    <article id="post-content" class="post-content-section" aria-label="Article content">
+      <div class="container post-content-inner">
+        <div class="post-body">
+          {{ content }}
+        </div>
+        {% if page.original_url %}
+        <p class="post-original-link">Originally published on <a href="{{ page.original_url }}" target="_blank" rel="noopener">Hashnode &rarr;</a></p>
+        {% endif %}
+        <hr class="post-divider" />
+
+        {% comment %}Post navigation — site.posts is newest-first{% endcomment %}
+        <nav class="post-nav-links" aria-label="Post navigation">
+          {% if page.next %}
+          <a href="{{ page.next.url | relative_url }}" class="post-nav-link prev">&larr; {{ page.next.title | truncate: 60 }}</a>
+          {% endif %}
+          {% if page.previous %}
+          <a href="{{ page.previous.url | relative_url }}" class="post-nav-link next">{{ page.previous.title | truncate: 60 }} &rarr;</a>
+          {% endif %}
+        </nav>
+        <div class="post-back-wrap">
+          <a href="{{ '/blog.html' | relative_url }}" class="btn btn-secondary">&larr; All Posts</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

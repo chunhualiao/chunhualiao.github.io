@@ -1,3 +1,7 @@
+---
+layout: none
+title: "Blog"
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=3" />
+  <link rel="stylesheet" href="assets/css/style.css?v=4" />
 </head>
 <body>
   <a href="#blog-hero" class="sr-only skip-link">Skip to main content</a>
@@ -36,324 +40,41 @@
     </section>
     <section class="section-light blog-listing-section">
       <div class="container">
+        {% assign tech_count = 0 %}
+        {% assign thoughts_count = 0 %}
+        {% for post in site.posts %}
+          {% if post.category == 'tech' %}{% assign tech_count = tech_count | plus: 1 %}{% else %}{% assign thoughts_count = thoughts_count | plus: 1 %}{% endif %}
+        {% endfor %}
         <div class="blog-filter-bar" role="group" aria-label="Filter posts by category">
-          <button class="filter-btn active" data-filter="all">All <span class="filter-count">26</span></button>
-          <button class="filter-btn" data-filter="tech">Tech &amp; AI <span class="filter-count">13</span></button>
-          <button class="filter-btn" data-filter="thoughts">Life &amp; Thoughts <span class="filter-count">13</span></button>
+          <button class="filter-btn active" data-filter="all">All <span class="filter-count">{{ site.posts.size }}</span></button>
+          <button class="filter-btn" data-filter="tech">Tech &amp; AI <span class="filter-count">{{ tech_count }}</span></button>
+          <button class="filter-btn" data-filter="thoughts">Life &amp; Thoughts <span class="filter-count">{{ thoughts_count }}</span></button>
         </div>
         <div class="post-grid" id="postGrid">
-    <article class="post-card" data-category="tech">
-      <a href="blog/your-ai-assistant-should-not-also-be-your-autocrat.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2026-03-17" class="post-date">March 17, 2026</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">Your AI Assistant Should Not Also Be Your Autocrat</h2>
-        <p class="post-card-desc">&quot;The smartest personal agent is often the most dangerous one, unless I split memory, execution, and approval into separate roles.</p>
-        
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/introducing-telegram-codex-bridge-talk-to-a-local-codex-cli-from-telegram.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2026-03-12" class="post-date">March 12, 2026</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">Introducing telegram-codex-bridge: talk to a local Codex CLI from Telegram</h2>
-        <p class="post-card-desc">Sometimes I want to say “Codex, do the thing on my machine” while I’m away from my desk, on my phone, in a taxi, or between meetings. That was the whole reason I built telegram-codex-bridge: I wanted </p>
-        
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/the-right-way-to-use-openclaw-raise-it-like-a-partner-not-a-tool-1.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2026-03-12" class="post-date">March 12, 2026</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">The Right Way to Use OpenClaw: Raise It Like a Partner, Not a Tool</h2>
-        <p class="post-card-desc">&quot;The Right Way to Use OpenClaw: Raise It Like a Partner, Not a Tool</p>
-        <div class="post-tags"><span class="tag-pill">ai agents</span><span class="tag-pill">openclaw</span><span class="tag-pill">automation</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/mirror-paper-story.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2026-03-08" class="post-date">March 08, 2026</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">The Mirror Test: A Story of AI Writing About AI</h2>
-        <p class="post-card-desc">&quot;The Mirror Test: A Story of AI Writing About AI</p>
-        
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/the-hidden-killer-in-multi-agent-systems.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2026-03-08" class="post-date">March 08, 2026</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management</h2>
-        <p class="post-card-desc">&quot;The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management</p>
-        
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/from-thrones-to-algorithms-how-ancient-emperors-teach-us-to-govern-superhuman-ai.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2025-07-23" class="post-date">July 23, 2025</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">From Thrones to Algorithms: How Ancient Emperors Teach Us to Govern Superhuman AI</h2>
-        <p class="post-card-desc">&quot;Introduction: A Timeless Dilemma</p>
-        <div class="post-tags"><span class="tag-pill">AI</span><span class="tag-pill">Governance</span><span class="tag-pill">emperor</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/rethinking-success-how-young-people-can-build-their-future-outside-university-walls.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2025-06-09" class="post-date">June 09, 2025</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">Rethinking Success: How Young People Can Build Their Future Outside University Walls</h2>
-        <p class="post-card-desc">&quot;Do you feel that the walls of traditional universities have trapped your child’s ambition to change the world? Does your child have a disruptive idea and can’t wait to make it a reality?</p>
-        <div class="post-tags"><span class="tag-pill">university</span><span class="tag-pill">Entrepreneurship</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/paying-2770month-for-health-insurance-and-waiting-34-weeks-for-a-doctor.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2025-05-18" class="post-date">May 18, 2025</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">Paying $2,770/Month for Health Insurance — and Waiting 3–4 Weeks for a Doctor?</h2>
-        <p class="post-card-desc">&quot;I don’t go to the doctor often. But when I do, I expect to be able to see one without waiting nearly a month.</p>
-        <div class="post-tags"><span class="tag-pill">freemarket</span><span class="tag-pill">healthcare</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/from-1787-to-the-red-planet-rethinking-constitutional-design.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2025-04-21" class="post-date">April 21, 2025</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">From 1787 to the Red Planet: Rethinking Constitutional Design</h2>
-        <p class="post-card-desc">Assume that a sufficient number of humans have migrated to Mars and now need to form an independent colony with a perfect Constitution. Please use first principles thinking to draft a complete Constit</p>
-        <div class="post-tags"><span class="tag-pill">consitution</span><span class="tag-pill">mars</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/why-mars-needs-a-new-rulebookand-what-makes-it-better-than-the-us-constitution.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2025-04-21" class="post-date">April 21, 2025</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">Why Mars Needs a New Rulebook—and What Makes It Better Than the U.S. Constitution</h2>
-        <p class="post-card-desc">Question: Assume that a sufficient number of humans have migrated to Mars and now need to form an independent colony with a perfect Constitution. Please use first principles thinking to draft a comple</p>
-        <div class="post-tags"><span class="tag-pill">Constitution</span><span class="tag-pill">First Principles</span><span class="tag-pill">mars</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/100-most-common-fatal-mistakes-in-life-an-encyclopedia-of-pitfalls.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2025-04-09" class="post-date">April 09, 2025</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">100 Most Common Fatal Mistakes in Life: An Encyclopedia of Pitfalls</h2>
-        <p class="post-card-desc">&quot;Introduction: The Wisdom of Inversion Thinking</p>
-        <div class="post-tags"><span class="tag-pill">Life lessons</span><span class="tag-pill">inversion thinking</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/why-cant-china-just-happily-consume-what-it-produces.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2025-04-09" class="post-date">April 09, 2025</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">Why Can’t China Just Happily Consume What It Produces?</h2>
-        <p class="post-card-desc">I don't quite understand the trouble China is having right now. China can already produce a lot of things for what even the entire world will need. They do not have to export goods to have a good life</p>
-        <div class="post-tags"><span class="tag-pill">china</span><span class="tag-pill">self-sufficiency</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/weekend-chat-with-my-older-son-about-future-trends.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2024-06-09" class="post-date">June 09, 2024</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">Weekend Chat with My Older Son about Future Trends</h2>
-        <p class="post-card-desc">During the summer vacation, my 15-year-old eldest son Alex is immersed in a programming project purely out of interest. His goal is to develop an iPhone app for his high school that reminds students o</p>
-        <div class="post-tags"><span class="tag-pill">future career</span><span class="tag-pill">AI</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/why-is-the-field-of-artificial-intelligence-developing-so-successfully.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2024-03-09" class="post-date">March 09, 2024</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">Why Is the Field of Artificial Intelligence Developing So Successfully?</h2>
-        <p class="post-card-desc">Recently, I have been thinking about why the research and development field of artificial intelligence (AI) or machine learning (ML) has been so successful and continuously achieves significant breakt</p>
-        <div class="post-tags"><span class="tag-pill">research ecosystem</span><span class="tag-pill">AI</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/the-deepest-driving-force-of-innovation-the-mindset-of-equality-for-all.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2023-06-11" class="post-date">June 11, 2023</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">The Deepest Driving Force of Innovation: The Mindset of Equality for All</h2>
-        <p class="post-card-desc">Recently, there has been a discussion on how to overcome the middle-income trap. Economic development is driven by three main factors: increasing labor (labor-intensive), increasing investment (capita</p>
-        <div class="post-tags"><span class="tag-pill">innovation-by-equality</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/dont-worry-because-there-are-only-5-things-in-life-you-need-to-focus-on.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2023-06-10" class="post-date">June 10, 2023</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">Don't Worry, Because There Are Only 5 Things in Life You Need to Focus On</h2>
-        <p class="post-card-desc">My older son, Alex, is currently 14 and a half years old and has just graduated from junior high school. In the eyes of others, he is already a very excellent student. For example, his school grades a</p>
-        <div class="post-tags"><span class="tag-pill">5 priorities in life</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/a-systematic-approach-to-innovation.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2023-02-11" class="post-date">February 11, 2023</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">A Systematic Approach to Innovation</h2>
-        <p class="post-card-desc">This weekend, I’d like to jot down some random thoughts once more. This time, the topic is innovation. Allow me to first express my perspective: innovation is not mysterious, and there exists a set of</p>
-        <div class="post-tags"><span class="tag-pill">systemic approach</span><span class="tag-pill">innovation</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/key-takeaways-from-30-classic-investment-books-summarized-by-chatgpt.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2023-01-29" class="post-date">January 29, 2023</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">Key Takeaways from 30 Classic Investment Books Summarized by ChatGPT</h2>
-        <p class="post-card-desc">&quot;Original Chinese version: https://mp.weixin.qq.com/s/05AvVQf9NCZlHR6Q0FF-Cg</p>
-        <div class="post-tags"><span class="tag-pill">Investment</span><span class="tag-pill">chatgpt</span><span class="tag-pill">book summary</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/book-notes-on-critical-thinking-skills-for-dummies.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2023-01-15" class="post-date">January 15, 2023</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">Book Notes on Critical Thinking Skills For Dummies</h2>
-        <p class="post-card-desc">At the end of last year, I wrote an article titled \&quot;Sharing Ideas for New Products, Services, and Research Directions.\&quot; The second idea in that article was an \&quot;Automated Critical Thinking Assistant…</p>
-        <div class="post-tags"><span class="tag-pill">Critical Thinking</span><span class="tag-pill">BookReview</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/things-i-want-to-do-sharing-some-ideas-for-new-products-services-and-research-directions.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2022-11-05" class="post-date">November 05, 2022</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">Things I Want to Do: Sharing Some Ideas for New Products, Services, and Research Directions</h2>
-        <p class="post-card-desc">Recently, I found that I have too many scattered ideas and not enough energy to implement them all. Often, coming up with an idea takes just a few minutes, but scaling and implementing an impactful id</p>
-        <div class="post-tags"><span class="tag-pill">new products and services</span><span class="tag-pill">ideas</span><span class="tag-pill">TODOLIST</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/quantifying-the-independence-of-americans.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2022-07-27" class="post-date">July 27, 2022</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">Quantifying the Independence of Americans</h2>
-        <p class="post-card-desc">This year’s American Independence Day holiday prompted me to reflect on the meaning of independence and consider if there are any quantitative measures to assess it. After pondering the topic intermit</p>
-        <div class="post-tags"><span class="tag-pill">quantify independence</span><span class="tag-pill">Independence Day</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/thinking-about-the-nature-of-intelligence-part-4-execution.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2019-12-26" class="post-date">December 26, 2019</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">Thinking About the Nature of Intelligence (Part 4) Execution</h2>
-        <p class="post-card-desc">Today my family continued skiing at the Lake Tahoe ski resort, and I continued to have nothing much to do, so I wrote something :-） This article is the final piece in the series \&quot;Thinking About the N…</p>
-        <div class="post-tags"><span class="tag-pill">Intelligence</span><span class="tag-pill">execution</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/thinking-about-the-nature-of-intelligence-part-3-decision-making.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2019-12-25" class="post-date">December 25, 2019</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">Thinking About the Nature of Intelligence (Part 3): Decision Making</h2>
-        <p class="post-card-desc">During the Christmas holiday, I was accompanying my family skiing at Lake Tahoe in California. For various reasons, I don't ski, so with nothing much to do, I continued to entertain myself by writing </p>
-        <div class="post-tags"><span class="tag-pill">decision making</span><span class="tag-pill">Intelligence</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-2.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2019-12-24" class="post-date">December 24, 2019</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">Thinking About the Nature of Intelligence for Education and Self-Improvement (Part 2)</h2>
-        <p class="post-card-desc">Continuing from the previous article (Part 1), which explored the nature of expanded intelligence (Goal Setting + Learning + Modeling + Perception + Prediction + Decision Making + Execution). This art</p>
-        <div class="post-tags"><span class="tag-pill">modeling</span><span class="tag-pill">prediction</span><span class="tag-pill">perception</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="tech">
-      <a href="blog/thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-1.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2019-12-22" class="post-date">December 22, 2019</time>
-          <span class="category-badge cat-tech">Tech & AI</span>
-        </div>
-        <h2 class="post-card-title">Thinking About the Nature of Intelligence for Education and Self-Improvement (Part 1)</h2>
-        <p class="post-card-desc">Though I'm not academically accomplished, friends and family in China still ask me about educating children. I have two kids myself and constantly need to learn and improve at work. Educating others a</p>
-        <div class="post-tags"><span class="tag-pill">Intelligence</span><span class="tag-pill">goal-setting</span><span class="tag-pill">learning</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
-    <article class="post-card" data-category="thoughts">
-      <a href="blog/why-chinese-professionals-in-silicon-valley-appear-to-lag-behind-their-indian-counterparts.html" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="2019-12-14" class="post-date">December 14, 2019</time>
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-        </div>
-        <h2 class="post-card-title">Why Chinese Professionals in Silicon Valley Appear to Lag Behind Their Indian Counterparts</h2>
-        <p class="post-card-desc">This topic is a perennial hot topic in Silicon Valley. Some Chinese professionals consider themselves elites, but their career progression in Silicon Valley is often not ideal, hitting a ceiling after</p>
-        <div class="post-tags"><span class="tag-pill">chinese vs indians</span><span class="tag-pill">silicon valley</span><span class="tag-pill">Career</span></div>
-        <span class="post-read-more">Read more &rarr;</span>
-      </a>
-    </article>
+          {% for post in site.posts %}
+          <article class="post-card" data-category="{{ post.category | default: 'thoughts' }}">
+            <a href="{{ post.url | relative_url }}" class="post-card-link">
+              <div class="post-card-meta">
+                <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">{{ post.date | date: "%B %-d, %Y" }}</time>
+                {% if post.category == 'tech' %}
+                <span class="category-badge cat-tech">Tech & AI</span>
+                {% else %}
+                <span class="category-badge cat-thoughts">Life & Thoughts</span>
+                {% endif %}
+              </div>
+              <h2 class="post-card-title">{{ post.title }}</h2>
+              <p class="post-card-desc">{{ post.description | default: post.excerpt | strip_html | truncate: 200 }}</p>
+              {% if post.tags and post.tags.size > 0 %}
+              <div class="post-tags">
+                {% for tag in post.tags %}
+                <span class="tag-pill">{{ tag }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+              <span class="post-read-more">Read more &rarr;</span>
+            </a>
+          </article>
+          {% endfor %}
         </div>
         <p class="no-posts-msg" id="noPostsMsg" style="display:none">No posts found.</p>
       </div>

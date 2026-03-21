@@ -1,16 +1,32 @@
 # Jekyll / GitHub Pages config
-# This site uses plain HTML/CSS/JS — Jekyll is not required but this
-# file tells GitHub Pages to serve it as-is.
-
-title: "Chunhua (Leo) Liao | LLNL Computer Scientist"
-description: "Personal academic website of Dr. Chunhua (Leo) Liao, Senior Computer Scientist at Lawrence Livermore National Laboratory."
+title: "Chunhua Liao"
+description: "Blog and personal site of Dr. Chunhua Liao — AI, compilers, and the messy future of humans working with machines."
 url: ""
 baseurl: ""
 
-# If deploying to GitHub Pages user site:
-# url: "https://chunhualiao.github.io"
+# Permalink: match existing /blog/{slug}.html URLs
+permalink: /blog/:slug.html
+
+# Collections / defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 # Exclude non-web files from build
 exclude:
   - README.md
   - "*.sh"
+  - "*.py"
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .git
+
+# Keep existing folders
+include:
+  - assets
+  - research

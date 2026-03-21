@@ -423,6 +423,15 @@ h1, h2, h3, h4 {
 /* ─── HERO TEXT ──────────────────────────────────────────── */
 .hero-text { flex: 1; min-width: 0; }
 
+/* No-photo hero: center the text */
+.hero-no-photo {
+  justify-content: center;
+  text-align: center;
+}
+.hero-no-photo .hero-text { max-width: 720px; }
+.hero-no-photo .hero-now { text-align: left; display: inline-block; }
+.hero-no-photo .hero-links { justify-content: center; }
+
 .hero-label {
   display: inline-block;
   font-size: 0.82rem;

@@ -3,7 +3,7 @@ title: "Book Notes on Critical Thinking Skills For Dummies"
 date: 2023-01-15
 slug: book-notes-on-critical-thinking-skills-for-dummies
 category: thoughts
-tags: [Critical Thinking, #BookReview]
+tags: [Critical Thinking, BookReview]
 description: "At the end of last year, I wrote an article titled \"Sharing Ideas for New Products, Services, and Research Directions.\" The second idea in that article was an \"Automated Critical Thinking Assistant.\" "
 original_url: "https://chunhualiao.hashnode.dev/book-notes-on-critical-thinking-skills-for-dummies"
 ---
