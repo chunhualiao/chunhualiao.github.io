@@ -1,0 +1,128 @@
+---
+layout: none
+title: "Work"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Research and software by Chunhua Liao — compilers, AI-assisted programming, HPC, and parallel computing." />
+  <title>Work | Chunhua Liao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=5" />
+</head>
+<body>
+  <a href="#work-hero" class="sr-only skip-link">Skip to main content</a>
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html">Chunhua Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="topics.html">Topics</a></li>
+        <li><a href="index.html#about-me">About</a></li>
+        <li><a href="work.html" class="nav-active">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="top">
+    <section id="work-hero" class="blog-hero">
+      <div class="container blog-hero-inner">
+        <p class="hero-label">The Day Job</p>
+        <h1 class="blog-hero-title">Research & Code</h1>
+        <p class="blog-hero-subtitle">Compilers, HPC, AI tools — the stuff behind the blog posts.</p>
+      </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section id="research" class="section-light">
+      <div class="container">
+        <h2 class="section-title">Research Areas</h2>
+        <div class="work-grid">
+          <a href="research/ai-assisted-programming.html" class="work-card">
+            <div class="work-icon">🤖</div>
+            <h3>AI-Assisted Programming</h3>
+            <p>CompilerGPT, HPC-GPT, Fortran2CPP — using LLMs to make programming less painful.</p>
+          </a>
+          <a href="research/compiler-technologies.html" class="work-card">
+            <div class="work-icon">🧩</div>
+            <h3>Compiler Technologies</h3>
+            <p>The ROSE compiler and source-to-source transformation for scientific codes.</p>
+          </a>
+          <a href="research/parallel-programming.html" class="work-card">
+            <div class="work-icon">⚡</div>
+            <h3>Parallel Programming</h3>
+            <p>OpenMP, automatic parallelization, and making HPC accessible.</p>
+          </a>
+          <a href="research/correctness-verification.html" class="work-card">
+            <div class="work-icon">🔍</div>
+            <h3>Correctness & Verification</h3>
+            <p>DataRaceBench, AutoParBench — you can't fix what you can't measure.</p>
+          </a>
+          <a href="research/hpc-performance.html" class="work-card">
+            <div class="work-icon">📊</div>
+            <h3>HPC Performance</h3>
+            <p>AI-guided performance engineering for scientific applications.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="software" class="section-dark">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="work-grid">
+          <a href="/blog/mirror-paper-story.html" class="work-card featured-project">
+            <div class="work-icon">🤖</div>
+            <h3>AI-Automated Research</h3>
+            <p>Using AI agents to automate the full research lifecycle — from literature review to hypothesis generation, writing, and peer-review preparation.</p>
+            <span class="sw-tag new">New 2026</span>
+          </a>
+          <a href="https://github.com/chunhualiao/openclaw-paradigm-book" target="_blank" rel="noopener" class="work-card featured-project">
+            <div class="work-icon">📖</div>
+            <h3>OpenClaw Paradigm Book</h3>
+            <p>88,000+ words written by 5 AI agents in 5 hours. A book about AI-native patterns that was itself built with AI-native patterns.</p>
+            <span class="sw-tag new">New 2026</span>
+          </a>
+          <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="work-card featured-project">
+            <div class="work-icon">🌹</div>
+            <h3>ROSE Compiler</h3>
+            <p>Open-source compiler infrastructure for scientific code analysis and transformation. R&D 100 Award 2009.</p>
+          </a>
+          <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="work-card featured-project">
+            <div class="work-icon">💬</div>
+            <h3>CompilerGPT</h3>
+            <p>Making compilers explain themselves in plain English using LLMs.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="section-light">
+      <div class="container" style="text-align:center;">
+        <h2 class="section-title">Publications</h2>
+        <p class="section-subtitle">2,246+ citations across 90+ peer-reviewed papers.</p>
+        <div style="margin-top:var(--space-lg);">
+          <a href="https://scholar.google.com/citations?user=9IY55CsAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-primary">
+            View All on Google Scholar →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Chunhua Liao &middot; Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub"><a href="index.html">Home</a> &middot; <a href="blog.html">Blog</a> &middot; <a href="#top">Back to top &uarr;</a></p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

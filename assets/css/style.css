@@ -1905,6 +1905,51 @@ a.research-card-link:hover .research-card .learn-more {
   .about-prose { font-size: 1rem; }
 }
 
+/* ===== Topics Showcase (Homepage) ===== */
+.topics-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+.topic-showcase-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 1.2rem 1.4rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.topic-showcase-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.12);
+  border-color: var(--accent);
+}
+
+.topic-showcase-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.topic-showcase-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #1e293b;
+}
+
+.topic-showcase-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0.2rem 0 0;
+}
+
 /* ===== Topics Page ===== */
 .topic-section { padding: var(--space-xl) 0; }
 

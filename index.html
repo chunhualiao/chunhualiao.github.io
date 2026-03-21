@@ -34,9 +34,9 @@ layout: none
       </button>
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="#blog-preview">Blog</a></li>
-        <li><a href="topics.html">Topics</a></li>
+        <li><a href="#topics">Topics</a></li>
         <li><a href="#about-me">About</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="work.html">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -131,70 +131,30 @@ layout: none
       </div>
     </section>
 
-    <!-- ========== WORK (collapsed, secondary) ========== -->
-    <section id="work" class="section-dark" aria-labelledby="work-heading">
+    <!-- ========== TOPICS (prominent) ========== -->
+    <section id="topics" class="section-dark" aria-labelledby="topics-heading">
       <div class="container">
-        <h2 id="work-heading" class="section-title">Research & Code</h2>
-        <p class="section-subtitle">The day job. Compilers, HPC, AI tools — the stuff behind the blog posts.</p>
+        <h2 id="topics-heading" class="section-title">Explore by Topic</h2>
+        <p class="section-subtitle">{{ site.posts.size }} articles across 5 themes spanning 6+ years of thinking.</p>
 
-        <div class="work-grid">
-          <a href="research/ai-assisted-programming.html" class="work-card">
-            <div class="work-icon">🤖</div>
-            <h3>AI-Assisted Programming</h3>
-            <p>CompilerGPT, HPC-GPT, Fortran2CPP — using LLMs to make programming less painful.</p>
+        <div class="topics-showcase">
+          {% assign themes = "ai,governance,innovation,thinking,society" | split: "," %}
+          {% assign icons = "🤖,🏛️,💡,🧠,🌏" | split: "," %}
+          {% assign labels = "AI & Intelligence,Governance & Independence,Innovation & Entrepreneurship,Thinking & Life Strategy,Society & Culture" | split: "," %}
+          {% for theme in themes %}
+          {% assign posts = site.posts | where: "theme", theme %}
+          <a href="topics.html#theme-{{ theme }}" class="topic-showcase-card">
+            <span class="topic-showcase-icon">{{ icons[forloop.index0] }}</span>
+            <div>
+              <h3>{{ labels[forloop.index0] }}</h3>
+              <p>{{ posts.size }} articles</p>
+            </div>
           </a>
-          <a href="research/compiler-technologies.html" class="work-card">
-            <div class="work-icon">🧩</div>
-            <h3>Compiler Technologies</h3>
-            <p>The ROSE compiler and source-to-source transformation for scientific codes.</p>
-          </a>
-          <a href="research/parallel-programming.html" class="work-card">
-            <div class="work-icon">⚡</div>
-            <h3>Parallel Programming</h3>
-            <p>OpenMP, automatic parallelization, and making HPC accessible.</p>
-          </a>
-          <a href="research/correctness-verification.html" class="work-card">
-            <div class="work-icon">🔍</div>
-            <h3>Correctness & Verification</h3>
-            <p>DataRaceBench, AutoParBench — you can't fix what you can't measure.</p>
-          </a>
-          <a href="research/hpc-performance.html" class="work-card">
-            <div class="work-icon">📊</div>
-            <h3>HPC Performance</h3>
-            <p>AI-guided performance engineering for scientific applications.</p>
-          </a>
-        </div>
-
-        <h3 class="subsection-title">Featured Projects</h3>
-        <div class="work-grid">
-          <a href="/blog/mirror-paper-story.html" class="work-card featured-project">
-            <div class="work-icon">🤖</div>
-            <h3>AI-Automated Research</h3>
-            <p>Using AI agents to automate the full research lifecycle — from literature review to hypothesis generation, writing, and peer-review preparation.</p>
-            <span class="sw-tag new">New 2026</span>
-          </a>
-          <a href="https://github.com/chunhualiao/openclaw-paradigm-book" target="_blank" rel="noopener" class="work-card featured-project">
-            <div class="work-icon">📖</div>
-            <h3>OpenClaw Paradigm Book</h3>
-            <p>88,000+ words written by 5 AI agents in 5 hours. A book about AI-native patterns that was itself built with AI-native patterns.</p>
-            <span class="sw-tag new">New 2026</span>
-          </a>
-          <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="work-card featured-project">
-            <div class="work-icon">🌹</div>
-            <h3>ROSE Compiler</h3>
-            <p>Open-source compiler infrastructure for scientific code analysis and transformation. R&D 100 Award 2009.</p>
-          </a>
-          <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="work-card featured-project">
-            <div class="work-icon">💬</div>
-            <h3>CompilerGPT</h3>
-            <p>Making compilers explain themselves in plain English using LLMs.</p>
-          </a>
+          {% endfor %}
         </div>
 
         <div style="margin-top:var(--space-lg);text-align:center;">
-          <a href="https://scholar.google.com/citations?user=9IY55CsAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline">
-            All Publications on Google Scholar →
-          </a>
+          <a href="topics.html" class="btn btn-primary">Browse All Topics →</a>
         </div>
       </div>
     </section>
@@ -234,7 +194,7 @@ layout: none
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Chunhua Liao</p>
-      <p class="footer-sub"><a href="blog.html">Blog</a> · <a href="#work">Research</a> · <a href="#hero">Back to top ↑</a></p>
+      <p class="footer-sub"><a href="blog.html">Blog</a> · <a href="topics.html">Topics</a> · <a href="work.html">Work</a> · <a href="#hero">Back to top ↑</a></p>
     </div>
   </footer>
 
