@@ -1,0 +1,16 @@
+# Jekyll / GitHub Pages config
+# This site uses plain HTML/CSS/JS — Jekyll is not required but this
+# file tells GitHub Pages to serve it as-is.
+
+title: "Chunhua (Leo) Liao | LLNL Computer Scientist"
+description: "Personal academic website of Dr. Chunhua (Leo) Liao, Senior Computer Scientist at Lawrence Livermore National Laboratory."
+url: ""
+baseurl: ""
+
+# If deploying to GitHub Pages user site:
+# url: "https://chunhualiao.github.io"
+
+# Exclude non-web files from build
+exclude:
+  - README.md
+  - "*.sh"

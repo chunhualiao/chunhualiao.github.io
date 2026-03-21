@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dr. Chunhua (Leo) Liao — Senior Computer Scientist at Lawrence Livermore National Laboratory. Research in compilers, HPC, and AI-assisted programming tools." />
+  <meta name="author" content="Chunhua Liao" />
+  <meta property="og:title" content="Chunhua (Leo) Liao | LLNL Computer Scientist" />
+  <meta property="og:description" content="Senior Computer Scientist at CASC, LLNL. Research in compilers, HPC, and AI-assisted programming tools." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0a1628" />
+  <title>Chunhua (Leo) Liao | LLNL Computer Scientist</title>
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a href="#hero" class="sr-only skip-link">Skip to main content</a>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="#hero">Leo Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#software">Software</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO / ABOUT ========== -->
+    <section id="hero" aria-labelledby="hero-name">
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-photo-wrap">
+          <div class="hero-photo" aria-label="Photo of Dr. Chunhua Liao">
+            <img src="assets/images/headshot-placeholder.svg"
+                 alt="Dr. Chunhua (Leo) Liao"
+                 width="220" height="220"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <span class="photo-initials" aria-hidden="true" style="display:none">CL</span>
+          </div>
+        </div>
+        <div class="hero-text">
+          <p class="hero-label">Senior Computer Scientist</p>
+          <h1 id="hero-name">Chunhua <span class="accent">"Leo"</span> Liao</h1>
+          <p class="hero-affiliation">
+            Center for Applied Scientific Computing (CASC)<br />
+            <strong>Lawrence Livermore National Laboratory</strong>
+          </p>
+          <p class="hero-bio">
+            I work at the intersection of <strong>compiler technologies</strong>, <strong>high-performance computing (HPC)</strong>,
+            and <strong>AI-assisted programming tools</strong>. My research focuses on making parallel programs more correct, performant,
+            and accessible — from static analysis and automated parallelization to leveraging large language models for code transformation and optimization.
+          </p>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num">2,032+</span>
+              <span class="stat-label">Citations</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">R&D 100</span>
+              <span class="stat-label">Award 2009</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">20+</span>
+              <span class="stat-label">Years Research</span>
+            </div>
+          </div>
+          <div class="hero-links">
+            <a href="https://scholar.google.com/citations?user=chunhualiao" target="_blank" rel="noopener" class="btn btn-primary">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 10a8 8 0 017.162 3.44L24 9.5 12 0z"/></svg>
+              Google Scholar
+            </a>
+            <a href="https://github.com/chunhualiao" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="https://people.llnl.gov/liao6" target="_blank" rel="noopener" class="btn btn-secondary">
+              🏛️ LLNL Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT (EDUCATION) ========== -->
+    <section id="about" class="section-light" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading" class="section-title">Background</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">🎓</div>
+            <h3>Education</h3>
+            <ul class="edu-list">
+              <li>
+                <strong>Ph.D., Computer Science</strong>
+                <span>University of Houston, 2007</span>
+              </li>
+              <li>
+                <strong>M.E., Computer Science</strong>
+                <span>Sichuan University, China</span>
+              </li>
+              <li>
+                <strong>B.E., Computer Science</strong>
+                <span>Sichuan University, China</span>
+              </li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🏆</div>
+            <h3>Recognition</h3>
+            <ul class="edu-list">
+              <li>
+                <strong>R&D 100 Award</strong>
+                <span>ROSE Compiler Infrastructure, 2009</span>
+              </li>
+              <li>
+                <strong>2,032+ Citations</strong>
+                <span>Google Scholar</span>
+              </li>
+              <li>
+                <strong>Senior Computer Scientist</strong>
+                <span>LLNL CASC, ~2007–present</span>
+              </li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🔬</div>
+            <h3>Research Areas</h3>
+            <ul class="tag-list">
+              <li>Compiler Technologies</li>
+              <li>OpenMP / Parallel Programming</li>
+              <li>High-Performance Computing</li>
+              <li>AI for Code</li>
+              <li>LLM-Assisted Tools</li>
+              <li>Static Analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== RESEARCH INTERESTS ========== -->
+    <section id="research" class="section-dark" aria-labelledby="research-heading">
+      <div class="container">
+        <h2 id="research-heading" class="section-title">Research Interests</h2>
+        <p class="section-subtitle">Bridging classical compiler theory with modern AI to advance high-performance scientific computing.</p>
+        <div class="research-grid">
+
+          <div class="research-card" data-delay="0">
+            <div class="research-icon">🧩</div>
+            <h3>Compiler Technologies</h3>
+            <p>Developing advanced compiler infrastructure (ROSE) for source-to-source transformation, static analysis, and automated optimization of large-scale scientific codes.</p>
+          </div>
+
+          <div class="research-card" data-delay="100">
+            <div class="research-icon">⚡</div>
+            <h3>Parallel Programming Models</h3>
+            <p>Advancing OpenMP and other parallel programming abstractions — enabling automated parallelization, race detection, and performance tuning for HPC workloads.</p>
+          </div>
+
+          <div class="research-card" data-delay="200">
+            <div class="research-icon">🤖</div>
+            <h3>AI-Assisted Programming</h3>
+            <p>Leveraging Large Language Models (LLMs) for code optimization, Fortran-to-C++ migration, compiler report interpretation, and security intelligence — CompilerGPT, HPC-GPT, Fortran2CPP.</p>
+          </div>
+
+          <div class="research-card" data-delay="300">
+            <div class="research-icon">🔍</div>
+            <h3>Correctness & Verification</h3>
+            <p>Building benchmark suites (DataRaceBench, AutoParBench) and analysis tools to detect data races, validate auto-parallelization, and ensure correctness of parallel programs.</p>
+          </div>
+
+          <div class="research-card" data-delay="400">
+            <div class="research-icon">🛡️</div>
+            <h3>Security Intelligence</h3>
+            <p>Applying LLM-driven document clustering and NLP to cyber-security intelligence — automating threat analysis and information extraction from unstructured data.</p>
+          </div>
+
+          <div class="research-card" data-delay="500">
+            <div class="research-icon">📊</div>
+            <h3>HPC Performance Optimization</h3>
+            <p>Combining compiler analysis with AI to guide performance engineers — translating cryptic compiler reports into actionable insights for real-world scientific applications.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PUBLICATIONS ========== -->
+    <section id="publications" class="section-light" aria-labelledby="pub-heading">
+      <div class="container">
+        <h2 id="pub-heading" class="section-title">Selected Publications</h2>
+        <p class="section-subtitle">Recent work at the intersection of compilers, HPC, and AI. Full list on <a href="https://scholar.google.com/citations?user=chunhualiao" target="_blank" rel="noopener">Google Scholar</a>.</p>
+
+        <div class="pub-list">
+
+          <article class="pub-item" aria-label="Publication: CompilerGPT">
+            <div class="pub-year">2025</div>
+            <div class="pub-content">
+              <div class="pub-badges">
+                <span class="badge badge-new">New</span>
+                <span class="badge badge-venue">C3PO-HPC @ ISC 2025</span>
+              </div>
+              <h3 class="pub-title">CompilerGPT: Leveraging LLMs for Compiler Optimization Reports</h3>
+              <p class="pub-authors">Chunhua Liao et al.</p>
+              <p class="pub-desc">Uses large language models to interpret and explain compiler optimization reports, making HPC performance tuning more accessible to non-expert developers.</p>
+              <div class="pub-links">
+                <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="pub-link">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub-item" aria-label="Publication: Reductive Analysis PLDI 2025">
+            <div class="pub-year">2025</div>
+            <div class="pub-content">
+              <div class="pub-badges">
+                <span class="badge badge-new">New</span>
+                <span class="badge badge-venue">PLDI 2025</span>
+              </div>
+              <h3 class="pub-title">Reductive Analysis with Compiler-Guided LLMs for Code Optimizations</h3>
+              <p class="pub-authors">Chunhua Liao et al.</p>
+              <p class="pub-desc">A novel approach combining compiler-guided reductive analysis with LLMs to identify and apply code optimizations in complex scientific programs.</p>
+              <div class="pub-links">
+                <a href="#" class="pub-link">Paper →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub-item" aria-label="Publication: LLM-Driven Document Clustering">
+            <div class="pub-year">2025</div>
+            <div class="pub-content">
+              <div class="pub-badges">
+                <span class="badge badge-venue">ISI 2025</span>
+              </div>
+              <h3 class="pub-title">LLM-Driven Document Clustering for Security Intelligence</h3>
+              <p class="pub-authors">Chunhua Liao et al.</p>
+              <p class="pub-desc">Applies LLM-based embeddings and clustering techniques to automate threat document analysis and security intelligence extraction at scale.</p>
+              <div class="pub-links">
+                <a href="#" class="pub-link">Paper →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub-item" aria-label="Publication: Fortran2CPP">
+            <div class="pub-year">2024</div>
+            <div class="pub-content">
+              <div class="pub-badges">
+                <span class="badge badge-venue">2024</span>
+              </div>
+              <h3 class="pub-title">Fortran2CPP: Automating Fortran-to-C++ Migration using LLMs</h3>
+              <p class="pub-authors">Chunhua Liao et al.</p>
+              <p class="pub-desc">Automates legacy Fortran modernization by using LLMs to translate code to idiomatic C++, validated on real HPC scientific codebases.</p>
+              <div class="pub-links">
+                <a href="#" class="pub-link">Paper →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub-item" aria-label="Publication: HPC-GPT">
+            <div class="pub-year">2023</div>
+            <div class="pub-content">
+              <div class="pub-badges">
+                <span class="badge badge-venue">SC-W 2023</span>
+              </div>
+              <h3 class="pub-title">HPC-GPT: Integrating Large Language Models for High-Performance Computing</h3>
+              <p class="pub-authors">Chunhua Liao et al.</p>
+              <p class="pub-desc">Explores GPT-based assistance for HPC tasks including code optimization suggestions, documentation, and programming model guidance.</p>
+              <div class="pub-links">
+                <a href="#" class="pub-link">Paper →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub-item" aria-label="Publication: Data Race Detection with LLMs">
+            <div class="pub-year">2023</div>
+            <div class="pub-content">
+              <div class="pub-badges">
+                <span class="badge badge-venue">SC-W 2023</span>
+              </div>
+              <h3 class="pub-title">Data Race Detection Using Large Language Models</h3>
+              <p class="pub-authors">Chunhua Liao et al.</p>
+              <p class="pub-desc">Investigates the effectiveness of LLMs in detecting data race conditions in parallel programs, benchmarked against DataRaceBench.</p>
+              <div class="pub-links">
+                <a href="#" class="pub-link">Paper →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="pub-more-wrap">
+          <a href="https://scholar.google.com/citations?user=chunhualiao" target="_blank" rel="noopener" class="btn btn-outline">
+            View All Publications on Google Scholar →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOFTWARE / PROJECTS ========== -->
+    <section id="software" class="section-dark" aria-labelledby="software-heading">
+      <div class="container">
+        <h2 id="software-heading" class="section-title">Software &amp; Projects</h2>
+        <p class="section-subtitle">Open-source tools for HPC, compiler research, and AI-assisted programming.</p>
+        <div class="software-grid">
+
+          <div class="software-card featured">
+            <div class="software-header">
+              <div class="software-icon">🌹</div>
+              <div class="software-meta">
+                <h3>ROSE Compiler</h3>
+                <span class="sw-tag">Flagship Project</span>
+              </div>
+            </div>
+            <p>An open-source compiler infrastructure for building program analysis and transformation tools for large-scale scientific codes. Powers many of the lab's HPC tooling efforts. <em>R&D 100 Award 2009.</em></p>
+            <div class="software-links">
+              <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="btn btn-sm">Website</a>
+            </div>
+            <div class="sw-tags">
+              <span>C/C++</span><span>Fortran</span><span>Source Analysis</span><span>HPC</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">🤖</div>
+              <div class="software-meta">
+                <h3>CompilerGPT</h3>
+                <span class="sw-tag">AI + Compilers</span>
+              </div>
+            </div>
+            <p>LLM-powered tool that translates compiler optimization reports into plain English — helping HPC developers understand and act on performance feedback.</p>
+            <div class="software-links">
+              <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>LLM</span><span>Python</span><span>Compilers</span><span>HPC</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">🏁</div>
+              <div class="software-meta">
+                <h3>DataRaceBench</h3>
+                <span class="sw-tag">Benchmark Suite</span>
+              </div>
+            </div>
+            <p>A benchmark suite for evaluating data race detection tools. Contains microbenchmarks covering a wide range of OpenMP race patterns for systematic tool evaluation.</p>
+            <div class="software-links">
+              <a href="https://github.com/LLNL/dataracebench" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>OpenMP</span><span>C/C++</span><span>Benchmarking</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">📐</div>
+              <div class="software-meta">
+                <h3>AutoParBench</h3>
+                <span class="sw-tag">Benchmark Suite</span>
+              </div>
+            </div>
+            <p>A benchmark framework for evaluating automatic parallelization compilers and tools. Provides ground-truth annotations and correctness validation for parallelization research.</p>
+            <div class="software-links">
+              <a href="https://github.com/LLNL/AutoParBench" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>OpenMP</span><span>Auto-par</span><span>Evaluation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section-contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="section-title">Contact &amp; Links</h2>
+        <p class="section-subtitle">Reach out for collaborations, questions, or to learn more about ongoing research.</p>
+
+        <div class="contact-grid">
+          <a href="https://people.llnl.gov/liao6" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">🏛️</div>
+            <h3>LLNL Profile</h3>
+            <p>Official laboratory profile with contact details and project affiliations.</p>
+            <span class="contact-link">people.llnl.gov/liao6</span>
+          </a>
+          <a href="https://scholar.google.com/citations?user=chunhualiao" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">📚</div>
+            <h3>Google Scholar</h3>
+            <p>Full list of publications with citation metrics and co-author network.</p>
+            <span class="contact-link">Google Scholar Profile</span>
+          </a>
+          <a href="https://github.com/chunhualiao" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">💻</div>
+            <h3>GitHub</h3>
+            <p>Open-source repositories for LLNL projects, research prototypes, and tools.</p>
+            <span class="contact-link">github.com/chunhualiao</span>
+          </a>
+        </div>
+
+        <p class="contact-note">
+          📍 Lawrence Livermore National Laboratory, Livermore, CA<br />
+          <em>For general inquiries, please use the LLNL institutional contact page.</em>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Chunhua "Leo" Liao · Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub">LLNL-WEB-XXXXXX · Built with vanilla HTML/CSS/JS · <a href="#hero">Back to top ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
