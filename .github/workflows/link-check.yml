@@ -1,0 +1,47 @@
+name: Broken Link Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Also run weekly
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 9am UTC
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --no-progress
+            --exclude-mail
+            --exclude 'fonts.googleapis.com'
+            --exclude 'fonts.gstatic.com'
+            --exclude 'cdn.jsdelivr.net'
+            --include-fragments
+            _site/
+          fail: true
+          format: markdown
+          output: link-report.md
+
+      - name: Upload report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-report
+          path: link-report.md
