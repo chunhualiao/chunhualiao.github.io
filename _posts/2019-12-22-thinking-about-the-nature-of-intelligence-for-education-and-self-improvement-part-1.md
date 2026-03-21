@@ -3,6 +3,7 @@ title: "Thinking About the Nature of Intelligence for Education and Self-Improve
 date: 2019-12-22
 slug: thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-1
 category: tech
+theme: ai
 tags: [Intelligence, goal-setting, learning]
 description: "Though I'm not academically accomplished, friends and family in China still ask me about educating children. I have two kids myself and constantly need to learn and improve at work. Educating others a"
 original_url: "https://chunhualiao.hashnode.dev/thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-1"

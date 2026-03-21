@@ -3,6 +3,7 @@ title: "Thinking About the Nature of Intelligence (Part 4) Execution"
 date: 2019-12-26
 slug: thinking-about-the-nature-of-intelligence-part-4-execution
 category: tech
+theme: ai
 tags: [Intelligence, execution]
 description: "Today my family continued skiing at the Lake Tahoe ski resort, and I continued to have nothing much to do, so I wrote something :-） This article is the final piece in the series \"Thinking About the Na"
 original_url: "https://chunhualiao.hashnode.dev/thinking-about-the-nature-of-intelligence-part-4-execution"

@@ -3,6 +3,7 @@ title: "Paying $2,770/Month for Health Insurance — and Waiting 3–4 Weeks for
 date: 2025-05-18
 slug: paying-2770month-for-health-insurance-and-waiting-34-weeks-for-a-doctor
 category: tech
+theme: society
 tags: [freemarket, healthcare]
 description: "I don’t go to the doctor often. But when I do, I expect to be able to see one without waiting nearly a month.
 Unfortunately, that’s not the case with Kaiser Permanente in Northern California, where I "

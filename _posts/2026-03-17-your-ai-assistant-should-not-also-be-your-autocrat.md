@@ -3,6 +3,7 @@ title: "Your AI Assistant Should Not Also Be Your Autocrat"
 date: 2026-03-17
 slug: your-ai-assistant-should-not-also-be-your-autocrat
 category: tech
+theme: ai
 tags: []
 description: "The smartest personal agent is often the most dangerous one, unless I split memory, execution, and approval into separate roles.
 I used to think the path to a better AI assistant was obvious: give it "

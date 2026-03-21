@@ -3,6 +3,7 @@ title: "Key Takeaways from 30 Classic Investment Books Summarized by ChatGPT"
 date: 2023-01-29
 slug: key-takeaways-from-30-classic-investment-books-summarized-by-chatgpt
 category: thoughts
+theme: ai
 tags: [Investment, chatgpt, book summary]
 description: "Original Chinese version: https://mp.weixin.qq.com/s/05AvVQf9NCZlHR6Q0FF-Cg
 Recently, my eldest son suddenly said he wanted to learn about investing, which surprised me. Why would a 14-year-old sudden"

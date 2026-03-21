@@ -3,6 +3,7 @@ title: "Thinking About the Nature of Intelligence for Education and Self-Improve
 date: 2019-12-24
 slug: thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-2
 category: tech
+theme: ai
 tags: [modeling, prediction, perception]
 description: "Continuing from the previous article (Part 1), which explored the nature of expanded intelligence (Goal Setting + Learning + Modeling + Perception + Prediction + Decision Making + Execution). This art"
 original_url: "https://chunhualiao.hashnode.dev/thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-2"

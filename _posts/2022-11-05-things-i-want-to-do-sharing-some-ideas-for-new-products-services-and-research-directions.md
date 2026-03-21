@@ -3,6 +3,7 @@ title: "Things I Want to Do: Sharing Some Ideas for New Products, Services, and 
 date: 2022-11-05
 slug: things-i-want-to-do-sharing-some-ideas-for-new-products-services-and-research-directions
 category: thoughts
+theme: innovation
 tags: [new products and services, ideas, TODOLIST]
 description: "Recently, I found that I have too many scattered ideas and not enough energy to implement them all. Often, coming up with an idea takes just a few minutes, but scaling and implementing an impactful id"
 original_url: "https://chunhualiao.hashnode.dev/things-i-want-to-do-sharing-some-ideas-for-new-products-services-and-research-directions"

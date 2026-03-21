@@ -3,6 +3,7 @@ title: "Rethinking Success: How Young People Can Build Their Future Outside Univ
 date: 2025-06-09
 slug: rethinking-success-how-young-people-can-build-their-future-outside-university-walls
 category: thoughts
+theme: thinking
 tags: [university, Entrepreneurship]
 description: "Do you feel that the walls of traditional universities have trapped your child’s ambition to change the world? Does your child have a disruptive idea and can’t wait to make it a reality?
 When it comes"

@@ -3,6 +3,7 @@ title: "From 1787 to the Red Planet: Rethinking Constitutional Design"
 date: 2025-04-21
 slug: from-1787-to-the-red-planet-rethinking-constitutional-design
 category: thoughts
+theme: governance
 tags: [consitution, mars]
 description: "Assume that a sufficient number of humans have migrated to Mars and now need to form an independent colony with a perfect Constitution. Please use first principles thinking to draft a complete Constit"
 original_url: "https://chunhualiao.hashnode.dev/from-1787-to-the-red-planet-rethinking-constitutional-design"

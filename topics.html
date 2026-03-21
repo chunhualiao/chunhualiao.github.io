@@ -1,0 +1,189 @@
+---
+layout: none
+title: "Topics"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse Chunhua Liao's writing by theme — AI & Intelligence, Governance, Innovation, Life Strategy, Society & Culture." />
+  <title>Topics | Chunhua Liao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=5" />
+</head>
+<body>
+  <a href="#topics-hero" class="sr-only skip-link">Skip to main content</a>
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html">Chunhua Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#software">Software</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="topics.html" class="nav-active">Topics</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="top">
+    <section id="topics-hero" class="blog-hero">
+      <div class="container blog-hero-inner">
+        <p class="hero-label">Explore</p>
+        <h1 class="blog-hero-title">Topics</h1>
+        <p class="blog-hero-subtitle">26 articles across 5 themes spanning 6+ years of thinking. From intelligence theory to AI governance, innovation to life strategy.</p>
+      </div>
+    </section>
+
+    <!-- Quick nav -->
+    <section class="section-light" style="padding-top:var(--space-md);padding-bottom:0;">
+      <div class="container">
+        <div class="blog-filter-bar" role="navigation" aria-label="Jump to theme">
+          <a href="#theme-ai" class="filter-btn" style="text-decoration:none;">🤖 AI & Intelligence</a>
+          <a href="#theme-governance" class="filter-btn" style="text-decoration:none;">🏛️ Governance</a>
+          <a href="#theme-innovation" class="filter-btn" style="text-decoration:none;">💡 Innovation</a>
+          <a href="#theme-thinking" class="filter-btn" style="text-decoration:none;">🧠 Life Strategy</a>
+          <a href="#theme-society" class="filter-btn" style="text-decoration:none;">🌏 Society & Culture</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AI & Intelligence ===== -->
+    <section id="theme-ai" class="section-light topic-section">
+      <div class="container">
+        <div class="topic-header">
+          <span class="topic-icon">🤖</span>
+          <div>
+            <h2 class="topic-title">AI & Intelligence</h2>
+            <p class="topic-desc">From first-principles intelligence theory (2019) to AI agent architecture and governance (2026). The thread connecting all: <strong>designing systems that make powerful entities behave correctly through structural architecture rather than trust or force.</strong></p>
+          </div>
+        </div>
+        <div class="topic-posts">
+          {% assign ai_posts = site.posts | where: "theme", "ai" | sort: "date" %}
+          {% for post in ai_posts %}
+          <a href="{{ post.url | relative_url }}" class="topic-post-row">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+            <span class="topic-post-title">{{ post.title }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Governance & Independence ===== -->
+    <section id="theme-governance" class="section-dark topic-section">
+      <div class="container">
+        <div class="topic-header">
+          <span class="topic-icon">🏛️</span>
+          <div>
+            <h2 class="topic-title">Governance & Independence</h2>
+            <p class="topic-desc">The intellectual foundation of civic governance thinking. Independence as financial control. Constitutional design from first principles. AI can enforce consistency at scale.</p>
+          </div>
+        </div>
+        <div class="topic-posts">
+          {% assign gov_posts = site.posts | where: "theme", "governance" | sort: "date" %}
+          {% for post in gov_posts %}
+          <a href="{{ post.url | relative_url }}" class="topic-post-row">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+            <span class="topic-post-title">{{ post.title }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Innovation & Entrepreneurship ===== -->
+    <section id="theme-innovation" class="section-light topic-section">
+      <div class="container">
+        <div class="topic-header">
+          <span class="topic-icon">💡</span>
+          <div>
+            <h2 class="topic-title">Innovation & Entrepreneurship</h2>
+            <p class="topic-desc">Systematic frameworks for innovation and product creation. Innovation comes from an equality mindset — believing anyone can improve any system.</p>
+          </div>
+        </div>
+        <div class="topic-posts">
+          {% assign inn_posts = site.posts | where: "theme", "innovation" | sort: "date" %}
+          {% for post in inn_posts %}
+          <a href="{{ post.url | relative_url }}" class="topic-post-row">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+            <span class="topic-post-title">{{ post.title }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Thinking & Life Strategy ===== -->
+    <section id="theme-thinking" class="section-dark topic-section">
+      <div class="container">
+        <div class="topic-header">
+          <span class="topic-icon">🧠</span>
+          <div>
+            <h2 class="topic-title">Thinking & Life Strategy</h2>
+            <p class="topic-desc">Frameworks for critical thinking, decision-making, and avoiding common life pitfalls. Inversion thinking — study failure patterns to avoid them, rather than only chasing success.</p>
+          </div>
+        </div>
+        <div class="topic-posts">
+          {% assign think_posts = site.posts | where: "theme", "thinking" | sort: "date" %}
+          {% for post in think_posts %}
+          <a href="{{ post.url | relative_url }}" class="topic-post-row">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+            <span class="topic-post-title">{{ post.title }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Society & Culture ===== -->
+    <section id="theme-society" class="section-light topic-section">
+      <div class="container">
+        <div class="topic-header">
+          <span class="topic-icon">🌏</span>
+          <div>
+            <h2 class="topic-title">Society & Culture</h2>
+            <p class="topic-desc">Analysis of systemic issues — career dynamics, healthcare, international trade. The common thread: <strong>incumbent systems serve insiders, not the people they claim to serve.</strong></p>
+          </div>
+        </div>
+        <div class="topic-posts">
+          {% assign soc_posts = site.posts | where: "theme", "society" | sort: "date" %}
+          {% for post in soc_posts %}
+          <a href="{{ post.url | relative_url }}" class="topic-post-row">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+            <span class="topic-post-title">{{ post.title }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- The Big Arc -->
+    <section class="section-dark" style="padding-top:var(--space-xl);padding-bottom:var(--space-xl);">
+      <div class="container" style="max-width:720px;">
+        <h2 class="section-title" style="text-align:center;">The Big Arc</h2>
+        <div class="about-prose" style="margin-top:var(--space-md);">
+          <p><strong>2019</strong> — What is intelligence? How do perception, modeling, decision-making, and execution work?</p>
+          <p><strong>2022–2023</strong> — Independence = financial control. Systematic innovation. Critical thinking frameworks.</p>
+          <p><strong>2024–2025</strong> — AI governance. Constitutional design from first principles. Systems serving insiders, not people.</p>
+          <p><strong>2026</strong> — Building AI agents that work as partners. Multi-agent architecture. "Your AI should not be your autocrat."</p>
+          <p style="margin-top:var(--space-md);font-style:italic;opacity:0.8;">The thread: Designing governance systems — whether for code, AI agents, or nations — that make complex, powerful entities behave correctly through <strong>structural architecture</strong> rather than trust or force.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Chunhua Liao &middot; Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub">Built with Jekyll &middot; <a href="index.html">Home</a> &middot; <a href="blog.html">Blog</a> &middot; <a href="#top">Back to top &uarr;</a></p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

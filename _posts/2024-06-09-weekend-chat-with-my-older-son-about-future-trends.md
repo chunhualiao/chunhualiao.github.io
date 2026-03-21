@@ -3,6 +3,7 @@ title: "Weekend Chat with My Older Son about Future Trends"
 date: 2024-06-09
 slug: weekend-chat-with-my-older-son-about-future-trends
 category: tech
+theme: society
 tags: [future career, AI]
 description: "During the summer vacation, my 15-year-old eldest son Alex is immersed in a programming project purely out of interest. His goal is to develop an iPhone app for his high school that reminds students o"
 original_url: "https://chunhualiao.hashnode.dev/weekend-chat-with-my-older-son-about-future-trends"

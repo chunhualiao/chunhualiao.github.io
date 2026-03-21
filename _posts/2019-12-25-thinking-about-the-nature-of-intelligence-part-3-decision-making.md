@@ -3,6 +3,7 @@ title: "Thinking About the Nature of Intelligence (Part 3): Decision Making"
 date: 2019-12-25
 slug: thinking-about-the-nature-of-intelligence-part-3-decision-making
 category: tech
+theme: ai
 tags: [decision making, Intelligence]
 description: "During the Christmas holiday, I was accompanying my family skiing at Lake Tahoe in California. For various reasons, I don't ski, so with nothing much to do, I continued to entertain myself by writing "
 original_url: "https://chunhualiao.hashnode.dev/thinking-about-the-nature-of-intelligence-part-3-decision-making"

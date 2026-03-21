@@ -3,6 +3,7 @@ title: "Quantifying the Independence of Americans"
 date: 2022-07-27
 slug: quantifying-the-independence-of-americans
 category: thoughts
+theme: governance
 tags: [quantify independence, Independence Day]
 description: "This year’s American Independence Day holiday prompted me to reflect on the meaning of independence and consider if there are any quantitative measures to assess it. After pondering the topic intermit"
 original_url: "https://chunhualiao.hashnode.dev/quantifying-the-independence-of-americans"

@@ -3,6 +3,7 @@ title: "Why Is the Field of Artificial Intelligence Developing So Successfully?"
 date: 2024-03-09
 slug: why-is-the-field-of-artificial-intelligence-developing-so-successfully
 category: tech
+theme: ai
 tags: [research ecosystem, AI]
 description: "Recently, I have been thinking about why the research and development field of artificial intelligence (AI) or machine learning (ML) has been so successful and continuously achieves significant breakt"
 original_url: "https://chunhualiao.hashnode.dev/why-is-the-field-of-artificial-intelligence-developing-so-successfully"

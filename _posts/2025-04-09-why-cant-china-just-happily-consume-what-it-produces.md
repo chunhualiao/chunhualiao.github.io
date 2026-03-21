@@ -3,6 +3,7 @@ title: "Why Can’t China Just Happily Consume What It Produces?"
 date: 2025-04-09
 slug: why-cant-china-just-happily-consume-what-it-produces
 category: thoughts
+theme: society
 tags: [china,  self-sufficiency]
 description: "I don't quite understand the trouble China is having right now. China can already produce a lot of things for what even the entire world will need. They do not have to export goods to have a good life"
 original_url: "https://chunhualiao.hashnode.dev/why-cant-china-just-happily-consume-what-it-produces"

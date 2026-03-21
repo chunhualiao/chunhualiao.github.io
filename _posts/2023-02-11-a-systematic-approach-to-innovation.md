@@ -3,6 +3,7 @@ title: "A Systematic Approach to Innovation"
 date: 2023-02-11
 slug: a-systematic-approach-to-innovation
 category: thoughts
+theme: innovation
 tags: [systemic approach, innovation]
 description: "This weekend, I’d like to jot down some random thoughts once more. This time, the topic is innovation. Allow me to first express my perspective: innovation is not mysterious, and there exists a set of"
 original_url: "https://chunhualiao.hashnode.dev/a-systematic-approach-to-innovation"

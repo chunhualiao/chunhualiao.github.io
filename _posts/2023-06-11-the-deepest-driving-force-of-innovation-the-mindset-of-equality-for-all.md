@@ -3,6 +3,7 @@ title: "The Deepest Driving Force of Innovation: The Mindset of Equality for All
 date: 2023-06-11
 slug: the-deepest-driving-force-of-innovation-the-mindset-of-equality-for-all
 category: thoughts
+theme: innovation
 tags: [innovation-by-equality]
 description: "Recently, there has been a discussion on how to overcome the middle-income trap. Economic development is driven by three main factors: increasing labor (labor-intensive), increasing investment (capita"
 original_url: "https://chunhualiao.hashnode.dev/the-deepest-driving-force-of-innovation-the-mindset-of-equality-for-all"

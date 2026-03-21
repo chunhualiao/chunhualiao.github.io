@@ -3,6 +3,7 @@ title: "From Thrones to Algorithms: How Ancient Emperors Teach Us to Govern Supe
 date: 2025-07-23
 slug: from-thrones-to-algorithms-how-ancient-emperors-teach-us-to-govern-superhuman-ai
 category: tech
+theme: ai
 tags: [AI, Governance, emperor]
 description: "Introduction: A Timeless Dilemma
 Imagine you are an emperor in ancient times—not the strongest warrior, nor the wisest philosopher. Yet, the fate of a vast empire rests on your shoulders. Surrounding "

@@ -3,6 +3,7 @@ title: "Don't Worry, Because There Are Only 5 Things in Life You Need to Focus O
 date: 2023-06-10
 slug: dont-worry-because-there-are-only-5-things-in-life-you-need-to-focus-on
 category: thoughts
+theme: thinking
 tags: [5 priorities in life]
 description: "My older son, Alex, is currently 14 and a half years old and has just graduated from junior high school. In the eyes of others, he is already a very excellent student. For example, his school grades a"
 original_url: "https://chunhualiao.hashnode.dev/dont-worry-because-there-are-only-5-things-in-life-you-need-to-focus-on"

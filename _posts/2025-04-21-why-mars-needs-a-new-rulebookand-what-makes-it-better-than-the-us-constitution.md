@@ -3,6 +3,7 @@ title: "Why Mars Needs a New Rulebook—and What Makes It Better Than the U.S. C
 date: 2025-04-21
 slug: why-mars-needs-a-new-rulebookand-what-makes-it-better-than-the-us-constitution
 category: thoughts
+theme: governance
 tags: [Constitution, First Principles, mars]
 description: "Question: Assume that a sufficient number of humans have migrated to Mars and now need to form an independent colony with a perfect Constitution. Please use first principles thinking to draft a comple"
 original_url: "https://chunhualiao.hashnode.dev/why-mars-needs-a-new-rulebookand-what-makes-it-better-than-the-us-constitution"
