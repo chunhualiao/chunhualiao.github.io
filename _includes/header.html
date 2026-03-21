@@ -1,12 +1,12 @@
 <header id="site-header" role="banner">
   <nav class="nav-container" aria-label="Main navigation">
-    <a class="nav-logo" href="{{ '/' | relative_url }}">Chunhua Liao</a>
+    <a class="nav-logo" href="{{ '/index.html' | relative_url }}">Chunhua Liao</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks" role="list">
       <li><a href="{{ '/blog.html' | relative_url }}"{% if page.layout == 'post' or page.url == '/blog.html' %} class="nav-active"{% endif %}>Blog</a></li>
       <li><a href="{{ '/topics.html' | relative_url }}"{% if page.url == '/topics.html' %} class="nav-active"{% endif %}>Topics</a></li>
       <li><a href="{{ '/work.html' | relative_url }}"{% if page.url == '/work.html' %} class="nav-active"{% endif %}>Work</a></li>
-      <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+      <li><a href="{{ '/index.html#contact' | relative_url }}">Contact</a></li>
     </ul>
   </nav>
 </header>
