@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI-Assisted Programming research by Dr. Chunhua (Leo) Liao — CompilerGPT, HPC-GPT, Fortran2CPP, and LLMs as co-pilots for HPC developers." />
+  <meta name="author" content="Chunhua Liao" />
+  <title>AI-Assisted Programming | Chunhua (Leo) Liao</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="../index.html">Leo Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#software">Software</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="research-page-hero" aria-labelledby="rp-title">
+      <div class="container">
+        <a href="../index.html#research" class="back-link">← Back to Research</a>
+        <p class="rp-label">Research Area</p>
+        <div class="rp-hero-icon" aria-hidden="true">🤖</div>
+        <h1 id="rp-title" class="rp-title">AI-Assisted Programming</h1>
+        <p class="rp-desc">
+          Using large language models as intelligent co-pilots for HPC developers — interpreting compiler reports, migrating legacy code,
+          optimizing scientific applications, and teaching parallel programming. Leo's vision: AI doesn't replace compilers, it makes
+          them speak human.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== OVERVIEW ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="overview-heading">
+      <div class="container rp-overview">
+        <h2 id="overview-heading" class="rp-section-title"><span class="rp-sec-icon">📖</span> Overview</h2>
+        <p>
+          The advent of large language models (LLMs) has opened fundamentally new possibilities for programming tools. Leo's research
+          at the frontier of AI-assisted programming is grounded in a core insight: <strong>LLMs are most powerful when paired with
+          compiler analysis</strong>. Rather than using LLMs in isolation — where they can hallucinate or misunderstand low-level
+          performance details — his approach uses compiler-derived context (optimization reports, call graphs, data-flow analysis)
+          to ground LLM reasoning in verifiable program facts.
+        </p>
+        <p>
+          This philosophy manifests across several research directions. <strong>CompilerGPT</strong> translates opaque compiler
+          optimization diagnostics into actionable developer guidance. <strong>HPC-GPT</strong> explores GPT-based assistants for
+          HPC programming tasks. <strong>Fortran2CPP</strong> automates the notoriously difficult task of migrating legacy Fortran
+          scientific codes to modern C++ — a pressing challenge for national laboratories sitting on decades of legacy code. The
+          <strong>Reductive Analysis</strong> technique (PLDI 2025) provides a principled framework for applying LLMs to large,
+          complex codebases by progressively reducing program context to what's relevant.
+        </p>
+        <p>
+          Beyond individual tools, Leo's work addresses the broader challenge of <strong>HPC developer productivity</strong>:
+          how do we help the scientists and engineers building tomorrow's exascale applications write better code, faster, with fewer
+          bugs? The answer, he argues, is not to replace programmers with AI but to give them AI tools that understand the specific
+          constraints and idioms of scientific high-performance computing — tools that speak both the language of the developer and
+          the language of the machine.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== PUBLICATIONS ========== -->
+    <section class="rp-section rp-section-warm" aria-labelledby="pubs-heading">
+      <div class="container">
+        <h2 id="pubs-heading" class="rp-section-title"><span class="rp-sec-icon">📄</span> Key Publications</h2>
+        <div class="rp-pub-list">
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2025</span>
+              <span class="rp-pub-venue">PLDI 2025</span>
+            </div>
+            <h3 class="rp-pub-title">Reductive Analysis with Compiler-Guided LLMs for Code Optimizations</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              Introduces a novel methodology for applying LLMs to large, complex programs: reductive analysis progressively strips
+              away program context until the LLM can focus on the relevant optimization opportunity. Compiler analysis guides which
+              reductions are safe and informative. Published at PLDI, the flagship programming languages conference.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2025</span>
+              <span class="rp-pub-venue">C3PO-HPC @ ISC 2025</span>
+            </div>
+            <h3 class="rp-pub-title">CompilerGPT: Leveraging LLMs for Compiler Optimization Reports</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              CompilerGPT feeds compiler optimization remarks into an LLM pipeline that explains why optimizations did or did not
+              fire, suggests code changes, and links to relevant OpenMP or vectorization directives. Dramatically reduces the
+              expertise required to act on compiler feedback.
+            </p>
+            <div class="rp-pub-links">
+              <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="rp-pub-link">Code →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2024</span>
+              <span class="rp-pub-venue">IWOMP 2024</span>
+            </div>
+            <h3 class="rp-pub-title">An Interactive OpenMP Programming Book with LLM Assistance</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              A novel approach to parallel programming education: using LLMs to power an interactive, adaptive OpenMP textbook
+              that explains concepts, generates examples on demand, and answers follow-up questions. Presented at the International
+              Workshop on OpenMP.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2024</span>
+              <span class="rp-pub-venue">2024</span>
+            </div>
+            <h3 class="rp-pub-title">Fortran2CPP: Automating Fortran-to-C++ Migration using LLMs</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              Addresses the critical national laboratory challenge of modernizing legacy Fortran codes. Uses LLMs to automatically
+              translate Fortran to idiomatic, performant C++, validated against the original code using automated test suites.
+              Tackles array semantics, COMMON blocks, and numerical precision preservation.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2023</span>
+              <span class="rp-pub-venue">SC-W 2023</span>
+            </div>
+            <h3 class="rp-pub-title">HPC-GPT: Integrating Large Language Models for High-Performance Computing</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              One of the first systematic explorations of using GPT-based models for HPC tasks: code optimization, OpenMP directive
+              suggestion, documentation generation, and debugging assistance. Establishes baselines and identifies key limitations
+              of general-purpose LLMs for HPC-specific tasks.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOFTWARE ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="software-heading">
+      <div class="container">
+        <h2 id="software-heading" class="rp-section-title"><span class="rp-sec-icon">💻</span> Software &amp; Tools</h2>
+        <div class="rp-software-grid">
+
+          <div class="software-card featured">
+            <div class="software-header">
+              <div class="software-icon">🤖</div>
+              <div class="software-meta">
+                <h3>CompilerGPT</h3>
+                <span class="sw-tag">Flagship · AI + Compiler Integration</span>
+              </div>
+            </div>
+            <p>
+              CompilerGPT is an open-source tool that bridges compiler optimization diagnostics and developer understanding.
+              It ingests compiler remarks (from GCC, Clang, Intel, or LLNL's compilers), uses LLM reasoning to explain what
+              happened and why, and suggests actionable code modifications. Available on GitHub and published at ISC 2025.
+            </p>
+            <div class="software-links">
+              <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>LLM</span><span>Python</span><span>Compilers</span><span>HPC</span><span>OpenAI API</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">🔄</div>
+              <div class="software-meta">
+                <h3>Fortran2CPP</h3>
+                <span class="sw-tag">Code Migration Tool</span>
+              </div>
+            </div>
+            <p>
+              An LLM-powered tool for automatically migrating legacy Fortran scientific codes to modern C++. Handles the
+              distinctive challenges of Fortran-to-C++ translation including array indexing conventions, COMMON blocks,
+              numerical precision, and implicit type coercions.
+            </p>
+            <div class="software-links">
+              <a href="https://github.com/chunhualiao" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>LLM</span><span>Fortran</span><span>C++</span><span>Migration</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">💬</div>
+              <div class="software-meta">
+                <h3>HPC-GPT</h3>
+                <span class="sw-tag">HPC AI Assistant Research</span>
+              </div>
+            </div>
+            <p>
+              A research prototype exploring GPT integration for HPC development tasks: OpenMP directive recommendation,
+              performance analysis question answering, and code documentation. Establishes benchmarks for evaluating
+              LLM capabilities on HPC-specific tasks.
+            </p>
+            <div class="software-links">
+              <a href="https://github.com/chunhualiao" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>GPT</span><span>HPC</span><span>OpenMP</span><span>Research Prototype</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== IMPACT ========== -->
+    <section class="rp-section rp-section-peach" aria-labelledby="impact-heading">
+      <div class="container">
+        <h2 id="impact-heading" class="rp-section-title"><span class="rp-sec-icon">💡</span> Impact &amp; Insights</h2>
+        <div class="rp-impact-box">
+          <blockquote>
+            LLMs don't replace compilers — they translate between compilers and humans.
+            A compiler knows what happened; an LLM can explain why it matters and what to do next.
+          </blockquote>
+          <ul class="rp-impact-list">
+            <li><strong>Compiler-grounded LLMs</strong> dramatically outperform general-purpose LLMs on optimization tasks because compiler analysis provides verified facts about the program — loop trip counts, alias analysis, vectorization blockers — that LLMs alone cannot infer.</li>
+            <li>The <strong>Reductive Analysis</strong> methodology (PLDI 2025) is a general contribution: any complex program analysis problem can benefit from progressively narrowing context until the LLM can reason reliably.</li>
+            <li><strong>Fortran modernization</strong> is one of the most economically significant applications of AI in scientific computing — national laboratories have millions of lines of legacy Fortran that are expensive to maintain and port to new hardware.</li>
+            <li><strong>CompilerGPT democratizes performance engineering</strong>: a domain scientist with no compiler background can now understand why their code isn't vectorizing and what pragma to add — without consulting an expert.</li>
+            <li>The <strong>interactive OpenMP book</strong> represents a new model for technical education in a rapidly evolving field — AI-powered learning materials that adapt to the reader's level and answer questions in real time.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Chunhua "Leo" Liao · Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub">
+        <a href="../index.html">Home</a> ·
+        <a href="../index.html#research">All Research Areas</a> ·
+        <a href="#" onclick="window.scrollTo(0,0);return false;">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

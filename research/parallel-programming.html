@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Parallel Programming Models research by Dr. Chunhua (Leo) Liao — OpenMP implementation, automatic parallelization, GPU accelerator support, and HPC programming abstractions." />
+  <meta name="author" content="Chunhua Liao" />
+  <title>Parallel Programming Models | Chunhua (Leo) Liao</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="../index.html">Leo Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#software">Software</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="research-page-hero" aria-labelledby="rp-title">
+      <div class="container">
+        <a href="../index.html#research" class="back-link">← Back to Research</a>
+        <p class="rp-label">Research Area</p>
+        <div class="rp-hero-icon" aria-hidden="true">⚡</div>
+        <h1 id="rp-title" class="rp-title">Parallel Programming Models</h1>
+        <p class="rp-desc">
+          Advancing the science and practice of parallel programming — from OpenMP compiler implementations and automatic parallelization
+          to GPU accelerator support and control-flow optimization. Leo's work bridges the intent of the programmer with the reality of
+          massively parallel hardware, making HPC more accessible and correct.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== OVERVIEW ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="overview-heading">
+      <div class="container rp-overview">
+        <h2 id="overview-heading" class="rp-section-title"><span class="rp-sec-icon">📖</span> Overview</h2>
+        <p>
+          The challenge of parallel programming lies in the enormous gap between what a programmer expresses — a sequential algorithm
+          and its intended semantics — and what the hardware actually executes — thousands of concurrent threads with complex memory
+          hierarchies and synchronization requirements. Leo's research addresses this gap from multiple directions: building better
+          compilers for parallel programming models, automating parallelization, and extending these models to emerging hardware architectures.
+        </p>
+        <p>
+          A central contribution is <strong>XOMP</strong>, a complete OpenMP implementation built on top of the ROSE compiler infrastructure.
+          XOMP enables source-to-source translation of OpenMP programs, making it possible to experiment with new OpenMP features,
+          runtime optimizations, and custom parallelization strategies without modifying production compilers. This work laid the
+          groundwork for ROSE's automatic parallelization capabilities and continues to inform OpenMP standard development.
+          Earlier, Leo contributed to the <strong>OpenUH compiler</strong> at the University of Houston, building one of the most
+          complete and standards-compliant OpenMP implementations of its time.
+        </p>
+        <p>
+          As scientific workloads shifted to GPU accelerators, Leo extended this work with <strong>HOMP</strong> (Heterogeneous OpenMP),
+          targeting automatic offloading of OpenMP loops to GPU devices. More recently, research at CGO 2024 addressed
+          <strong>control-flow unmerging on GPUs</strong> — a critical optimization for avoiding thread divergence and maximizing
+          GPU utilization in irregular scientific codes. Together, these efforts represent a comprehensive body of work spanning
+          the full lifecycle of parallel programming model support.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== PUBLICATIONS ========== -->
+    <section class="rp-section rp-section-warm" aria-labelledby="pubs-heading">
+      <div class="container">
+        <h2 id="pubs-heading" class="rp-section-title"><span class="rp-sec-icon">📄</span> Key Publications</h2>
+        <div class="rp-pub-list">
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2024</span>
+              <span class="rp-pub-venue">CGO 2024</span>
+            </div>
+            <h3 class="rp-pub-title">Control-Flow Unmerging Optimizations for GPU Programs</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              Introduces compiler transformations that unmerge GPU control-flow paths to reduce thread divergence and improve
+              warp utilization. Published at the International Symposium on Code Generation and Optimization (CGO), the premier
+              venue for compiler optimization research.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2024</span>
+              <span class="rp-pub-venue">IWOMP 2024</span>
+            </div>
+            <h3 class="rp-pub-title">An Interactive OpenMP Programming Book with LLM Assistance</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              Explores a novel approach to OpenMP education: using LLMs to create an interactive, adaptive programming textbook
+              that helps developers learn OpenMP through conversational explanations and code examples. Presented at the
+              International Workshop on OpenMP (IWOMP).
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2015–2020</span>
+              <span class="rp-pub-venue">OpenMP / EuroMPI</span>
+            </div>
+            <h3 class="rp-pub-title">XOMP: An OpenMP Extension for Source-to-Source Transformation</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al. — LLNL</p>
+            <p class="rp-pub-desc">
+              A series of publications describing XOMP — a complete, extensible OpenMP implementation built as a ROSE compiler
+              plugin. Enables custom OpenMP runtime backends, new OpenMP constructs, and experimental parallelization strategies
+              for HPC workloads.
+            </p>
+            <div class="rp-pub-links">
+              <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="rp-pub-link">ROSE Project →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2007–2012</span>
+              <span class="rp-pub-venue">CC / PLDI / EuroPar</span>
+            </div>
+            <h3 class="rp-pub-title">OpenMP Implementation and Optimization in the OpenUH Compiler</h3>
+            <p class="rp-pub-authors">Chunhua Liao, Oscar Hernandez, Barbara Chapman, et al. — University of Houston</p>
+            <p class="rp-pub-desc">
+              Foundational work on OpenMP 3.0 implementation in the OpenUH open-source compiler framework. Includes task parallelism
+              support, NUMA-aware optimizations, and one of the first complete implementations of the OpenMP task model.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOFTWARE ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="software-heading">
+      <div class="container">
+        <h2 id="software-heading" class="rp-section-title"><span class="rp-sec-icon">💻</span> Software &amp; Tools</h2>
+        <div class="rp-software-grid">
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">🧵</div>
+              <div class="software-meta">
+                <h3>XOMP / ROSE OpenMP</h3>
+                <span class="sw-tag">OpenMP Compiler Plugin</span>
+              </div>
+            </div>
+            <p>
+              A complete OpenMP 4.x implementation built as a ROSE source-to-source compiler plugin. Enables custom runtime backends,
+              experimental OpenMP extensions, and serves as the foundation for ROSE's automatic parallelization infrastructure.
+            </p>
+            <div class="software-links">
+              <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="btn btn-sm">ROSE Website</a>
+              <a href="https://github.com/rose-compiler/rose" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>OpenMP</span><span>C/C++</span><span>Fortran</span><span>HPC</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">🖥️</div>
+              <div class="software-meta">
+                <h3>HOMP</h3>
+                <span class="sw-tag">Heterogeneous OpenMP</span>
+              </div>
+            </div>
+            <p>
+              An extension to the XOMP framework that adds GPU offloading support — automatically translating OpenMP target
+              directives to CUDA or OpenCL kernel calls. Enables portable GPU programming through standard OpenMP syntax.
+            </p>
+            <div class="software-links">
+              <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="btn btn-sm">ROSE Website</a>
+            </div>
+            <div class="sw-tags">
+              <span>GPU</span><span>OpenMP</span><span>CUDA</span><span>Offloading</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">🔬</div>
+              <div class="software-meta">
+                <h3>OpenUH Compiler</h3>
+                <span class="sw-tag">Academic Open-Source Compiler</span>
+              </div>
+            </div>
+            <p>
+              A research compiler developed at the University of Houston with one of the most complete OpenMP 3.0 implementations
+              available at the time. Formed the basis of Leo's PhD research on OpenMP implementation strategies.
+            </p>
+            <div class="software-links">
+              <a href="http://web.cs.uh.edu/~openuh/" target="_blank" rel="noopener" class="btn btn-sm">Project Page</a>
+            </div>
+            <div class="sw-tags">
+              <span>OpenMP</span><span>Open64</span><span>Research</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== IMPACT ========== -->
+    <section class="rp-section rp-section-peach" aria-labelledby="impact-heading">
+      <div class="container">
+        <h2 id="impact-heading" class="rp-section-title"><span class="rp-sec-icon">💡</span> Impact &amp; Insights</h2>
+        <div class="rp-impact-box">
+          <blockquote>
+            The goal of a parallel programming model is to let programmers express what they want to compute —
+            not micromanage how to distribute it. Our work strives to close the gap between programmer intent and machine execution.
+          </blockquote>
+          <ul class="rp-impact-list">
+            <li>XOMP's <strong>source-to-source OpenMP translation</strong> enabled rapid prototyping of new OpenMP features and custom runtime systems, accelerating research that would otherwise require months of compiler hacking.</li>
+            <li>The <strong>OpenUH OpenMP implementation</strong> was one of the most complete and standards-compliant of its era, influencing subsequent compiler implementations and OpenMP standard discussions.</li>
+            <li><strong>GPU control-flow unmerging</strong> (CGO 2024) addresses a fundamental performance bottleneck in GPU computing — thread divergence — with a compiler-level solution that requires no programmer effort.</li>
+            <li>The <strong>HOMP heterogeneous extension</strong> demonstrates a key design principle: parallel programming models should abstract away hardware heterogeneity, letting programmers write portable code that runs on CPUs and GPUs alike.</li>
+            <li>The <strong>LLM-assisted OpenMP book</strong> (IWOMP 2024) shows a future direction: using AI to teach parallel programming, making OpenMP knowledge accessible to the next generation of HPC developers.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Chunhua "Leo" Liao · Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub">
+        <a href="../index.html">Home</a> ·
+        <a href="../index.html#research">All Research Areas</a> ·
+        <a href="#" onclick="window.scrollTo(0,0);return false;">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

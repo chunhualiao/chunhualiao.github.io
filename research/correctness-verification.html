@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Correctness & Verification research by Dr. Chunhua (Leo) Liao — DataRaceBench, AutoParBench, data race detection, and benchmark-driven reproducible research." />
+  <meta name="author" content="Chunhua Liao" />
+  <title>Correctness &amp; Verification | Chunhua (Leo) Liao</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="../index.html">Leo Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#software">Software</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="research-page-hero" aria-labelledby="rp-title">
+      <div class="container">
+        <a href="../index.html#research" class="back-link">← Back to Research</a>
+        <p class="rp-label">Research Area</p>
+        <div class="rp-hero-icon" aria-hidden="true">🔍</div>
+        <h1 id="rp-title" class="rp-title">Correctness &amp; Verification</h1>
+        <p class="rp-desc">
+          You can't fix what you can't measure. Leo's correctness research builds the standardized benchmark suites, analysis tools,
+          and evaluation frameworks that the HPC community needs to reproducibly assess and improve data race detection,
+          auto-parallelization, and parallel program correctness.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== OVERVIEW ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="overview-heading">
+      <div class="container rp-overview">
+        <h2 id="overview-heading" class="rp-section-title"><span class="rp-sec-icon">📖</span> Overview</h2>
+        <p>
+          Parallel programs are notoriously difficult to get right. Data races — where two threads access the same memory location
+          concurrently and at least one is a write — are subtle, non-deterministic bugs that can corrupt results, cause crashes,
+          or silently produce wrong answers in scientific simulations. Detecting and eliminating these bugs requires both powerful
+          analysis tools and rigorous benchmarks that can evaluate how well those tools work. Leo's correctness research addresses
+          both sides of this challenge.
+        </p>
+        <p>
+          <strong>DataRaceBench</strong> is a community benchmark suite specifically designed to evaluate data race detection tools.
+          It contains hundreds of microbenchmarks covering a comprehensive range of race patterns in OpenMP programs — from simple
+          shared-variable races to complex patterns involving reductions, atomic operations, and nested parallelism. By providing
+          ground-truth annotations (each microbenchmark is labeled as having or not having a race), DataRaceBench enables apples-to-apples
+          comparison of different detection tools and serves as a regression suite for tool developers. It has been adopted by
+          research groups worldwide and cited in dozens of publications.
+        </p>
+        <p>
+          <strong>AutoParBench</strong> extends this philosophy to automatic parallelization: a benchmark framework for evaluating
+          how well compilers and tools can automatically identify and parallelize sequential loops. More recently, Leo's group has
+          explored whether <strong>LLMs can detect data races</strong> — a fascinating intersection of AI and program correctness.
+          The SC-W 2023 paper found that current LLMs show surprising capability on simple race patterns but struggle with the
+          complex, context-dependent races that occur in real HPC codes — highlighting both the promise and the current limits of
+          AI-based program correctness analysis.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== PUBLICATIONS ========== -->
+    <section class="rp-section rp-section-warm" aria-labelledby="pubs-heading">
+      <div class="container">
+        <h2 id="pubs-heading" class="rp-section-title"><span class="rp-sec-icon">📄</span> Key Publications</h2>
+        <div class="rp-pub-list">
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2023</span>
+              <span class="rp-pub-venue">SC-W 2023</span>
+            </div>
+            <h3 class="rp-pub-title">Data Race Detection Using Large Language Models</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              The first systematic evaluation of LLMs as data race detectors, using DataRaceBench as the evaluation harness.
+              Finds that GPT-4 achieves reasonable accuracy on simple races but misses subtle ones, pointing toward hybrid
+              approaches combining compiler analysis with LLM reasoning. Published at the SC23 Workshop on Correctness.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+              <a href="https://github.com/LLNL/dataracebench" target="_blank" rel="noopener" class="rp-pub-link">DataRaceBench →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2017–2022</span>
+              <span class="rp-pub-venue">SC / PPoPP / ISC</span>
+            </div>
+            <h3 class="rp-pub-title">DataRaceBench: A Benchmark Suite for Evaluating Data Race Detection Tools</h3>
+            <p class="rp-pub-authors">Chunhua Liao, Pei-Hung Lin, Joshua Asplund, et al. — LLNL</p>
+            <p class="rp-pub-desc">
+              The foundational DataRaceBench paper introducing the benchmark design philosophy, microbenchmark taxonomy, and
+              evaluation methodology. The suite has been continuously expanded and is now the standard evaluation benchmark for
+              OpenMP race detection tools in the research community.
+            </p>
+            <div class="rp-pub-links">
+              <a href="https://github.com/LLNL/dataracebench" target="_blank" rel="noopener" class="rp-pub-link">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2020–2022</span>
+              <span class="rp-pub-venue">CC / IPDPS</span>
+            </div>
+            <h3 class="rp-pub-title">AutoParBench: A Unified Test Framework for OpenMP-Based Automatic Parallelization Compilers</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al. — LLNL</p>
+            <p class="rp-pub-desc">
+              Introduces AutoParBench, a benchmark framework for evaluating automatic parallelization tools. Provides ground-truth
+              parallelization annotations and a correctness-checking methodology to reliably compare different auto-parallelization
+              compilers on realistic loop patterns.
+            </p>
+            <div class="rp-pub-links">
+              <a href="https://github.com/LLNL/AutoParBench" target="_blank" rel="noopener" class="rp-pub-link">GitHub →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOFTWARE ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="software-heading">
+      <div class="container">
+        <h2 id="software-heading" class="rp-section-title"><span class="rp-sec-icon">💻</span> Software &amp; Tools</h2>
+        <div class="rp-software-grid">
+
+          <div class="software-card featured">
+            <div class="software-header">
+              <div class="software-icon">🏁</div>
+              <div class="software-meta">
+                <h3>DataRaceBench</h3>
+                <span class="sw-tag">Flagship Benchmark Suite</span>
+              </div>
+            </div>
+            <p>
+              A comprehensive benchmark suite for evaluating data race detection tools on OpenMP programs. Provides hundreds of
+              microbenchmarks spanning a systematic taxonomy of race patterns: loop races, pointer aliasing, reduction races,
+              atomic races, and complex inter-procedural patterns. Each benchmark carries ground-truth race annotations.
+              Widely adopted in academia and industry for tool evaluation and development.
+            </p>
+            <div class="software-links">
+              <a href="https://github.com/LLNL/dataracebench" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>OpenMP</span><span>C/C++</span><span>Fortran</span><span>Benchmarking</span><span>Race Detection</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">📐</div>
+              <div class="software-meta">
+                <h3>AutoParBench</h3>
+                <span class="sw-tag">Auto-Parallelization Benchmark</span>
+              </div>
+            </div>
+            <p>
+              A unified benchmark framework for evaluating automatic parallelization compilers and tools. Contains loops from
+              real scientific codes alongside synthetic patterns, with ground-truth parallelizability annotations and an automated
+              correctness-checking infrastructure.
+            </p>
+            <div class="software-links">
+              <a href="https://github.com/LLNL/AutoParBench" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>OpenMP</span><span>Auto-parallelization</span><span>Evaluation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== IMPACT ========== -->
+    <section class="rp-section rp-section-peach" aria-labelledby="impact-heading">
+      <div class="container">
+        <h2 id="impact-heading" class="rp-section-title"><span class="rp-sec-icon">💡</span> Impact &amp; Insights</h2>
+        <div class="rp-impact-box">
+          <blockquote>
+            You can't fix what you can't measure. Standardized benchmarks don't just evaluate tools —
+            they define what correctness means and create shared ground truth for a research community.
+          </blockquote>
+          <ul class="rp-impact-list">
+            <li><strong>DataRaceBench's systematic taxonomy</strong> of race patterns ensures that tool evaluations are comprehensive and comparable — preventing the cherry-picking of easy test cases that would make tools look better than they are.</li>
+            <li>The <strong>ground-truth annotation approach</strong> is critical for scientific benchmarking: unlike running programs and observing crashes, explicit annotations enable precision/recall analysis of detection tool quality.</li>
+            <li><strong>Community adoption</strong> of DataRaceBench has created a virtuous cycle: tool builders use it to find weaknesses, improve their tools, and contribute new patterns back to the suite — continuously raising the bar for the field.</li>
+            <li>The <strong>LLM race detection study</strong> (SC-W 2023) is important precisely because it reveals limits: understanding where AI fails at correctness analysis is as valuable as celebrating where it succeeds.</li>
+            <li><strong>AutoParBench</strong> fills a gap in evaluation infrastructure for automatic parallelization — a tool that generates incorrect parallel code is worse than no tool at all, and rigorous benchmarking catches these failures.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Chunhua "Leo" Liao · Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub">
+        <a href="../index.html">Home</a> ·
+        <a href="../index.html#research">All Research Areas</a> ·
+        <a href="#" onclick="window.scrollTo(0,0);return false;">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HPC Performance Optimization research by Dr. Chunhua (Leo) Liao — compiler-guided optimization, autotuning, data placement, exascale computing, and AI-assisted performance engineering." />
+  <meta name="author" content="Chunhua Liao" />
+  <title>HPC Performance Optimization | Chunhua (Leo) Liao</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="../index.html">Leo Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#software">Software</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="research-page-hero" aria-labelledby="rp-title">
+      <div class="container">
+        <a href="../index.html#research" class="back-link">← Back to Research</a>
+        <p class="rp-label">Research Area</p>
+        <div class="rp-hero-icon" aria-hidden="true">📊</div>
+        <h1 id="rp-title" class="rp-title">HPC Performance Optimization</h1>
+        <p class="rp-desc">
+          Closing the gap between theoretical peak performance and what scientific applications actually achieve —
+          through compiler-guided analysis, AI-assisted optimization, intelligent data placement, and developer-facing tools
+          that translate cryptic compiler reports into actionable engineering guidance for exascale machines.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== OVERVIEW ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="overview-heading">
+      <div class="container rp-overview">
+        <h2 id="overview-heading" class="rp-section-title"><span class="rp-sec-icon">📖</span> Overview</h2>
+        <p>
+          High-performance computing applications running on the world's largest supercomputers — from LLNL's Sierra and El Capitan
+          to Frontier and Aurora — routinely achieve only a fraction of their hardware's theoretical peak performance. Closing this
+          performance gap requires a deep understanding of both the application's computational structure and the machine's memory
+          hierarchy, parallelism model, and compiler optimization opportunities. Leo's HPC performance optimization research addresses
+          this challenge at multiple levels: from compiler-level analysis of individual loops to system-level data placement strategies
+          for heterogeneous memory architectures.
+        </p>
+        <p>
+          A central theme is making performance optimization <strong>accessible and actionable</strong>. Modern compilers generate
+          voluminous optimization reports — thousands of lines of diagnostics explaining why loops weren't vectorized, why functions
+          weren't inlined, why memory accesses were flagged as potential bottlenecks. This information is invaluable but requires
+          expert interpretation. Leo's <strong>CompilerGPT</strong> and related tools use AI to translate these reports into plain-English
+          explanations with concrete, prioritized recommendations — democratizing performance engineering.
+        </p>
+        <p>
+          Beyond individual code optimization, Leo's group has tackled <strong>data placement in heterogeneous memory</strong> with
+          tools like XPlacer, which automatically recommends optimal placement of data structures across NUMA domains, GPU HBM,
+          and host DRAM. This problem becomes critical at exascale, where memory bandwidth is often the binding performance constraint.
+          Leo's work under the <strong>RAPIDS/SciDAC</strong> initiative and the <strong>SUPER institute</strong> contributes directly
+          to the DOE's exascale computing mission, developing the tools and methodologies that scientific application teams need
+          to productively use next-generation hardware.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== PUBLICATIONS ========== -->
+    <section class="rp-section rp-section-warm" aria-labelledby="pubs-heading">
+      <div class="container">
+        <h2 id="pubs-heading" class="rp-section-title"><span class="rp-sec-icon">📄</span> Key Publications</h2>
+        <div class="rp-pub-list">
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2025</span>
+              <span class="rp-pub-venue">PLDI 2025</span>
+            </div>
+            <h3 class="rp-pub-title">Reductive Analysis with Compiler-Guided LLMs for Code Optimizations</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              Presents a novel compiler-AI collaboration framework where compiler analysis progressively reduces program complexity
+              to help LLMs identify and apply targeted code optimizations. Demonstrates significant speedups on real HPC benchmarks
+              through automated identification of vectorization, parallelization, and memory access pattern improvements.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2025</span>
+              <span class="rp-pub-venue">C3PO-HPC @ ISC 2025</span>
+            </div>
+            <h3 class="rp-pub-title">CompilerGPT: Leveraging LLMs for Compiler Optimization Reports</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              Demonstrates how LLMs can interpret compiler optimization diagnostics and generate actionable performance tuning
+              recommendations. Evaluated on real HPC application codes from LLNL's production portfolio, showing substantial
+              developer time savings in performance engineering workflows.
+            </p>
+            <div class="rp-pub-links">
+              <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="rp-pub-link">Code →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2020–2023</span>
+              <span class="rp-pub-venue">ICS / SC / ISC</span>
+            </div>
+            <h3 class="rp-pub-title">XPlacer: Guided Optimal Placement of Data on Heterogeneous Memory Systems</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al. — LLNL</p>
+            <p class="rp-pub-desc">
+              Introduces XPlacer, a tool that automatically analyzes application memory access patterns and recommends optimal
+              data placement across heterogeneous memory systems — GPU HBM, NUMA host memory, and NVM. Critical for extracting
+              peak performance from modern heterogeneous supercomputers where memory bandwidth is the binding constraint.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2015–2020</span>
+              <span class="rp-pub-venue">DOE SciDAC / RAPIDS</span>
+            </div>
+            <h3 class="rp-pub-title">RAPIDS SciDAC Institute: Enabling Exascale Application Performance</h3>
+            <p class="rp-pub-authors">Chunhua Liao, LLNL CASC Team, et al.</p>
+            <p class="rp-pub-desc">
+              Contributions to the DOE SciDAC RAPIDS Institute for Computer Science and Data, developing compiler and runtime
+              tools that help scientific application teams extract performance from pre-exascale and exascale platforms. Work
+              encompasses auto-parallelization, memory optimization, and performance portability frameworks.
+            </p>
+            <div class="rp-pub-links">
+              <a href="https://people.llnl.gov/liao6" target="_blank" rel="noopener" class="rp-pub-link">LLNL Profile →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2013–2018</span>
+              <span class="rp-pub-venue">SUPER Institute / ASCR</span>
+            </div>
+            <h3 class="rp-pub-title">SUPER Institute: Compiler and Runtime Support for Scalable Systems</h3>
+            <p class="rp-pub-authors">Chunhua Liao, LLNL, ANL, LBNL, et al.</p>
+            <p class="rp-pub-desc">
+              Multi-laboratory collaboration developing compiler technologies and runtime systems for scalable parallel computing.
+              Leo's contributions focused on OpenMP extensions, auto-parallelization, and performance analysis tooling for
+              DOE leadership-class systems.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Project Page →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOFTWARE ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="software-heading">
+      <div class="container">
+        <h2 id="software-heading" class="rp-section-title"><span class="rp-sec-icon">💻</span> Software &amp; Tools</h2>
+        <div class="rp-software-grid">
+
+          <div class="software-card featured">
+            <div class="software-header">
+              <div class="software-icon">🌹</div>
+              <div class="software-meta">
+                <h3>ROSE Optimization Plugins</h3>
+                <span class="sw-tag">ROSE-based Performance Tools</span>
+              </div>
+            </div>
+            <p>
+              A suite of ROSE compiler plugins for performance analysis and transformation: loop optimization advisors,
+              vectorization analyzers, memory access pattern profilers, and auto-parallelization tools. These plugins leverage
+              ROSE's source-level analysis capabilities to provide actionable optimization guidance while preserving code readability.
+            </p>
+            <div class="software-links">
+              <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="btn btn-sm">ROSE Website</a>
+              <a href="https://github.com/rose-compiler/rose" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>ROSE</span><span>C/C++</span><span>Fortran</span><span>Performance</span><span>Vectorization</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">🗺️</div>
+              <div class="software-meta">
+                <h3>XPlacer</h3>
+                <span class="sw-tag">Heterogeneous Memory Placement</span>
+              </div>
+            </div>
+            <p>
+              A compiler-assisted tool that analyzes application memory access patterns and recommends optimal data placement
+              across heterogeneous memory systems. Particularly valuable for GPU-accelerated HPC codes where choosing between
+              HBM and host memory for each data structure can dramatically affect performance.
+            </p>
+            <div class="software-links">
+              <a href="https://people.llnl.gov/liao6" target="_blank" rel="noopener" class="btn btn-sm">LLNL Profile</a>
+            </div>
+            <div class="sw-tags">
+              <span>GPU</span><span>Memory</span><span>NUMA</span><span>Exascale</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">🤖</div>
+              <div class="software-meta">
+                <h3>CompilerGPT</h3>
+                <span class="sw-tag">AI Performance Assistant</span>
+              </div>
+            </div>
+            <p>
+              LLM-powered tool that converts compiler optimization reports into plain-English explanations with actionable
+              recommendations. Reduces performance engineering from a specialist skill to something any HPC developer can
+              practice effectively with AI assistance.
+            </p>
+            <div class="software-links">
+              <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>LLM</span><span>Performance</span><span>Python</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== IMPACT ========== -->
+    <section class="rp-section rp-section-peach" aria-labelledby="impact-heading">
+      <div class="container">
+        <h2 id="impact-heading" class="rp-section-title"><span class="rp-sec-icon">💡</span> Impact &amp; Insights</h2>
+        <div class="rp-impact-box">
+          <blockquote>
+            Performance optimization is ultimately a human activity. The compiler knows what's happening in the machine,
+            but a developer must decide what to change. Our mission is to make compiler intelligence actionable for every HPC developer.
+          </blockquote>
+          <ul class="rp-impact-list">
+            <li><strong>The performance gap problem</strong> at exascale is more acute than ever: with heterogeneous CPUs, GPUs, and novel memory tiers, even expert programmers struggle to fully exploit modern HPC hardware without systematic tool support.</li>
+            <li><strong>Compiler-guided LLM optimization</strong> (PLDI 2025) demonstrates that the combination of precise compiler analysis and flexible LLM reasoning outperforms either approach alone — a key architectural insight for AI-assisted programming tools.</li>
+            <li><strong>XPlacer's data placement approach</strong> addresses a performance bottleneck that is invisible to most developers but critical for GPU-accelerated codes: choosing the wrong memory tier can cost 10–100× in bandwidth-bound applications.</li>
+            <li>The <strong>HPC-FAIR framework</strong> applies FAIR (Findable, Accessible, Interoperable, Reusable) principles to HPC performance data, enabling reproducible performance engineering and cross-site benchmarking.</li>
+            <li>Contributions to <strong>RAPIDS/SciDAC and the SUPER Institute</strong> represent long-term investment in national laboratory infrastructure — the tools and methods developed here directly enable the scientific missions of DOE's flagship computing facilities.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Chunhua "Leo" Liao · Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub">
+        <a href="../index.html">Home</a> ·
+        <a href="../index.html#research">All Research Areas</a> ·
+        <a href="#" onclick="window.scrollTo(0,0);return false;">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compiler Technologies research by Dr. Chunhua (Leo) Liao — ROSE compiler infrastructure, source-to-source transformation, and making compiler technology accessible." />
+  <meta name="author" content="Chunhua Liao" />
+  <title>Compiler Technologies | Chunhua (Leo) Liao</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="../index.html">Leo Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#software">Software</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="research-page-hero" aria-labelledby="rp-title">
+      <div class="container">
+        <a href="../index.html#research" class="back-link">← Back to Research</a>
+        <p class="rp-label">Research Area</p>
+        <div class="rp-hero-icon" aria-hidden="true">🧩</div>
+        <h1 id="rp-title" class="rp-title">Compiler Technologies</h1>
+        <p class="rp-desc">
+          Building the compiler infrastructure that empowers scientists and engineers to transform, analyze, and optimize large-scale
+          scientific codes — without needing to become compiler experts themselves. The ROSE compiler framework is Leo's flagship contribution
+          to this space, enabling a new generation of HPC tooling.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== OVERVIEW ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="overview-heading">
+      <div class="container rp-overview">
+        <h2 id="overview-heading" class="rp-section-title"><span class="rp-sec-icon">📖</span> Overview</h2>
+        <p>
+          Compiler technology is the invisible backbone of every high-performance application — but historically, building compiler tools
+          required deep, specialized expertise that put them out of reach for most developers. Leo's work on the
+          <strong>ROSE compiler infrastructure</strong> fundamentally changed this by providing a mature, open-source framework for
+          constructing program analysis and transformation tools for C, C++, Fortran, Ada, and Java. ROSE empowers domain scientists,
+          HPC engineers, and tool builders to write powerful source-to-source transformations without needing to understand the full
+          complexity of compiler internals.
+        </p>
+        <p>
+          A key insight behind ROSE's design is the <strong>source-to-source transformation</strong> approach: rather than operating
+          on low-level intermediate representations (IRs), ROSE works at the source-code level. This preserves developer intent, keeps
+          generated code readable and maintainable, and allows transformations to be validated by human experts. This philosophy makes
+          ROSE uniquely suited for scientific computing, where code longevity and human understandability are paramount.
+        </p>
+        <p>
+          More recently, Leo has expanded this vision by integrating <strong>Large Language Models (LLMs)</strong> into compiler workflows —
+          using AI to interpret compiler optimization reports, suggest code transformations, and assist with language migrations. This
+          intersection of classical compiler theory and modern AI represents the frontier of his current research, culminating in tools
+          like CompilerGPT that make compiler intelligence accessible to every HPC developer.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== PUBLICATIONS ========== -->
+    <section class="rp-section rp-section-warm" aria-labelledby="pubs-heading">
+      <div class="container">
+        <h2 id="pubs-heading" class="rp-section-title"><span class="rp-sec-icon">📄</span> Key Publications</h2>
+        <div class="rp-pub-list">
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2025</span>
+              <span class="rp-pub-venue">C3PO-HPC @ ISC 2025</span>
+            </div>
+            <h3 class="rp-pub-title">CompilerGPT: Leveraging LLMs for Compiler Optimization Reports</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              Introduces CompilerGPT, a system that uses large language models to interpret, explain, and act upon compiler optimization
+              reports — bridging the gap between cryptic compiler feedback and actionable developer guidance. Directly extends ROSE's
+              mission of making compiler technology accessible.
+            </p>
+            <div class="rp-pub-links">
+              <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="rp-pub-link">Code →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2024</span>
+              <span class="rp-pub-venue">2024</span>
+            </div>
+            <h3 class="rp-pub-title">Ada Language Support in the ROSE Compiler Infrastructure</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              Extends ROSE's language coverage to Ada, enabling static analysis and transformation of safety-critical and legacy Ada
+              codebases used in defense and aerospace applications. Demonstrates ROSE's extensibility as a multi-language platform.
+            </p>
+            <div class="rp-pub-links">
+              <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="rp-pub-link">ROSE Website →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2025</span>
+              <span class="rp-pub-venue">PLDI 2025</span>
+            </div>
+            <h3 class="rp-pub-title">Reductive Analysis with Compiler-Guided LLMs for Code Optimizations</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              A novel compiler-AI integration technique that uses reductive analysis — progressively simplifying program context —
+              to guide LLMs in identifying and applying code optimizations in complex scientific programs. Published at PLDI, the
+              premier programming languages venue.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2009</span>
+              <span class="rp-pub-venue">R&amp;D 100 Award</span>
+            </div>
+            <h3 class="rp-pub-title">ROSE: An Open Source Compiler Infrastructure for Scientific Computing</h3>
+            <p class="rp-pub-authors">Dan Quinlan, Chunhua Liao, et al. — Lawrence Livermore National Laboratory</p>
+            <p class="rp-pub-desc">
+              The foundational work describing the ROSE compiler infrastructure for source-to-source analysis and transformation.
+              Recognized with the prestigious R&amp;D 100 Award in 2009, ROSE has been deployed in numerous DOE laboratory projects
+              and academic institutions worldwide.
+            </p>
+            <div class="rp-pub-links">
+              <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="rp-pub-link">Project Site →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOFTWARE ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="software-heading">
+      <div class="container">
+        <h2 id="software-heading" class="rp-section-title"><span class="rp-sec-icon">💻</span> Software &amp; Tools</h2>
+        <div class="rp-software-grid">
+
+          <div class="software-card featured">
+            <div class="software-header">
+              <div class="software-icon">🌹</div>
+              <div class="software-meta">
+                <h3>ROSE Compiler Infrastructure</h3>
+                <span class="sw-tag">Flagship · R&amp;D 100 Award 2009</span>
+              </div>
+            </div>
+            <p>
+              An open-source compiler framework for building source-level program analysis, transformation, and optimization tools
+              for C, C++, Fortran, Ada, Java, and Python. Used at LLNL, DOE labs, and universities worldwide. Enables non-compiler-experts
+              to build powerful static analysis tools. <em>Winner of the R&amp;D 100 Award in 2009.</em>
+            </p>
+            <div class="software-links">
+              <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="btn btn-sm">Website</a>
+              <a href="https://github.com/rose-compiler/rose" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>C/C++</span><span>Fortran</span><span>Ada</span><span>Source Analysis</span><span>HPC</span>
+            </div>
+          </div>
+
+          <div class="software-card">
+            <div class="software-header">
+              <div class="software-icon">🤖</div>
+              <div class="software-meta">
+                <h3>CompilerGPT</h3>
+                <span class="sw-tag">AI-Powered Compiler Tools</span>
+              </div>
+            </div>
+            <p>
+              LLM-powered tool that translates compiler optimization reports into plain-English explanations — helping HPC developers
+              understand what the compiler did (or couldn't do) and how to improve their code. Built on top of ROSE analysis.
+            </p>
+            <div class="software-links">
+              <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
+            </div>
+            <div class="sw-tags">
+              <span>LLM</span><span>Python</span><span>Compilers</span><span>HPC</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== IMPACT ========== -->
+    <section class="rp-section rp-section-peach" aria-labelledby="impact-heading">
+      <div class="container">
+        <h2 id="impact-heading" class="rp-section-title"><span class="rp-sec-icon">💡</span> Impact &amp; Insights</h2>
+        <div class="rp-impact-box">
+          <blockquote>
+            Compiler technology should not require a PhD in compilers. ROSE was built on the principle that scientists and engineers
+            — not just compiler researchers — should be able to analyze and transform their own code.
+          </blockquote>
+          <ul class="rp-impact-list">
+            <li>The <strong>source-to-source approach</strong> preserves developer intent and produces human-readable output — a critical differentiator for scientific codebases where maintainability matters as much as performance.</li>
+            <li>By building a <strong>high-level API over compiler internals</strong>, ROSE enables domain scientists to write analysis tools in days rather than months, democratizing access to compiler technology.</li>
+            <li>The <strong>R&amp;D 100 Award</strong> recognition validates ROSE's impact beyond academia — it has become production infrastructure at multiple national laboratories.</li>
+            <li>The pivot to <strong>LLM-augmented compiler tools</strong> (CompilerGPT, PLDI 2025) marks a new frontier: using AI to interpret and communicate compiler intelligence to developers in natural language.</li>
+            <li>Multi-language support (C, C++, Fortran, Ada, Java) means ROSE addresses the real-world heterogeneity of HPC codebases, including legacy code that other tools ignore.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Chunhua "Leo" Liao · Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub">
+        <a href="../index.html">Home</a> ·
+        <a href="../index.html#research">All Research Areas</a> ·
+        <a href="#" onclick="window.scrollTo(0,0);return false;">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

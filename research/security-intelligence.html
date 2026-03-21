@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Security Intelligence research by Dr. Chunhua (Leo) Liao — LLM-driven document clustering for threat analysis and applying HPC NLP techniques to cybersecurity." />
+  <meta name="author" content="Chunhua Liao" />
+  <title>Security Intelligence | Chunhua (Leo) Liao</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="../index.html">Leo Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#software">Software</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="research-page-hero" aria-labelledby="rp-title">
+      <div class="container">
+        <a href="../index.html#research" class="back-link">← Back to Research</a>
+        <p class="rp-label">Research Area</p>
+        <div class="rp-hero-icon" aria-hidden="true">🛡️</div>
+        <h1 id="rp-title" class="rp-title">Security Intelligence</h1>
+        <p class="rp-desc">
+          Applying the NLP and large language model techniques developed in HPC research to a new domain: cybersecurity intelligence.
+          Automating the analysis and clustering of threat documents to extract actionable intelligence from large, unstructured data
+          sources — at machine speed and scale.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== OVERVIEW ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="overview-heading">
+      <div class="container rp-overview">
+        <h2 id="overview-heading" class="rp-section-title"><span class="rp-sec-icon">📖</span> Overview</h2>
+        <p>
+          The cybersecurity domain faces an information overload problem: threat intelligence analysts must process enormous volumes
+          of reports, advisories, vulnerability disclosures, and incident write-ups — far more than any human analyst can read and
+          synthesize in a timely manner. The challenge is not a shortage of information, but a shortage of automated tools to
+          extract signal from noise and organize it into actionable intelligence.
+        </p>
+        <p>
+          Leo's security intelligence research transfers LLM and NLP expertise accumulated in the HPC domain to address this
+          challenge. The core technique is <strong>LLM-driven document clustering</strong>: using large language model embeddings
+          to represent threat documents in a semantically rich vector space, then applying clustering algorithms to automatically
+          group related documents — malware families, attack campaigns, vulnerability types — without requiring manually crafted
+          taxonomies or labeled training data. This unsupervised approach scales to large corpora and adapts automatically to
+          emerging threats.
+        </p>
+        <p>
+          The key insight driving this work is that the NLP and LLM infrastructure developed for HPC code analysis — understanding
+          technical documents, extracting key concepts, grouping related artifacts — transfers naturally to the security domain.
+          Both domains deal with highly technical, domain-specific text where general-purpose NLP models struggle, and both benefit
+          from the same approach: fine-tuning or prompt-engineering LLMs with domain context, then applying clustering or
+          classification to organize the results. Lawrence Livermore National Laboratory's unique position at the intersection of
+          HPC and national security makes this cross-domain research a natural fit.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== PUBLICATIONS ========== -->
+    <section class="rp-section rp-section-warm" aria-labelledby="pubs-heading">
+      <div class="container">
+        <h2 id="pubs-heading" class="rp-section-title"><span class="rp-sec-icon">📄</span> Key Publications</h2>
+        <div class="rp-pub-list">
+
+          <article class="rp-pub-item">
+            <div class="rp-pub-meta">
+              <span class="rp-pub-year">2025</span>
+              <span class="rp-pub-venue">ISI 2025</span>
+            </div>
+            <h3 class="rp-pub-title">LLM-Driven Document Clustering for Security Intelligence</h3>
+            <p class="rp-pub-authors">Chunhua Liao et al.</p>
+            <p class="rp-pub-desc">
+              Presents a framework for automated threat intelligence analysis using LLM-based document embeddings and unsupervised
+              clustering. The system automatically groups related security documents — vulnerability reports, threat actor profiles,
+              malware analyses — enabling analysts to focus on clusters of interest rather than individual documents.
+              Published at the IEEE International Symposium on Intelligence and Security Informatics (ISI) 2025.
+            </p>
+            <div class="rp-pub-links">
+              <a href="#" class="rp-pub-link">Paper →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== INSIGHT INTO APPROACH ========== -->
+    <section class="rp-section rp-section-light" aria-labelledby="approach-heading">
+      <div class="container rp-overview">
+        <h2 id="approach-heading" class="rp-section-title"><span class="rp-sec-icon">🔬</span> Technical Approach</h2>
+        <p>
+          The LLM-driven clustering pipeline processes security documents through several stages. First, documents are embedded
+          using a large language model (or a security-domain fine-tuned variant) to produce dense semantic vector representations
+          that capture meaning beyond keyword matching. These embeddings encode relationships between technical concepts — two
+          documents about the same exploit technique will be close in embedding space even if they use different terminology.
+        </p>
+        <p>
+          Clustering algorithms (k-means, HDBSCAN, or hierarchical methods) then group the embedded documents, with cluster
+          quality evaluated using both quantitative metrics (silhouette score, clustering stability) and human expert assessment.
+          The resulting clusters can be labeled, summarized, and linked to known threat intelligence frameworks (e.g., MITRE ATT&amp;CK),
+          providing a structured, searchable intelligence picture from raw, unstructured text corpora.
+        </p>
+        <p>
+          A distinctive aspect of this work is the <strong>cross-domain transfer</strong> story: insights from applying LLMs to
+          HPC code (handling highly technical, domain-specific text; dealing with specialized vocabulary; clustering related
+          artifacts by semantic similarity) transfer directly to the security domain. This cross-pollination between HPC AI research
+          and security informatics is a hallmark of LLNL's multidisciplinary research environment.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== IMPACT ========== -->
+    <section class="rp-section rp-section-peach" aria-labelledby="impact-heading">
+      <div class="container">
+        <h2 id="impact-heading" class="rp-section-title"><span class="rp-sec-icon">💡</span> Impact &amp; Insights</h2>
+        <div class="rp-impact-box">
+          <blockquote>
+            The same LLM capabilities that help HPC developers understand compiler reports can help security analysts
+            understand threat landscapes — the technical depth required is similar, only the domain changes.
+          </blockquote>
+          <ul class="rp-impact-list">
+            <li><strong>Cross-domain transfer</strong> of LLM techniques demonstrates that investments in AI for HPC have broader payoffs — the infrastructure, prompting strategies, and evaluation methods developed for code analysis apply directly to security text analysis.</li>
+            <li><strong>Unsupervised clustering</strong> is strategically important for security intelligence because labeling training data is expensive, time-consuming, and falls behind the pace of emerging threats — the system works without requiring labeled examples.</li>
+            <li><strong>LLM embeddings capture semantic meaning</strong> that keyword-based approaches miss: two documents about the same threat actor may use entirely different terminology, yet LLM embeddings place them close in vector space.</li>
+            <li>This work reflects <strong>LLNL's dual mission</strong> in both scientific computing and national security — applying computational advances from one domain to strengthen capabilities in the other.</li>
+            <li>The <strong>ISI 2025 publication</strong> introduces this research to the security informatics community, opening doors for collaboration between the HPC AI and cybersecurity research communities.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Chunhua "Leo" Liao · Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub">
+        <a href="../index.html">Home</a> ·
+        <a href="../index.html#research">All Research Areas</a> ·
+        <a href="#" onclick="window.scrollTo(0,0);return false;">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
