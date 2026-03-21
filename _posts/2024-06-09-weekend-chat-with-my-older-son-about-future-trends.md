@@ -2,6 +2,7 @@
 title: "Weekend Chat with My Older Son about Future Trends"
 date: 2024-06-09
 slug: weekend-chat-with-my-older-son-about-future-trends
+cover_image: "/assets/images/covers/weekend-chat-with-my-older-son-about-future-trends.webp"
 category: tech
 theme: society
 tags: [future career, AI]

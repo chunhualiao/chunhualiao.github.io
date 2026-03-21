@@ -2,6 +2,7 @@
 title: "Introducing telegram-codex-bridge: talk to a local Codex CLI from Telegram"
 date: 2026-03-12
 slug: introducing-telegram-codex-bridge-talk-to-a-local-codex-cli-from-telegram
+cover_image: "/assets/images/covers/introducing-telegram-codex-bridge-talk-to-a-local-codex-cli-from-telegram.png"
 category: tech
 theme: ai
 tags: []

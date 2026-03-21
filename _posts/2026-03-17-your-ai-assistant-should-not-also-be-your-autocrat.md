@@ -2,6 +2,7 @@
 title: "Your AI Assistant Should Not Also Be Your Autocrat"
 date: 2026-03-17
 slug: your-ai-assistant-should-not-also-be-your-autocrat
+cover_image: "/assets/images/covers/your-ai-assistant-should-not-also-be-your-autocrat.png"
 category: tech
 theme: ai
 tags: []

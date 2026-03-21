@@ -52,6 +52,9 @@ title: "Blog"
           {% for post in site.posts %}
           <article class="post-card" data-category="{{ post.category | default: 'thoughts' }}">
             <a href="{{ post.url | relative_url }}" class="post-card-link">
+              {% if post.cover_image %}
+              <img src="{{ post.cover_image | relative_url }}" alt="" class="post-card-cover" loading="lazy" />
+              {% endif %}
               <div class="post-card-meta">
                 <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">{{ post.date | date: "%B %-d, %Y" }}</time>
                 {% if post.category == 'tech' %}

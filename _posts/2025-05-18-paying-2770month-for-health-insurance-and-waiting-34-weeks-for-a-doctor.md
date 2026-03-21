@@ -2,6 +2,7 @@
 title: "Paying $2,770/Month for Health Insurance — and Waiting 3–4 Weeks for a Doctor?"
 date: 2025-05-18
 slug: paying-2770month-for-health-insurance-and-waiting-34-weeks-for-a-doctor
+cover_image: "/assets/images/covers/paying-2770month-for-health-insurance-and-waiting-34-weeks-for-a-doctor.jpeg"
 category: tech
 theme: society
 tags: [freemarket, healthcare]

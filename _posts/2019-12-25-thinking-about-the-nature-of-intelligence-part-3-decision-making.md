@@ -2,6 +2,7 @@
 title: "Thinking About the Nature of Intelligence (Part 3): Decision Making"
 date: 2019-12-25
 slug: thinking-about-the-nature-of-intelligence-part-3-decision-making
+cover_image: "/assets/images/covers/thinking-about-the-nature-of-intelligence-part-3-decision-making.png"
 category: tech
 theme: ai
 tags: [decision making, Intelligence]

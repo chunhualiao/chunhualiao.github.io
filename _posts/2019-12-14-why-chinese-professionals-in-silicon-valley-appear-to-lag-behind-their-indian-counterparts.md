@@ -2,6 +2,7 @@
 title: "Why Chinese Professionals in Silicon Valley Appear to Lag Behind Their Indian Counterparts"
 date: 2019-12-14
 slug: why-chinese-professionals-in-silicon-valley-appear-to-lag-behind-their-indian-counterparts
+cover_image: "/assets/images/covers/why-chinese-professionals-in-silicon-valley-appear-to-lag-behind-their-indian-counterparts.webp"
 category: thoughts
 theme: society
 tags: [chinese vs indians, silicon valley, Career]

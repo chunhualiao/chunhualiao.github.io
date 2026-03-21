@@ -2,6 +2,7 @@
 title: "Things I Want to Do: Sharing Some Ideas for New Products, Services, and Research Directions"
 date: 2022-11-05
 slug: things-i-want-to-do-sharing-some-ideas-for-new-products-services-and-research-directions
+cover_image: "/assets/images/covers/things-i-want-to-do-sharing-some-ideas-for-new-products-services-and-research-directions.png"
 category: thoughts
 theme: innovation
 tags: [new products and services, ideas, TODOLIST]

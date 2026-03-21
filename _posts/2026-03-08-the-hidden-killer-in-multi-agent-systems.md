@@ -2,6 +2,7 @@
 title: "The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management"
 date: 2026-03-08
 slug: the-hidden-killer-in-multi-agent-systems
+cover_image: "/assets/images/covers/the-hidden-killer-in-multi-agent-systems.png"
 category: tech
 theme: ai
 tags: []

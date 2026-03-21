@@ -2,6 +2,7 @@
 title: "A Systematic Approach to Innovation"
 date: 2023-02-11
 slug: a-systematic-approach-to-innovation
+cover_image: "/assets/images/covers/a-systematic-approach-to-innovation.png"
 category: thoughts
 theme: innovation
 tags: [systemic approach, innovation]

@@ -2,6 +2,7 @@
 title: "Why Mars Needs a New Rulebook—and What Makes It Better Than the U.S. Constitution"
 date: 2025-04-21
 slug: why-mars-needs-a-new-rulebookand-what-makes-it-better-than-the-us-constitution
+cover_image: "/assets/images/covers/why-mars-needs-a-new-rulebookand-what-makes-it-better-than-the-us-constitution.png"
 category: thoughts
 theme: governance
 tags: [Constitution, First Principles, mars]

@@ -2,6 +2,7 @@
 title: "Thinking About the Nature of Intelligence for Education and Self-Improvement (Part 1)"
 date: 2019-12-22
 slug: thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-1
+cover_image: "/assets/images/covers/thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-1.png"
 category: tech
 theme: ai
 tags: [Intelligence, goal-setting, learning]

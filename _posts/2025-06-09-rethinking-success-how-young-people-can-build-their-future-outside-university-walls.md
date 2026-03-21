@@ -2,6 +2,7 @@
 title: "Rethinking Success: How Young People Can Build Their Future Outside University Walls"
 date: 2025-06-09
 slug: rethinking-success-how-young-people-can-build-their-future-outside-university-walls
+cover_image: "/assets/images/covers/rethinking-success-how-young-people-can-build-their-future-outside-university-walls.jpeg"
 category: thoughts
 theme: thinking
 tags: [university, Entrepreneurship]

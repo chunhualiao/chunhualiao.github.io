@@ -2,6 +2,7 @@
 title: "The Deepest Driving Force of Innovation: The Mindset of Equality for All"
 date: 2023-06-11
 slug: the-deepest-driving-force-of-innovation-the-mindset-of-equality-for-all
+cover_image: "/assets/images/covers/the-deepest-driving-force-of-innovation-the-mindset-of-equality-for-all.webp"
 category: thoughts
 theme: innovation
 tags: [innovation-by-equality]

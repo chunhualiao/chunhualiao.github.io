@@ -2,6 +2,7 @@
 title: "Key Takeaways from 30 Classic Investment Books Summarized by ChatGPT"
 date: 2023-01-29
 slug: key-takeaways-from-30-classic-investment-books-summarized-by-chatgpt
+cover_image: "/assets/images/covers/key-takeaways-from-30-classic-investment-books-summarized-by-chatgpt.png"
 category: thoughts
 theme: ai
 tags: [Investment, chatgpt, book summary]

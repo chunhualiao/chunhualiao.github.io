@@ -2,6 +2,7 @@
 title: "From Thrones to Algorithms: How Ancient Emperors Teach Us to Govern Superhuman AI"
 date: 2025-07-23
 slug: from-thrones-to-algorithms-how-ancient-emperors-teach-us-to-govern-superhuman-ai
+cover_image: "/assets/images/covers/from-thrones-to-algorithms-how-ancient-emperors-teach-us-to-govern-superhuman-ai.jpeg"
 category: tech
 theme: ai
 tags: [AI, Governance, emperor]

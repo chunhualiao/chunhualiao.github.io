@@ -2,6 +2,7 @@
 title: "Why Is the Field of Artificial Intelligence Developing So Successfully?"
 date: 2024-03-09
 slug: why-is-the-field-of-artificial-intelligence-developing-so-successfully
+cover_image: "/assets/images/covers/why-is-the-field-of-artificial-intelligence-developing-so-successfully.webp"
 category: tech
 theme: ai
 tags: [research ecosystem, AI]

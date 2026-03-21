@@ -2,6 +2,7 @@
 title: "100 Most Common Fatal Mistakes in Life: An Encyclopedia of Pitfalls"
 date: 2025-04-09
 slug: 100-most-common-fatal-mistakes-in-life-an-encyclopedia-of-pitfalls
+cover_image: "/assets/images/covers/100-most-common-fatal-mistakes-in-life-an-encyclopedia-of-pitfalls.png"
 category: thoughts
 theme: thinking
 tags: [Life lessons, inversion thinking]

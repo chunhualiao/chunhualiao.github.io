@@ -2,6 +2,7 @@
 title: "Thinking About the Nature of Intelligence for Education and Self-Improvement (Part 2)"
 date: 2019-12-24
 slug: thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-2
+cover_image: "/assets/images/covers/thinking-about-the-nature-of-intelligence-for-education-and-self-improvement-part-2.png"
 category: tech
 theme: ai
 tags: [modeling, prediction, perception]

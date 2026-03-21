@@ -2,6 +2,7 @@
 title: "From 1787 to the Red Planet: Rethinking Constitutional Design"
 date: 2025-04-21
 slug: from-1787-to-the-red-planet-rethinking-constitutional-design
+cover_image: "/assets/images/covers/from-1787-to-the-red-planet-rethinking-constitutional-design.png"
 category: thoughts
 theme: governance
 tags: [consitution, mars]

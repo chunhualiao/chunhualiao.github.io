@@ -2,6 +2,7 @@
 title: "Don't Worry, Because There Are Only 5 Things in Life You Need to Focus On"
 date: 2023-06-10
 slug: dont-worry-because-there-are-only-5-things-in-life-you-need-to-focus-on
+cover_image: "/assets/images/covers/dont-worry-because-there-are-only-5-things-in-life-you-need-to-focus-on.webp"
 category: thoughts
 theme: thinking
 tags: [5 priorities in life]

@@ -2,6 +2,7 @@
 title: "Why Can’t China Just Happily Consume What It Produces?"
 date: 2025-04-09
 slug: why-cant-china-just-happily-consume-what-it-produces
+cover_image: "/assets/images/covers/why-cant-china-just-happily-consume-what-it-produces.png"
 category: thoughts
 theme: society
 tags: [china,  self-sufficiency]

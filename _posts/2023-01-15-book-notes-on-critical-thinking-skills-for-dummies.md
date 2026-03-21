@@ -2,6 +2,7 @@
 title: "Book Notes on Critical Thinking Skills For Dummies"
 date: 2023-01-15
 slug: book-notes-on-critical-thinking-skills-for-dummies
+cover_image: "/assets/images/covers/book-notes-on-critical-thinking-skills-for-dummies.png"
 category: thoughts
 theme: thinking
 tags: [Critical Thinking, BookReview]

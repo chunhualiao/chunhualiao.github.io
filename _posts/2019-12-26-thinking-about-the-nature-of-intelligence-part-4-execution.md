@@ -2,6 +2,7 @@
 title: "Thinking About the Nature of Intelligence (Part 4) Execution"
 date: 2019-12-26
 slug: thinking-about-the-nature-of-intelligence-part-4-execution
+cover_image: "/assets/images/covers/thinking-about-the-nature-of-intelligence-part-4-execution.png"
 category: tech
 theme: ai
 tags: [Intelligence, execution]

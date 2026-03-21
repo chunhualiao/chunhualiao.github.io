@@ -2,6 +2,7 @@
 title: "Quantifying the Independence of Americans"
 date: 2022-07-27
 slug: quantifying-the-independence-of-americans
+cover_image: "/assets/images/covers/quantifying-the-independence-of-americans.png"
 category: thoughts
 theme: governance
 tags: [quantify independence, Independence Day]
