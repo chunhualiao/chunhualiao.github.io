@@ -43,7 +43,7 @@ If I treat OpenClaw like a partner, the questions change:
 
 That shift matters because the value of an agent system is not just in a single answer. The value is in accumulated alignment. The more clearly I define its values, goals, memory, habits, operating rules, and skills, the more it stops feeling like a chatbot wrapper and starts feeling like a real working partner.
 
-![OpenClaw as a partner, not just a tool](https://cdn.hashnode.com/res/hashnode/image/upload/v1773294246996/6a067ea8-45fc-4606-9b34-822678829b20.png)
+![OpenClaw as a partner, not just a tool](/assets/images/blog/6a067ea8.png)
 
 ## The Twelve Dimensions That Actually Matter
 
@@ -97,7 +97,7 @@ A grand plan without follow-through is just theory. OpenClaw needs to break work
 
 That means task decomposition, persistence, automation of repetitive work, and the ability to push projects forward without waiting for constant nudges. Execution is where “interesting system” becomes “productive system.”
 
-![The twelve dimensions of a well-raised OpenClaw](https://cdn.hashnode.com/res/hashnode/image/upload/v1773294247917/28af19c2-6230-416b-8449-b5b24fa8df9b.png)
+![The twelve dimensions of a well-raised OpenClaw](/assets/images/blog/28af19c2.png)
 
 ### 9. Measurement Keeps Growth Honest
 
@@ -145,7 +145,7 @@ That is not just configuration. It is a training system.
 
 In other words, OpenClaw is not only a place to run prompts. It is a place to cultivate behavior.
 
-![How the philosophy maps onto the OpenClaw stack](https://cdn.hashnode.com/res/hashnode/image/upload/v1773294248924/5cdc57cc-2848-4e16-8911-1ea1da829e34.png)
+![How the philosophy maps onto the OpenClaw stack](/assets/images/blog/5cdc57cc.png)
 
 ## Most People Are Still Driving the Ferrari to the Grocery Store
 

@@ -33,4 +33,4 @@ On each Independence Day, beyond the traditional fireworks displays and extended
 
 Original Chinese version: [https://mp.weixin.qq.com/s/UcV\_z4ZpAKW7wcGVTKqs8w](https://mp.weixin.qq.com/s/UcV_z4ZpAKW7wcGVTKqs8w)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1744080822550/00c1ebfa-2cae-4526-b501-5af652a5b389.png align="center")
+![](/assets/images/blog/00c1ebfa.png)
