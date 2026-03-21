@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dr. Chunhua Liao — Senior Computer Scientist at Lawrence Livermore National Laboratory. Research in compilers, HPC, and AI-assisted programming tools." />
+  <meta name="description" content="Chunhua Liao — writing about AI, compilers, governance, and the future of human-AI collaboration." />
   <meta name="author" content="Chunhua Liao" />
-  <meta property="og:title" content="Chunhua Liao | LLNL Computer Scientist" />
-  <meta property="og:description" content="Senior Computer Scientist at CASC, LLNL. Research in compilers, HPC, and AI-assisted programming tools." />
+  <meta property="og:title" content="Chunhua Liao — Writer, Researcher, Builder" />
+  <meta property="og:description" content="Thoughts on AI agents, compilers, governance, and building things that matter." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#fdfaf7" />
-  <title>Chunhua Liao | LLNL Computer Scientist</title>
+  <title>Chunhua Liao — Writer, Researcher, Builder</title>
 
-  <!-- Preconnect for Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
@@ -21,7 +20,6 @@
 </head>
 <body>
 
-  <!-- Skip to main content (accessibility) -->
   <a href="#hero" class="sr-only skip-link">Skip to main content</a>
 
   <!-- ========== NAVIGATION ========== -->
@@ -32,11 +30,9 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks" role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#software">Software</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#blog-preview">Blog</a></li>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -44,13 +40,13 @@
 
   <main>
 
-    <!-- ========== HERO / ABOUT ========== -->
+    <!-- ========== HERO ========== -->
     <section id="hero" aria-labelledby="hero-name">
       <div class="hero-bg-overlay"></div>
       <div class="container hero-inner">
         <div class="hero-photo-wrap">
           <div class="hero-photo" aria-label="Photo of Chunhua Liao">
-            <img src="assets/images/headshot.jpg?v=4"
+            <img src="assets/images/headshot.jpg?v=5"
                  alt="Chunhua Liao"
                  width="300" height="300"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
@@ -61,310 +57,41 @@
           <p class="hero-label">Hey, I'm</p>
           <h1 id="hero-name">Chunhua <span class="accent">Liao</span></h1>
           <p class="hero-tagline">
-            I teach compilers to talk to AI — and sometimes the other way around.
+            I write about AI, compilers, and the messy future of humans working with machines.
           </p>
           <p class="hero-bio">
-            I'm a senior computer scientist at <a href="https://people.llnl.gov/liao6" target="_blank" rel="noopener">Lawrence Livermore National Lab</a>, where I've spent nearly two decades making parallel programs faster, safer, and less painful to write. These days I'm obsessed with getting <strong>large language models to actually understand code</strong> — not just autocomplete it, but reason about optimizations, catch race conditions, and translate between languages.
-          </p>
-          <p class="hero-bio">
-            I built the <a href="http://rosecompiler.org/" target="_blank" rel="noopener">ROSE compiler</a> (R&D 100 Award winner), <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener">CompilerGPT</a>, and a bunch of tools that live at the intersection of compilers and AI. When I'm not doing that, I'm writing about <a href="blog.html">AI agents, governance, and the future of human-AI collaboration</a>.
+            By day I'm a computer scientist at <a href="https://people.llnl.gov/liao6" target="_blank" rel="noopener">Lawrence Livermore National Lab</a> building tools that help AI understand code. By night (and weekends) I write about <strong>AI agents</strong>, <strong>governance</strong>, <strong>intelligence</strong>, and anything else I can't stop thinking about.
           </p>
 
           <div class="hero-now">
-            <h3>🔥 What I'm excited about right now</h3>
+            <h3>🔥 What I'm into right now</h3>
             <ul>
-              <li>Building an <a href="https://github.com/llnl/open-ai-co-scientist" target="_blank" rel="noopener">open-source AI Co-Scientist</a> — multi-agent research hypothesis generation</li>
-              <li>Exploring how <a href="https://github.com/chunhualiao/openclaw-paradigm-book" target="_blank" rel="noopener">AI agents can write entire books</a> (88k words, 5 agents, 5 hours)</li>
-              <li>Making compilers explain themselves in plain English via LLMs</li>
+              <li>Writing about <a href="blog/your-ai-assistant-should-not-also-be-your-autocrat.html">why your AI assistant shouldn't also be your autocrat</a></li>
+              <li>Building an <a href="https://github.com/llnl/open-ai-co-scientist" target="_blank" rel="noopener">open-source AI Co-Scientist</a> for automated research</li>
+              <li>Figuring out how <a href="https://github.com/chunhualiao/openclaw-paradigm-book" target="_blank" rel="noopener">5 AI agents wrote an 88k-word book in 5 hours</a></li>
             </ul>
           </div>
 
           <div class="hero-links">
-            <a href="https://scholar.google.com/citations?user=9IY55CsAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-primary">
-              📚 2,246+ Citations
+            <a href="blog.html" class="btn btn-primary">
+              ✍️ Read the Blog
+            </a>
+            <a href="#work" class="btn btn-secondary">
+              🔬 My Research
             </a>
             <a href="https://github.com/chunhualiao" target="_blank" rel="noopener" class="btn btn-secondary">
               💻 GitHub
             </a>
-            <a href="blog.html" class="btn btn-secondary">
-              ✍️ Blog
-            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== RESEARCH INTERESTS ========== -->
-    <section id="research" class="section-dark" aria-labelledby="research-heading">
-      <div class="container">
-        <h2 id="research-heading" class="section-title">Research Interests</h2>
-        <p class="section-subtitle">Bridging classical compiler theory with modern AI to advance high-performance scientific computing.</p>
-        <div class="research-grid">
-
-          <a href="research/compiler-technologies.html" class="research-card-link" data-delay="0">
-            <div class="research-card">
-              <div class="research-icon">🧩</div>
-              <h3>Compiler Technologies</h3>
-              <p>Developing advanced compiler infrastructure (ROSE) for source-to-source transformation, static analysis, and automated optimization of large-scale scientific codes.</p>
-              <span class="learn-more">Learn more →</span>
-            </div>
-          </a>
-
-          <a href="research/parallel-programming.html" class="research-card-link" data-delay="100">
-            <div class="research-card">
-              <div class="research-icon">⚡</div>
-              <h3>Parallel Programming Models</h3>
-              <p>Advancing OpenMP and other parallel programming abstractions — enabling automated parallelization, race detection, and performance tuning for HPC workloads.</p>
-              <span class="learn-more">Learn more →</span>
-            </div>
-          </a>
-
-          <a href="research/ai-assisted-programming.html" class="research-card-link" data-delay="200">
-            <div class="research-card">
-              <div class="research-icon">🤖</div>
-              <h3>AI-Assisted Programming</h3>
-              <p>Leveraging Large Language Models (LLMs) for code optimization, Fortran-to-C++ migration, and compiler report interpretation — CompilerGPT, HPC-GPT, Fortran2CPP.</p>
-              <span class="learn-more">Learn more →</span>
-            </div>
-          </a>
-
-          <a href="research/correctness-verification.html" class="research-card-link" data-delay="300">
-            <div class="research-card">
-              <div class="research-icon">🔍</div>
-              <h3>Correctness &amp; Verification</h3>
-              <p>Building benchmark suites (DataRaceBench, AutoParBench) and analysis tools to detect data races, validate auto-parallelization, and ensure correctness of parallel programs.</p>
-              <span class="learn-more">Learn more →</span>
-            </div>
-          </a>
-
-          <a href="research/hpc-performance.html" class="research-card-link" data-delay="400">
-            <div class="research-card">
-              <div class="research-icon">📊</div>
-              <h3>HPC Performance Optimization</h3>
-              <p>Combining compiler analysis with AI to guide performance engineers — translating cryptic compiler reports into actionable insights for real-world scientific applications.</p>
-              <span class="learn-more">Learn more →</span>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== PUBLICATIONS ========== -->
-    <section id="publications" class="section-light" aria-labelledby="pub-heading">
-      <div class="container">
-        <h2 id="pub-heading" class="section-title">Selected Publications</h2>
-        <p class="section-subtitle">Recent work at the intersection of compilers, HPC, and AI. Full list on <a href="https://scholar.google.com/citations?user=9IY55CsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
-
-        <div class="pub-list">
-
-          <article class="pub-item" aria-label="Publication: CompilerGPT">
-            <div class="pub-year">2025</div>
-            <div class="pub-content">
-              <div class="pub-badges">
-                <span class="badge badge-new">New</span>
-                <span class="badge badge-venue">C3PO-HPC @ ISC 2025</span>
-              </div>
-              <h3 class="pub-title">CompilerGPT: Leveraging LLMs for Compiler Optimization Reports</h3>
-              <p class="pub-authors">Chunhua Liao et al.</p>
-              <p class="pub-desc">Uses large language models to interpret and explain compiler optimization reports, making HPC performance tuning more accessible to non-expert developers.</p>
-              <div class="pub-links">
-                <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="pub-link">Code →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="pub-item" aria-label="Publication: Reductive Analysis PLDI 2025">
-            <div class="pub-year">2025</div>
-            <div class="pub-content">
-              <div class="pub-badges">
-                <span class="badge badge-new">New</span>
-                <span class="badge badge-venue">PLDI 2025</span>
-              </div>
-              <h3 class="pub-title">Reductive Analysis with Compiler-Guided LLMs for Code Optimizations</h3>
-              <p class="pub-authors">Chunhua Liao et al.</p>
-              <p class="pub-desc">A novel approach combining compiler-guided reductive analysis with LLMs to identify and apply code optimizations in complex scientific programs.</p>
-              <div class="pub-links">
-                <a href="#" class="pub-link">Paper →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="pub-item" aria-label="Publication: Fortran2CPP">
-            <div class="pub-year">2024</div>
-            <div class="pub-content">
-              <div class="pub-badges">
-                <span class="badge badge-venue">2024</span>
-              </div>
-              <h3 class="pub-title">Fortran2CPP: Automating Fortran-to-C++ Migration using LLMs</h3>
-              <p class="pub-authors">Chunhua Liao et al.</p>
-              <p class="pub-desc">Automates legacy Fortran modernization by using LLMs to translate code to idiomatic C++, validated on real HPC scientific codebases.</p>
-              <div class="pub-links">
-                <a href="#" class="pub-link">Paper →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="pub-item" aria-label="Publication: HPC-GPT">
-            <div class="pub-year">2023</div>
-            <div class="pub-content">
-              <div class="pub-badges">
-                <span class="badge badge-venue">SC-W 2023</span>
-              </div>
-              <h3 class="pub-title">HPC-GPT: Integrating Large Language Models for High-Performance Computing</h3>
-              <p class="pub-authors">Chunhua Liao et al.</p>
-              <p class="pub-desc">Explores GPT-based assistance for HPC tasks including code optimization suggestions, documentation, and programming model guidance.</p>
-              <div class="pub-links">
-                <a href="#" class="pub-link">Paper →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="pub-item" aria-label="Publication: Data Race Detection with LLMs">
-            <div class="pub-year">2023</div>
-            <div class="pub-content">
-              <div class="pub-badges">
-                <span class="badge badge-venue">SC-W 2023</span>
-              </div>
-              <h3 class="pub-title">Data Race Detection Using Large Language Models</h3>
-              <p class="pub-authors">Chunhua Liao et al.</p>
-              <p class="pub-desc">Investigates the effectiveness of LLMs in detecting data race conditions in parallel programs, benchmarked against DataRaceBench.</p>
-              <div class="pub-links">
-                <a href="#" class="pub-link">Paper →</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-
-        <div class="pub-more-wrap">
-          <a href="https://scholar.google.com/citations?user=9IY55CsAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline">
-            View All Publications on Google Scholar →
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== SOFTWARE / PROJECTS ========== -->
-    <section id="software" class="section-dark" aria-labelledby="software-heading">
-      <div class="container">
-        <h2 id="software-heading" class="section-title">Software &amp; Projects</h2>
-        <p class="section-subtitle">Open-source tools for HPC, compiler research, and AI-assisted programming.</p>
-        <div class="software-grid">
-
-          <div class="software-card featured">
-            <div class="software-header">
-              <div class="software-icon">🌹</div>
-              <div class="software-meta">
-                <h3>ROSE Compiler</h3>
-                <span class="sw-tag">Flagship Project</span>
-              </div>
-            </div>
-            <p>An open-source compiler infrastructure for building program analysis and transformation tools for large-scale scientific codes. Powers many of the lab's HPC tooling efforts. <em>R&D 100 Award 2009.</em></p>
-            <div class="software-links">
-              <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="btn btn-sm">Website</a>
-            </div>
-            <div class="sw-tags">
-              <span>C/C++</span><span>Fortran</span><span>Source Analysis</span><span>HPC</span>
-            </div>
-          </div>
-
-          <div class="software-card">
-            <div class="software-header">
-              <div class="software-icon">🤖</div>
-              <div class="software-meta">
-                <h3>CompilerGPT</h3>
-                <span class="sw-tag">AI + Compilers</span>
-              </div>
-            </div>
-            <p>LLM-powered tool that translates compiler optimization reports into plain English — helping HPC developers understand and act on performance feedback.</p>
-            <div class="software-links">
-              <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
-            </div>
-            <div class="sw-tags">
-              <span>LLM</span><span>Python</span><span>Compilers</span><span>HPC</span>
-            </div>
-          </div>
-
-          <div class="software-card">
-            <div class="software-header">
-              <div class="software-icon">🏁</div>
-              <div class="software-meta">
-                <h3>DataRaceBench</h3>
-                <span class="sw-tag">Benchmark Suite</span>
-              </div>
-            </div>
-            <p>A benchmark suite for evaluating data race detection tools. Contains microbenchmarks covering a wide range of OpenMP race patterns for systematic tool evaluation.</p>
-            <div class="software-links">
-              <a href="https://github.com/LLNL/dataracebench" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
-            </div>
-            <div class="sw-tags">
-              <span>OpenMP</span><span>C/C++</span><span>Benchmarking</span>
-            </div>
-          </div>
-
-          <div class="software-card">
-            <div class="software-header">
-              <div class="software-icon">📐</div>
-              <div class="software-meta">
-                <h3>AutoParBench</h3>
-                <span class="sw-tag">Benchmark Suite</span>
-              </div>
-            </div>
-            <p>A benchmark framework for evaluating automatic parallelization compilers and tools. Provides ground-truth annotations and correctness validation for parallelization research.</p>
-            <div class="software-links">
-              <a href="https://github.com/LLNL/AutoParBench" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
-            </div>
-            <div class="sw-tags">
-              <span>OpenMP</span><span>Auto-par</span><span>Evaluation</span>
-            </div>
-          </div>
-
-          <div class="software-card featured">
-            <div class="software-header">
-              <div class="software-icon">🔬</div>
-              <div class="software-meta">
-                <h3>Open AI Co-Scientist</h3>
-                <span class="sw-tag new">New 2025</span>
-              </div>
-            </div>
-            <p>Open-source implementation of Google's AI Co-Scientist — a multi-agent system for generating, reviewing, ranking, and evolving research hypotheses using LLMs. Interactive Gradio UI with arXiv integration and cost-effective model selection.</p>
-            <div class="software-links">
-              <a href="https://github.com/llnl/open-ai-co-scientist" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
-              <a href="https://huggingface.co/spaces/liaoch/open-ai-co-scientist" target="_blank" rel="noopener" class="btn btn-sm btn-outline">Live Demo</a>
-            </div>
-            <div class="sw-tags">
-              <span>Multi-Agent</span><span>LLM</span><span>Research Automation</span><span>Gradio</span>
-            </div>
-          </div>
-
-          <div class="software-card featured">
-            <div class="software-header">
-              <div class="software-icon">📖</div>
-              <div class="software-meta">
-                <h3>OpenClaw Paradigm Book</h3>
-                <span class="sw-tag new">New 2026</span>
-              </div>
-            </div>
-            <p>A 14-chapter, 88,000+ word book on AI-native development patterns — written by 5 parallel AI agents in under 5 hours using the OpenClaw platform. A living demonstration of the patterns it documents.</p>
-            <div class="software-links">
-              <a href="https://github.com/chunhualiao/openclaw-paradigm-book" target="_blank" rel="noopener" class="btn btn-sm">GitHub</a>
-            </div>
-            <div class="sw-tags">
-              <span>AI-Native</span><span>Multi-Agent</span><span>Book</span><span>OpenClaw</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== LATEST BLOG POSTS ========== -->
+    <!-- ========== BLOG (THE MAIN EVENT) ========== -->
     <section id="blog-preview" class="section-blog" aria-labelledby="blog-preview-heading">
       <div class="container">
         <h2 id="blog-preview-heading" class="section-title">Latest Posts</h2>
-        <p class="section-subtitle">Thoughts on AI, compilers, technology, and life. <a href="blog.html">View all posts &rarr;</a></p>
+        <p class="section-subtitle">I write when something won't leave my head. AI, technology, life, whatever's interesting. <a href="blog.html">See all posts &rarr;</a></p>
         <div class="latest-posts-grid">
           <article class="post-card">
             <a href="blog/your-ai-assistant-should-not-also-be-your-autocrat.html" class="post-card-link">
@@ -373,8 +100,7 @@
                 <span class="category-badge cat-tech">Tech & AI</span>
               </div>
               <h3 class="post-card-title">Your AI Assistant Should Not Also Be Your Autocrat</h3>
-              <p class="post-card-desc">&quot;The smartest personal agent is often the most dangerous one, unless I split memory, execution, and approval into separate roles.</p>
-              
+              <p class="post-card-desc">The smartest personal agent is often the most dangerous one, unless you split memory, execution, and approval into separate roles.</p>
               <span class="post-read-more">Read more &rarr;</span>
             </a>
           </article>
@@ -384,9 +110,8 @@
                 <time datetime="2026-03-12" class="post-date">March 12, 2026</time>
                 <span class="category-badge cat-tech">Tech & AI</span>
               </div>
-              <h3 class="post-card-title">Introducing telegram-codex-bridge: talk to a local Codex CLI from Telegram</h3>
-              <p class="post-card-desc">Sometimes I want to say “Codex, do the thing on my machine” while I’m away from my desk, on my phone, in a taxi, or between meetings. That was the whole reason I built telegram-codex-bridge: I wanted </p>
-              
+              <h3 class="post-card-title">Introducing telegram-codex-bridge: Talk to a Local Codex CLI from Telegram</h3>
+              <p class="post-card-desc">Sometimes I want to say "Codex, do the thing on my machine" while I'm away from my desk, on my phone, in a taxi. That's why I built this.</p>
               <span class="post-read-more">Read more &rarr;</span>
             </a>
           </article>
@@ -397,50 +122,165 @@
                 <span class="category-badge cat-tech">Tech & AI</span>
               </div>
               <h3 class="post-card-title">The Right Way to Use OpenClaw: Raise It Like a Partner, Not a Tool</h3>
-              <p class="post-card-desc">&quot;The Right Way to Use OpenClaw: Raise It Like a Partner, Not a Tool</p>
-              <div class="post-tags"><span class="tag-pill">ai agents</span><span class="tag-pill">openclaw</span><span class="tag-pill">automation</span></div>
+              <p class="post-card-desc">Stop treating your AI agent like a command-line tool. Start treating it like a junior colleague who needs mentorship.</p>
+              <span class="post-read-more">Read more &rarr;</span>
+            </a>
+          </article>
+          <article class="post-card">
+            <a href="blog/the-hidden-killer-in-multi-agent-systems.html" class="post-card-link">
+              <div class="post-card-meta">
+                <time datetime="2026-03-06" class="post-date">March 6, 2026</time>
+                <span class="category-badge cat-tech">Tech & AI</span>
+              </div>
+              <h3 class="post-card-title">The Hidden Killer in Multi-Agent Systems</h3>
+              <p class="post-card-desc">Everyone's excited about multi-agent architectures. Nobody's talking about the failure modes that make them worse than single agents.</p>
+              <span class="post-read-more">Read more &rarr;</span>
+            </a>
+          </article>
+          <article class="post-card">
+            <a href="blog/from-thrones-to-algorithms-how-ancient-emperors-teach-us-to-govern-superhuman-ai.html" class="post-card-link">
+              <div class="post-card-meta">
+                <time datetime="2025-12-28" class="post-date">December 28, 2025</time>
+                <span class="category-badge cat-thoughts">Thoughts</span>
+              </div>
+              <h3 class="post-card-title">From Thrones to Algorithms: How Ancient Emperors Teach Us to Govern Superhuman AI</h3>
+              <p class="post-card-desc">What Chinese emperors figured out about managing people smarter than themselves — and what that means for AI governance.</p>
+              <span class="post-read-more">Read more &rarr;</span>
+            </a>
+          </article>
+          <article class="post-card">
+            <a href="blog/mirror-paper-story.html" class="post-card-link">
+              <div class="post-card-meta">
+                <time datetime="2025-12-14" class="post-date">December 14, 2025</time>
+                <span class="category-badge cat-thoughts">Thoughts</span>
+              </div>
+              <h3 class="post-card-title">The Mirror Paper Story</h3>
+              <p class="post-card-desc">A story about the paper that changed how I think about research, collaboration, and what actually matters in science.</p>
               <span class="post-read-more">Read more &rarr;</span>
             </a>
           </article>
         </div>
         <div style="margin-top:var(--space-lg);text-align:center;">
-          <a href="blog.html" class="btn btn-outline">View All Posts &rarr;</a>
+          <a href="blog.html" class="btn btn-primary">View All 26 Posts &rarr;</a>
         </div>
       </div>
     </section>
 
+    <!-- ========== ABOUT ME (brief) ========== -->
+    <section id="about-me" class="section-light" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading" class="section-title">About Me</h2>
+        <div class="about-prose">
+          <p>
+            I've been a computer scientist at <a href="https://people.llnl.gov/liao6" target="_blank" rel="noopener">Lawrence Livermore National Lab</a> for nearly two decades. I build compilers, teach AI to understand code, and think a lot about how humans and machines should work together.
+          </p>
+          <p>
+            My biggest project was the <a href="http://rosecompiler.org/" target="_blank" rel="noopener">ROSE compiler</a> (R&D 100 Award winner). More recently I've been building tools like <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener">CompilerGPT</a> that use large language models to make compilers actually explain themselves.
+          </p>
+          <p>
+            But honestly? I write because I think faster when I write. The blog is where I work things out — AI governance, intelligence, multi-agent systems, sometimes just life. If something won't leave my head, it ends up here.
+          </p>
+          <p>
+            <a href="https://scholar.google.com/citations?user=9IY55CsAAAAJ&hl=en" target="_blank" rel="noopener">2,246+ citations on Google Scholar</a> · <a href="https://github.com/chunhualiao" target="_blank" rel="noopener">GitHub</a> · Based in Livermore, CA.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WORK (collapsed, secondary) ========== -->
+    <section id="work" class="section-dark" aria-labelledby="work-heading">
+      <div class="container">
+        <h2 id="work-heading" class="section-title">Research & Code</h2>
+        <p class="section-subtitle">The day job. Compilers, HPC, AI tools — the stuff behind the blog posts.</p>
+
+        <div class="work-grid">
+          <a href="research/ai-assisted-programming.html" class="work-card">
+            <div class="work-icon">🤖</div>
+            <h3>AI-Assisted Programming</h3>
+            <p>CompilerGPT, HPC-GPT, Fortran2CPP — using LLMs to make programming less painful.</p>
+          </a>
+          <a href="research/compiler-technologies.html" class="work-card">
+            <div class="work-icon">🧩</div>
+            <h3>Compiler Technologies</h3>
+            <p>The ROSE compiler and source-to-source transformation for scientific codes.</p>
+          </a>
+          <a href="research/parallel-programming.html" class="work-card">
+            <div class="work-icon">⚡</div>
+            <h3>Parallel Programming</h3>
+            <p>OpenMP, automatic parallelization, and making HPC accessible.</p>
+          </a>
+          <a href="research/correctness-verification.html" class="work-card">
+            <div class="work-icon">🔍</div>
+            <h3>Correctness & Verification</h3>
+            <p>DataRaceBench, AutoParBench — you can't fix what you can't measure.</p>
+          </a>
+          <a href="research/hpc-performance.html" class="work-card">
+            <div class="work-icon">📊</div>
+            <h3>HPC Performance</h3>
+            <p>AI-guided performance engineering for scientific applications.</p>
+          </a>
+        </div>
+
+        <h3 class="subsection-title">Featured Projects</h3>
+        <div class="work-grid">
+          <a href="https://github.com/llnl/open-ai-co-scientist" target="_blank" rel="noopener" class="work-card featured-project">
+            <div class="work-icon">🔬</div>
+            <h3>Open AI Co-Scientist</h3>
+            <p>Multi-agent system for generating and evolving research hypotheses. Open-source reimplementation of Google's approach.</p>
+            <span class="sw-tag new">New 2025</span>
+          </a>
+          <a href="https://github.com/chunhualiao/openclaw-paradigm-book" target="_blank" rel="noopener" class="work-card featured-project">
+            <div class="work-icon">📖</div>
+            <h3>OpenClaw Paradigm Book</h3>
+            <p>88,000+ words written by 5 AI agents in 5 hours. A book about AI-native patterns that was itself built with AI-native patterns.</p>
+            <span class="sw-tag new">New 2026</span>
+          </a>
+          <a href="http://rosecompiler.org/" target="_blank" rel="noopener" class="work-card featured-project">
+            <div class="work-icon">🌹</div>
+            <h3>ROSE Compiler</h3>
+            <p>Open-source compiler infrastructure for scientific code analysis and transformation. R&D 100 Award 2009.</p>
+          </a>
+          <a href="https://github.com/LLNL/CompilerGPT" target="_blank" rel="noopener" class="work-card featured-project">
+            <div class="work-icon">💬</div>
+            <h3>CompilerGPT</h3>
+            <p>Making compilers explain themselves in plain English using LLMs.</p>
+          </a>
+        </div>
+
+        <div style="margin-top:var(--space-lg);text-align:center;">
+          <a href="https://scholar.google.com/citations?user=9IY55CsAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline">
+            All Publications on Google Scholar →
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- ========== CONTACT ========== -->
     <section id="contact" class="section-contact" aria-labelledby="contact-heading">
       <div class="container">
-        <h2 id="contact-heading" class="section-title">Contact &amp; Links</h2>
-        <p class="section-subtitle">Reach out for collaborations, questions, or to learn more about ongoing research.</p>
+        <h2 id="contact-heading" class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Want to chat about AI, compilers, or something I wrote? Reach out.</p>
 
         <div class="contact-grid">
-          <a href="https://people.llnl.gov/liao6" target="_blank" rel="noopener" class="contact-card">
-            <div class="contact-icon">🏛️</div>
-            <h3>LLNL Profile</h3>
-            <p>Official laboratory profile with contact details and project affiliations.</p>
-            <span class="contact-link">people.llnl.gov/liao6</span>
+          <a href="https://github.com/chunhualiao" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">💻</div>
+            <h3>GitHub</h3>
+            <p>Code, projects, and open-source work.</p>
+            <span class="contact-link">github.com/chunhualiao</span>
           </a>
           <a href="https://scholar.google.com/citations?user=9IY55CsAAAAJ&hl=en" target="_blank" rel="noopener" class="contact-card">
             <div class="contact-icon">📚</div>
             <h3>Google Scholar</h3>
-            <p>Full list of publications with citation metrics and co-author network.</p>
-            <span class="contact-link">Google Scholar Profile</span>
+            <p>Publications and citations.</p>
+            <span class="contact-link">Google Scholar</span>
           </a>
-          <a href="https://github.com/chunhualiao" target="_blank" rel="noopener" class="contact-card">
-            <div class="contact-icon">💻</div>
-            <h3>GitHub</h3>
-            <p>Open-source repositories for LLNL projects, research prototypes, and tools.</p>
-            <span class="contact-link">github.com/chunhualiao</span>
+          <a href="https://people.llnl.gov/liao6" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">🏛️</div>
+            <h3>LLNL Profile</h3>
+            <p>Official contact and project info.</p>
+            <span class="contact-link">people.llnl.gov/liao6</span>
           </a>
         </div>
-
-        <p class="contact-note">
-          📍 Lawrence Livermore National Laboratory, Livermore, CA<br />
-          <em>For general inquiries, please use the LLNL institutional contact page.</em>
-        </p>
       </div>
     </section>
 
@@ -449,8 +289,8 @@
   <!-- ========== FOOTER ========== -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Chunhua Liao · Lawrence Livermore National Laboratory</p>
-      <p class="footer-sub">LLNL-WEB-XXXXXX · Built with vanilla HTML/CSS/JS · <a href="#hero">Back to top ↑</a></p>
+      <p>© <span id="year"></span> Chunhua Liao</p>
+      <p class="footer-sub"><a href="blog.html">Blog</a> · <a href="#work">Research</a> · <a href="#hero">Back to top ↑</a></p>
     </div>
   </footer>
 
