@@ -1929,7 +1929,7 @@ a.research-card-link:hover .research-card .learn-more {
   color: inherit;
 }
 
-.section-dark .topic-title { color: #f1f5f9; }
+.section-dark .topic-title { color: #1e293b; }
 
 .topic-desc {
   font-size: 1rem;
@@ -1961,30 +1961,22 @@ a.research-card-link:hover .research-card .learn-more {
 }
 
 .section-dark .topic-post-row:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(59, 130, 246, 0.08);
 }
 
 .topic-post-row time {
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
-  color: #64748b;
+  color: #475569;
   white-space: nowrap;
   flex-shrink: 0;
   min-width: 90px;
-}
-
-.section-dark .topic-post-row time {
-  color: #94a3b8;
 }
 
 .topic-post-title {
   font-size: 1.05rem;
   font-weight: 500;
   color: #1e293b;
-}
-
-.section-dark .topic-post-title {
-  color: #e2e8f0;
 }
 
 .topic-post-row:hover .topic-post-title {
