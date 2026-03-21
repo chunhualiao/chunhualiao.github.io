@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sometimes I want to say “Codex, do the thing on my machine” while I’m away from my desk, on my phone, in a taxi, or between meetings. That was the whole reason " />
+  <meta property="og:title" content="Introducing telegram-codex-bridge: talk to a local Codex CLI from Telegram" />
+  <meta property="og:type" content="article" />
+  <title>Introducing telegram-codex-bridge: talk to a local Codex CLI from Telegram | Leo Liao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <a href="#post-content" class="sr-only skip-link">Skip to main content</a>
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="../index.html">Leo Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#software">Software</a></li>
+        <li><a href="../blog.html" class="nav-active">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="post-header-section">
+      <div class="container post-header-inner">
+        <a href="../blog.html" class="back-to-blog">&larr; Back to Blog</a>
+        <div class="post-header-meta">
+          <time datetime="2026-03-12" class="post-date">March 12, 2026</time>
+          <span class="category-badge cat-tech">Tech & AI</span>
+        </div>
+        <h1 class="post-title">Introducing telegram-codex-bridge: talk to a local Codex CLI from Telegram</h1>
+        
+      </div>
+    </section>
+    <article id="post-content" class="post-content-section" aria-label="Article content">
+      <div class="container post-content-inner">
+        <div class="post-body">
+<p>Sometimes I want to say “Codex, do the thing on my machine” while I’m away from my desk, on my phone, in a taxi, or between meetings. That was the whole reason I built <a href="https://github.com/chunhualiao/telegram-codex-bridge" target="_blank" rel="noopener"><strong>telegram-codex-bridge</strong></a>: I wanted Telegram to feel like a lightweight remote control for a <strong>local</strong> Codex CLI session running on a computer I control.</p>
+
+<p>The motivation came directly from <strong>OpenClaw</strong>. I really like the feel of a message app interface where I can just talk to an AI agent naturally, and that led me to a simple question: could I get the same experience for a command-line coding agent like <strong>Codex CLI</strong>?</p>
+
+<p>That question was practical, not hypothetical. I already use Codex CLI to help maintain my <strong>OpenClaw Docker</strong> setup, but I wanted to do that work through <strong>Telegram</strong> instead of being tied to a terminal window, and I wanted <strong>voice messages</strong> to work too.</p>
+
+<p>There was also another reason: when my <strong>OpenClaw</strong> setup runs out of credits or gets rate-limited, this Codex bot on Telegram becomes my <strong>plan B</strong>. I can still talk to my own bot, still reach my own machine, and still get things done without waiting around for the primary setup to recover.</p>
+
+<p>So I opened up <strong>Codex with GPT-5.4</strong> and vibe-coded this tool in <strong>less than two hours</strong>.</p>
+
+<hr />
+
+<h2><strong>What <a href="https://github.com/chunhualiao/telegram-codex-bridge" target="_blank" rel="noopener">telegram-codex-bridge</a> is (and what it isn’t)</strong></h2>
+
+<p>At its core, this is a small Python “bridge” that <strong>polls Telegram messages</strong>, forwards them into <strong>local <code>codex exec</code></strong>, and relays both <strong>progress</strong> and the <strong>final reply</strong> back into Telegram. I built it for a <strong>single authorized user</strong> talking to <strong>one local Codex environment</strong>, not as a hosted multi-user service.</p>
+
+<p>I also added support for <strong>Telegram voice/audio messages</strong> by downloading the audio, converting it with <strong>ffmpeg</strong>, and transcribing it via OpenAI before sending the transcript into Codex. That part mattered to me because voice is often the most natural interface when I’m away from my desk.</p>
+
+<hr />
+
+<h2><strong>A quick look at the repo (screenshot)</strong></h2>
+
+<p><img src="https://opengraph.githubassets.com/1/chunhualiao/telegram-codex-bridge" alt="telegram-codex-bridge repository preview" loading="lazy" /></p>
+
+<p><em>Repository preview for <a href="https://github.com/chunhualiao/telegram-codex-bridge" target="_blank" rel="noopener">telegram-codex-bridge</a>.</em></p>
+
+<hr />
+
+<h2><strong>Why this bridge feels “nice” in practice</strong></h2>
+
+<p>A few design choices made this feel much nicer than a trivial “Telegram bot calls a command” script:</p>
+
+<p>I made it persist a <strong>Codex thread ID</strong>, so follow-up messages stay in the same conversation until I reset it. I also made it edit a “Running Codex…” status message to provide <strong>live-ish progress updates</strong> while Codex runs, which turns out to be really nice on mobile when I don’t want to sit there wondering whether anything is happening. </p>
+
+<hr />
+
+<h2><strong>How it works (architecture, simplified)</strong></h2>
+
+<pre><code class="language-mermaid">flowchart TD
+    A[Telegram user] --&gt;|text or voice message| B[Telegram Bot API]
+    B --&gt; C[bridge.py poller]
+    C --&gt; D{Message type}
+    D --&gt;|Text| E[Build Codex prompt]
+    D --&gt;|Voice/audio| F[Download audio from Telegram]
+    F --&gt; G[Convert with ffmpeg to WAV]
+    G --&gt; H[OpenAI transcription]
+    H --&gt; E
+    E --&gt; I[Run local codex exec]
+    I --&gt; J[Local workdir on your machine]
+    I --&gt; K[Progress events and final reply]
+    K --&gt; C
+    C --&gt;|sendMessage / editMessageText| B
+    B --&gt; L[Telegram chat updates]
+    C -. persists .-&gt; M[state/telegram_offset.txt]
+    C -. persists .-&gt; N[state/codex_thread.txt]
+    C -. lock file .-&gt; O[state/bridge.lock]</code></pre>
+
+<p>Under the hood, I store operational state on disk, things like the Telegram update offset and the Codex thread ID, so the bridge can run continuously without replaying old messages and can pick the conversation back up cleanly.</p>
+
+<hr />
+
+<h2><strong>Setup overview (what you’ll actually do)</strong></h2>
+
+<p>The setup flow I recommend is very pragmatic:</p>
+
+<p>First, verify the basics: Python 3, <code>codex</code> installed and logged in, and outbound network access. Then create a Telegram bot via BotFather, send it a test message so Telegram exposes a <code>chat.id</code>, fill out <code>.env</code> from <code>.env.example</code>, and <strong>run <code>python3 bridge.py</code> in the foreground first</strong> before attempting background or LaunchAgent setups.</p>
+
+<p>The <code>.env.example</code> is straightforward: Telegram credentials, allowlist IDs, a passphrase, Codex runtime knobs, and optional OpenAI transcription settings for voice. </p>
+
+<hr />
+
+<h2><strong>What you can do from Telegram once it’s running</strong></h2>
+
+<p>I kept the command set intentionally small:</p>
+
+<p><code>/start</code> returns a readiness message, <code>/status</code> tells you whether there’s a saved Codex thread and which workdir is configured, and <code>/reset</code> clears the saved thread so the next prompt starts fresh.</p>
+
+<p>Everything else is treated as a normal prompt and forwarded into Codex, so I can ask things like “review this repo,” “run tests,” or “create a script,” assuming my local Codex is allowed to do that and my <code>CODEX_FLAGS</code> support the workflow I want. That simplicity was part of the point.</p>
+
+<hr />
+
+<h2><strong>Voice notes: the underrated feature</strong></h2>
+
+<p>If I send a Telegram voice message, the bridge will:</p>
+
+<p>Download it, convert it to WAV via <strong>ffmpeg</strong>, call OpenAI transcription, then feed the transcript to Codex as my prompt. I ended up liking this feature more than I expected, because it makes the whole thing feel much closer to a real messaging interface instead of a remote shell with extra steps. The default transcription prompt is also written to preserve technical terms, commands, and file paths, which matters a lot for this use case. </p>
+
+<hr />
+
+<h2><strong>Security model: simple on purpose, but you should read this</strong></h2>
+
+<p>This repo is powerful enough to be dangerous if I run it casually, because it can trigger a local coding agent with real access to my filesystem and tools.</p>
+
+<p>The safety model is simple:</p>
+
+<p>It only accepts messages from one allowed Telegram chat or user, keeps the bot token in <code>.env</code>, and includes an inactivity lock that forces the configured passphrase after a timeout. It also explicitly warns that <code>--full-auto</code> reduces approval friction and is not appropriate for untrusted environments, so I think about this as remote control for my own machine, not a shared bot.</p>
+
+<p>If the bot token leaks, someone can interact with the bot via the Telegram API until it is rotated, so I treat <code>.env</code> like a password vault entry.</p>
+
+<hr />
+
+<h2><strong>Operational tips you’ll appreciate later</strong></h2>
+
+<p>Two details have already saved me real time:</p>
+
+<p>I use a PID lock file (<code>state/bridge.lock</code>) to avoid multiple pollers, because Telegram can respond with <strong>409 Conflict</strong> if more than one process polls <code>getUpdates</code>. I also recommend foreground runs first so I can debug real network and CLI issues before adding background or <code>launchd</code> complexity. It is one of those cases where the boring operational details matter more than the flashy part.</p>
+
+<hr />
+
+<h2><strong>License</strong></h2>
+
+<p>I released the repository under the <strong>MIT License</strong>.</p>
+        </div>
+        <p class="post-original-link">Originally published on <a href="https://chunhualiao.hashnode.dev/introducing-telegram-codex-bridge-talk-to-a-local-codex-cli-from-telegram" target="_blank" rel="noopener">Hashnode &rarr;</a></p>
+        <hr class="post-divider" />
+        <nav class="post-nav-links" aria-label="Post navigation">
+          <a href="the-right-way-to-use-openclaw-raise-it-like-a-partner-not-a-tool-1.html" class="post-nav-link prev">&larr; The Right Way to Use OpenClaw: Raise It Like a Partner, Not ...</a>
+          <a href="your-ai-assistant-should-not-also-be-your-autocrat.html" class="post-nav-link next">Your AI Assistant Should Not Also Be Your Autocrat &rarr;</a>
+        </nav>
+        <div class="post-back-wrap">
+          <a href="../blog.html" class="btn btn-secondary">&larr; All Posts</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Chunhua &ldquo;Leo&rdquo; Liao &middot; Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub">Built with vanilla HTML/CSS/JS &middot; <a href="../blog.html">Blog</a> &middot; <a href="../index.html">Home</a> &middot; <a href="#top">Back to top &uarr;</a></p>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

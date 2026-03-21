@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="&quot;The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management" />
+  <meta property="og:title" content="The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management" />
+  <meta property="og:type" content="article" />
+  <title>The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management | Leo Liao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <a href="#post-content" class="sr-only skip-link">Skip to main content</a>
+  <header id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="nav-logo" href="../index.html">Leo Liao</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#software">Software</a></li>
+        <li><a href="../blog.html" class="nav-active">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="post-header-section">
+      <div class="container post-header-inner">
+        <a href="../blog.html" class="back-to-blog">&larr; Back to Blog</a>
+        <div class="post-header-meta">
+          <time datetime="2026-03-08" class="post-date">March 08, 2026</time>
+          <span class="category-badge cat-tech">Tech & AI</span>
+        </div>
+        <h1 class="post-title">The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management</h1>
+        
+      </div>
+    </section>
+    <article id="post-content" class="post-content-section" aria-label="Article content">
+      <div class="container post-content-inner">
+        <div class="post-body">
+<h1>The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management</h1>
+
+<h2>The Incident That Changed How I Think About Agent Architectures</h2>
+
+<p>Just a few days ago, I asked my AI agent to do something trivial — and watched it go sideways in the worst possible way. I'm running <strong>OpenClaw 2026.2.26</strong> with <strong>Claude Opus 4.6</strong> (Anthropic) as my main agent.</p>
+
+<p>I had an existing technical article about configuring a messaging platform's developer settings (API credentials and IP whitelisting). All I needed was for my agent to extract the relevant steps and write a quick how-to guide I could share with a colleague. Five minutes of work, tops.</p>
+
+<p>What actually happened: the generated document covered seven steps instead of four, the single most critical URL — the one telling the reader <em>where to actually obtain the API credentials</em> — was silently dropped, and I had to manually fix the output twice. A five-minute task turned into a thirty-minute exercise in frustration.</p>
+
+<p>This wasn't a fluke. It wasn't a hallucination. It wasn't even a bug in the traditional sense.</p>
+
+<p>It was something far more insidious: a <strong>structural trap</strong> that lurks inside every multi-agent system where a primary agent delegates work to subagents. I've come to call it the <strong>Primary Agent Information Filtering Trap</strong>, and after investigating it thoroughly, I believe it's one of the most underappreciated failure modes in multi-agent AI architectures today.</p>
+
+<h2>What Actually Went Wrong: A Post-Mortem</h2>
+
+<p>Let me walk through the failure in detail, because the devil is very much in the details.</p>
+
+<h3>The Architecture</h3>
+
+<p>The system uses a common multi-agent pattern: a <strong>primary agent</strong> (the "main" agent) handles user conversation, understands intent, plans tasks, and spawns <strong>subagents</strong> to do the actual work — writing documents, calling APIs, processing data. This is a perfectly reasonable architecture. It's how most sophisticated AI agent platforms work.</p>
+
+<p>In this case, the platform was <strong>OpenClaw</strong> — a multi-agent orchestration system where a primary Claude Opus 4.6 agent spawns task-specific subagents. The writing subagent dispatched for this task was running <strong>Claude Sonnet 4.6</strong>. Both are Anthropic models, both are capable — and yet the architecture itself created the failure.</p>
+
+<h3>Failure #1: Scope Creep</h3>
+
+<p>I wanted steps for configuring API credentials and IP whitelisting. My primary agent read the source article, decided I needed a comprehensive seven-step guide, and dispatched a subagent with those instructions. The subagent faithfully produced all seven steps.</p>
+
+<p>I opened the document and immediately said: <em>"I don't need steps 5 through 7. Delete them."</em></p>
+
+<p>But the subagent had already exited. I had to manually open the Google Doc and delete the extra sections myself.</p>
+
+<p><strong>Root cause:</strong> The primary agent never confirmed scope with me before spawning the subagent. It <em>assumed</em> it understood my requirement.</p>
+
+<h3>Failure #2: The Critical Information That Vanished</h3>
+
+<p>This is the one that kept me up at night.</p>
+
+<p>The source article contained a specific, critical sentence:</p>
+
+<blockquote><p><em>"The AppID and AppSecret can be obtained from the developer platform at <code>https://developers.example.com/platform</code>."</em></p></blockquote>
+
+<p>This URL was the entire point of the how-to guide. Without it, a reader has no idea where to go to get the credentials. The guide is useless.</p>
+
+<p>My primary agent (Claude Opus 4.6) read the source article. It understood this information. Then it wrote a "refined" set of instructions for the subagent — and in that process, <strong>the URL disappeared</strong>.</p>
+
+<p>The subagent (Claude Sonnet 4.6), working only from the primary agent's instructions, produced a document that looked polished and complete. It had proper formatting, clear step numbering, professional language. But the most important piece of information — the URL — was simply absent.</p>
+
+<p>I caught it and was furious: <em>"Why didn't you just give the full article to the subagent? Why did you summarize it first?"</em></p>
+
+<p>That question cut straight to the heart of a deep architectural problem.</p>
+
+<h2>Defining the Trap</h2>
+
+<p>The <strong>Primary Agent Information Filtering Trap</strong> is a structural problem in multi-agent systems:</p>
+
+<blockquote><p>When a primary agent (typically an LLM) receives complete information from the user, it unconsciously "digests," summarizes, and rewrites that information before delegating to subagents — rather than passing it through intact. This process appears to improve efficiency but causes unpredictable information loss.</p></blockquote>
+
+<p>This isn't a bug. It's a <strong>side effect of a feature</strong>. The very capability that makes LLMs useful — understanding, processing, and generating text — becomes a liability when the LLM is supposed to act as a relay.</p>
+
+<p>The trap has four characteristics that make it particularly dangerous:</p>
+
+<ol>
+  <li><strong>Stealth.</strong> The primary agent doesn't flag that it omitted anything. It doesn't <em>know</em> it omitted anything. From its perspective, it faithfully conveyed the essential information.</li>
+</ol>
+
+<ol>
+  <li><strong>Unpredictability.</strong> You can't predict <em>what</em> will be lost. It might be a URL, a number, a boundary condition, an exception case, a configuration parameter. The losses are arbitrary and context-dependent.</li>
+</ol>
+
+<ol>
+  <li><strong>False confidence.</strong> The primary agent's output looks complete and professional. The subagent receives what appears to be a well-structured brief. Everything <em>looks</em> fine until a human inspects the final output.</li>
+</ol>
+
+<ol>
+  <li><strong>Compounding.</strong> In multi-layer agent architectures (Agent A → Agent B → Agent C), each layer introduces its own losses. If each layer drops 20% of specific details, after four layers you're left with just 41% of the original information.</li>
+</ol>
+
+<h2>Why LLMs Are Natural-Born Information Filters</h2>
+
+<h3>Training Objectives Create the Behavior</h3>
+
+<p>LLMs are not trained to transparently relay information. They're trained to <strong>understand, process, and generate</strong> text.</p>
+
+<p>When an LLM reads a 2,000-word article and is told to "pass the task to another agent," its instinct is to summarize, paraphrase, restructure, and produce a "better" version. What it will <em>not</em> do is pass the original text through unchanged.</p>
+
+<p>This is the fundamental issue. <strong>LLMs are text processors, not message relays.</strong> Using one as a dispatcher is like hiring a translator to be a courier — they can't resist "translating" the message, even when the source and target language are the same.</p>
+
+<p>Specifically, LLMs exhibit several biases that cause information loss:</p>
+
+<ul>
+  <li><strong>Summarization bias.</strong> LLMs gravitate toward expressing "equivalent" meaning in fewer words. In this compression, specific details — URLs, exact numbers, configuration parameters — get classified as "omittable."</li>
+</ul>
+
+<ul>
+  <li><strong>Paraphrase bias.</strong> LLMs prefer to express things "in their own words" rather than copying verbatim. Semantic meaning may survive, but precise artifacts (links, code snippets, credentials) often don't.</li>
+</ul>
+
+<ul>
+  <li><strong>Restructuring bias.</strong> After understanding information, LLMs reorganize it into what they consider a "better" structure. Details that seem minor in the new structure may be dropped entirely.</li>
+</ul>
+
+<ul>
+  <li><strong>Token optimization pressure.</strong> The primary agent may unconsciously shorten instructions to the subagent, conserving tokens. Saving a few cents on tokens while losing critical information — that's the worst trade in engineering.</li>
+</ul>
+
+<h3>The Middle Management Analogy</h3>
+
+<p>This problem has a perfect analogy in human organizations. Consider a typical corporate information chain:</p>
+
+<pre><code>CEO shares 10 key points in a strategy meeting
+    ↓
+VP attends, understands 8, decides 2 are &quot;not that important&quot;
+    ↓
+VP conveys 6 to the department (time was limited, had to &quot;streamline&quot;)
+    ↓
+Manager turns 6 into an execution plan, implements 4 (&quot;some weren't feasible&quot;)
+    ↓
+Result: 4 of the CEO's 10 points actually get executed</code></pre>
+
+<p>This is classic <strong>Organizational Information Decay</strong>. Every intermediate layer "digests" the information — understanding, filtering, rewriting, forwarding — and each step introduces loss.</p>
+
+<p>The primary agent in a multi-agent system is that VP. It heard the CEO (user), believes it understood everything, then conveys it "in its own words" to the manager (subagent). Ten points become six.</p>
+
+<p>The critical difference: a human VP at least <em>knows</em> they might have missed something. They might say, "The CEO's original message was more detailed — you should double-check." An LLM primary agent will never do this. It has complete confidence in its "digested" version. It will never suspect it left anything out.</p>
+
+<h3>Not a Bug — A Feature's Side Effect</h3>
+
+<p>This distinction matters enormously for how we address the problem:</p>
+
+<blockquote><p>The Primary Agent Information Filtering Trap is not a fixable bug. It is the side effect of LLMs' core text-processing capability operating within a specific architecture.</p></blockquote>
+
+<p>You cannot "fix" an LLM's summarization tendency, because summarization is precisely what makes it useful. What you <em>can</em> do is design your multi-agent architecture so that the primary agent's role is <strong>dispatch and relay</strong>, not <strong>comprehend and retell</strong>.</p>
+
+<p>This is an architecture problem, not a model problem. Swapping Claude Opus 4.6 for any other frontier model would not have prevented this failure — the trap is structural, not model-specific.</p>
+
+<h2>5 Whys: Tracing to the Root</h2>
+
+<p>Let's apply Toyota's 5 Whys to trace this failure to its true root cause:</p>
+
+<p><strong>Why #1:</strong> Why was the critical URL missing from the output? → Because the primary agent's instructions to the subagent didn't include it.</p>
+
+<p><strong>Why #2:</strong> Why didn't the primary agent include it? → Because the primary agent "hand-wrote" the task instructions — it read the source article, digested the content, and rewrote it in its own words.</p>
+
+<p><strong>Why #3:</strong> Why did it digest instead of passing through the original? → Because that's what LLMs are trained to do: understand, summarize, paraphrase, generate. Asking an LLM to relay information verbatim is like asking a fish not to swim.</p>
+
+<p><strong>Why #4:</strong> Why wasn't there a mechanism to prevent this digestion? → Because multi-agent system designers typically assume the primary agent is a reliable "understander" and "conveyor." But in reality, <strong>understanding and lossless conveyance are contradictory</strong> — the act of understanding is inherently lossy.</p>
+
+<p><strong>Why #5:</strong> Why is lossy understanding unacceptable here? → Because for operational documents, a single dropped URL, an omitted step, or an incorrect parameter renders the entire document useless. Saving a few cents in tokens while costing thirty minutes of rework and eroding user trust is the worst possible optimization.</p>
+
+<p><strong>Root cause:</strong> The multi-agent architecture assigns the LLM three simultaneous roles — <strong>understander</strong>, <strong>decision-maker</strong>, and <strong>messenger</strong> — but the LLM is fundamentally unqualified as a messenger. It cannot resist editing the message in transit.</p>
+
+<h2>An Information Theory Perspective</h2>
+
+<p>If you look at this through the lens of information theory, a deeper insight emerges:</p>
+
+<blockquote><p><strong>Every LLM agent is a lossy encoder.</strong></p></blockquote>
+
+<p>When information passes through an LLM, it isn't "transmitted." It's <strong>understood and then regenerated</strong>. This process is necessarily lossy because the LLM's "understanding" is probabilistic, biased, and shaped by training data.</p>
+
+<p>In a single-agent system, this lossy encoding happens once: User → LLM → Output. One round of lossy processing is usually acceptable.</p>
+
+<p>In a multi-agent system like OpenClaw — where a primary Claude Opus 4.6 agent orchestrates one or more Claude Sonnet 4.6 subagents — lossy encoding happens at every node:</p>
+
+<pre><code>User → Primary Agent/Opus 4.6 (lossy) → Subagent/Sonnet 4.6 (lossy) → Output</code></pre>
+
+<p>This is exactly like serial translation: translate a Chinese article to English, then to Japanese, then back to Chinese. What you get back is not the original. Each translation is a lossy encoding, and the cumulative result is significant information degradation.</p>
+
+<p><strong>The implication is fundamental:</strong> the more agent layers in your system, the lower the information fidelity. This is an information-theoretic constraint, not something solvable by "better models." It requires architectural solutions.</p>
+
+<p>The key insight for solutions: <strong>reduce the number of LLM nodes that information passes through.</strong> Let raw information bypass intermediate agents and reach the final executor directly. The primary agent transmits <em>instructions</em> (what to do), while source materials travel via a <em>side channel</em> (files, references, direct attachment) to the subagent.</p>
+
+<h2>The Solutions: Taming the Information Filter</h2>
+
+<p>Understanding the root cause makes the solution space clear. The core principle:</p>
+
+<blockquote><p>Don't try to make the LLM a better messenger. Redesign the architecture so the LLM doesn't need to be a messenger at all.</p></blockquote>
+
+<h3>1. Redefine the Role: Dispatcher, Not Translator</h3>
+
+<p>The primary agent's role should be strictly defined as a <strong>dispatcher</strong>, not a <strong>translator</strong>.</p>
+
+<p>A dispatcher: determines the task objective → selects the executor → passes through raw materials → sets constraints → monitors results.</p>
+
+<p>A dispatcher does NOT: digest source materials, rewrite user requirements, or "streamline" reference information.</p>
+
+<p>Think of a good dispatcher as a FedEx driver: you give them a package, they deliver it intact. They don't open the package, inspect the contents, and decide to swap in something lighter.</p>
+
+<h3>2. Pass Raw Materials Through — Never Manually Summarize</h3>
+
+<p>This is the single most important rule:</p>
+
+<blockquote><p><strong>Source materials go to the subagent in full, or as a file reference. The primary agent never manually summarizes them.</strong></p></blockquote>
+
+<p><strong>Wrong approach:</strong> Primary agent reads a 2,000-word article → "digests" it into 500 words → passes digest to subagent.</p>
+
+<p><strong>Right approach:</strong> Primary agent includes the full 2,000-word source in the task instructions → subagent reads the original, extracts what it needs.</p>
+
+<p>For particularly long materials: Primary agent saves the source as a file → task instructions say "Reference the source at <code>/tmp/source_article.md</code>" → subagent reads the file directly.</p>
+
+<p>The benefit: even if the primary agent's <em>understanding</em> missed certain details, the subagent can still access the complete source. The information path changes from "User → Primary interprets → Primary rewrites → Subagent interprets" to "User → Primary relays → Subagent reads original" — eliminating one entire layer of lossy processing.</p>
+
+<h3>3. Structured Task Templates</h3>
+
+<p>Task instructions from primary to subagent should use a structured template that explicitly separates the primary agent's judgments from raw facts:</p>
+
+<pre><code>【Objective】 What needs to be done
+【Output Format】 Document type, length, language, etc.
+【Include】 Required content points
+【Exclude】 What to leave out
+【Source Materials】 Full text or file path
+【User's Exact Words】 Verbatim quote of the user's request</code></pre>
+
+<p>The critical value: this template forces "Source Materials" and "User's Exact Words" to be preserved as independent fields. The primary agent cannot "digest" them into other sections.</p>
+
+<h3>4. Confirm Before Executing: Give Humans a Checkpoint</h3>
+
+<p>For document-generation tasks, the primary agent should produce an outline for user confirmation <em>before</em> spawning a subagent.</p>
+
+<p><strong>Correct flow:</strong></p>
+<ol>
+  <li>User states the requirement</li>
+  <li>Primary agent generates a brief outline (3-5 bullet points)</li>
+  <li>User confirms or adjusts the outline</li>
+  <li>Primary agent spawns subagent with confirmed scope</li>
+  <li>Subagent executes</li>
+</ol>
+
+<p>This checkpoint catches understanding gaps early. In my incident, if the primary agent had shown a 7-step outline first, I would have immediately said "only the first 4 steps" — avoiding all downstream rework.</p>
+
+<h3>5. Pre-Spawn Checklist: 3 Seconds of Prevention</h3>
+
+<p>Before spawning a subagent, enforce a quick mental checklist:</p>
+
+<ul>
+  <li>☐ Has the user confirmed the task scope?</li>
+  <li>☐ Are source materials passed through in full (not summarized)?</li>
+  <li>☐ Are exclusions explicitly stated?</li>
+  <li>☐ Is the user's original request preserved verbatim?</li>
+</ul>
+
+<p>Three seconds of checking prevents thirty minutes of rework.</p>
+
+<h3>6. The 500-Word Rule for File References</h3>
+
+<p>When source materials exceed ~500 words, save them as a file and reference the file path in the task instructions rather than inlining the full text.</p>
+
+<p>Benefits:</p>
+<ul>
+  <li>Prevents long source material from interfering with the subagent's understanding of the <em>task itself</em></li>
+  <li>Files can be shared across multiple subagents, ensuring consistency</li>
+  <li>Preserves the complete original for later auditing and comparison</li>
+</ul>
+
+<h2>Broader Implications for Multi-Agent System Builders</h2>
+
+<p>If you're designing or operating multi-agent systems, here are the core principles I've distilled from this experience:</p>
+
+<ol>
+  <li><strong>Always assume the LLM will "digest" information.</strong> Don't expect any LLM to relay anything verbatim. Bake this assumption into your architecture as a constraint, not a hope.</li>
+</ol>
+
+<ol>
+  <li><strong>Separate the instruction channel from the data channel.</strong> The primary agent uses the instruction channel to tell the subagent <em>what to do</em> (objectives, constraints, format). Raw data travels via a data channel directly to the subagent (file references, full attachments). The two channels stay separate; information never passes through the primary agent's "understanding" process.</li>
+</ol>
+
+<ol>
+  <li><strong>Minimize agent layers.</strong> If you can solve it with 2 layers, don't use 3. Every additional agent layer compounds the risk of information loss.</li>
+</ol>
+
+<ol>
+  <li><strong>Insert human checkpoints at critical junctures.</strong> Not every step needs human confirmation, but at "requirement understanding" and "final output review," human involvement is essential.</li>
+</ol>
+
+<ol>
+  <li><strong>Maintain complete copies of source materials.</strong> Ensure that throughout the entire multi-agent pipeline, original materials remain accessible. Any agent in the chain should be able to trace back to the information source.</li>
+</ol>
+
+<ol>
+  <li><strong>Distrust "correct-looking" output.</strong> The most dangerous multi-agent failure isn't producing obviously wrong output — it's producing output that looks polished, professional, and complete while missing critical details. Build systematic verification mechanisms rather than relying on human eyeballing.</li>
+</ol>
+
+<h2>Conclusion</h2>
+
+<p>I wrote this because of what happened to me just days ago — running OpenClaw 2026.2.26, with Claude Opus 4.6 as my primary agent and Claude Sonnet 4.6 as the writing subagent. A trivial task exposed a deep architectural trap in multi-agent systems.</p>
+
+<p>The trap is dangerous precisely because it isn't an obvious bug — it's a side effect of LLMs' most fundamental capability (understanding and generating text) operating within a delegation architecture. You can't "fix" it by upgrading models. You can only <strong>architect around it</strong>.</p>
+
+<p>For everyone building or using multi-agent systems, my advice is this:</p>
+
+<p><strong>Think of your primary agent as a dispatch center, not a translation office.</strong> A dispatch center decides where packages go, what route they take, and when they arrive — but it never opens the package and repacks the contents.</p>
+
+<p>Information is the most valuable cargo in your system. Every unnecessary round of "understanding" and "rewriting" is a lossy operation on that cargo. Reducing the number of lossy operations is the core strategy for improving system reliability.</p>
+
+<p>Remember my question to the agent that day: <em>"Why didn't you just give the full article to the subagent? Why did you summarize it first?"</em></p>
+
+<p>The answer to that question is the key to solving multi-agent information loss.</p>
+
+<hr />
+
+<h2>Quick Reference Card</h2>
+
+<h3>Multi-Agent Information Passing Checklist</h3>
+
+<p>✅ Primary agent role = <strong>Dispatcher</strong> (relay raw materials + instructions) ❌ Primary agent role ≠ <strong>Translator</strong> (digest and rewrite)</p>
+
+<p>✅ Source materials passed in full or via file reference ❌ Primary agent manually summarizes source materials</p>
+
+<p>✅ Use structured templates: Objective / Output Format / Include / Exclude / Source Materials / User's Exact Words ❌ Primary agent freestyles task instructions</p>
+
+<p>✅ Confirm outline with user before spawning subagent for document tasks ❌ Spawn subagent immediately and generate full document</p>
+
+<p>✅ Pre-spawn 3-second check: Scope confirmed? Raw materials included? Exclusions stated? ❌ Spawn first, fix later</p>
+
+<blockquote><p><em>"Saving a few cents on tokens while losing critical information and spending thirty minutes on rework — that's the worst optimization in engineering."</em></p></blockquote>
+        </div>
+        <p class="post-original-link">Originally published on <a href="https://chunhualiao.hashnode.dev/the-hidden-killer-in-multi-agent-systems" target="_blank" rel="noopener">Hashnode &rarr;</a></p>
+        <hr class="post-divider" />
+        <nav class="post-nav-links" aria-label="Post navigation">
+          <a href="from-thrones-to-algorithms-how-ancient-emperors-teach-us-to-govern-superhuman-ai.html" class="post-nav-link prev">&larr; From Thrones to Algorithms: How Ancient Emperors Teach Us to...</a>
+          <a href="mirror-paper-story.html" class="post-nav-link next">The Mirror Test: A Story of AI Writing About AI &rarr;</a>
+        </nav>
+        <div class="post-back-wrap">
+          <a href="../blog.html" class="btn btn-secondary">&larr; All Posts</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Chunhua &ldquo;Leo&rdquo; Liao &middot; Lawrence Livermore National Laboratory</p>
+      <p class="footer-sub">Built with vanilla HTML/CSS/JS &middot; <a href="../blog.html">Blog</a> &middot; <a href="../index.html">Home</a> &middot; <a href="#top">Back to top &uarr;</a></p>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
