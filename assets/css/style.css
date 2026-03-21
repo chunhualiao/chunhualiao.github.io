@@ -262,6 +262,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1027,11 +1028,14 @@ h1, h2, h3, h4 {
     display: none;
     position: absolute;
     top: 64px; left: 0; right: 0;
+    z-index: 1005;
     background: rgba(253, 250, 247, 0.98);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     flex-direction: column;
     padding: var(--space-sm) 0;
     border-bottom: 1px solid var(--border);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
     gap: 0;
   }
   .nav-links.open { display: flex; }
@@ -1344,6 +1348,10 @@ a.research-card-link:hover .research-card .learn-more {
   transition: color var(--transition);
 }
 .rp-pub-link:hover { color: var(--coral); }
+.rp-pub-link.is-disabled {
+  color: var(--text-soft);
+  cursor: default;
+}
 
 /* Software grid on research pages */
 .rp-software-grid {

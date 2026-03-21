@@ -26,29 +26,39 @@
   const navToggle = document.getElementById('navToggle');
   const navLinks  = document.getElementById('navLinks');
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
-
-  // Close mobile nav on link click
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+  if (navToggle && navLinks) {
+    const closeNav = () => {
       navLinks.classList.remove('open');
       navToggle.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    navToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
     });
-  });
 
-  // Close on outside click
-  document.addEventListener('click', (e) => {
-    if (!header.contains(e.target)) {
-      navLinks.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
+    navToggle.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    }, { passive: false });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeNav);
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (header && !header.contains(e.target)) closeNav();
+    });
+  }
 
   /* ─── ACTIVE NAV HIGHLIGHT ──────────────────────────────── */
   const sections = ['hero', 'about', 'research', 'publications', 'software', 'contact'];
