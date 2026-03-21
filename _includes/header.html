@@ -5,7 +5,6 @@
     <ul class="nav-links" id="navLinks" role="list">
       <li><a href="{{ '/blog.html' | relative_url }}"{% if page.layout == 'post' or page.url == '/blog.html' %} class="nav-active"{% endif %}>Blog</a></li>
       <li><a href="{{ '/topics.html' | relative_url }}"{% if page.url == '/topics.html' %} class="nav-active"{% endif %}>Topics</a></li>
-      <li><a href="{{ '/#about-me' | relative_url }}">About</a></li>
       <li><a href="{{ '/work.html' | relative_url }}"{% if page.url == '/work.html' %} class="nav-active"{% endif %}>Work</a></li>
       <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
     </ul>
