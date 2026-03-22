@@ -1,13 +1,15 @@
 name: Broken Link Check
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  # Also run weekly
-  schedule:
-    - cron: '0 9 * * 1'  # Every Monday at 9am UTC
+  # Disabled due to lychee v0.23.0 issues with URL encoding
+  # Re-enable when lychee properly handles #anchors and ?query strings
+  workflow_dispatch:  # Manual trigger only
+  # push:
+  #   branches: [main]
+  # pull_request:
+  #   branches: [main]
+  # schedule:
+  #   - cron: '0 9 * * 1'  # Every Monday at 9am UTC
 
 jobs:
   link-check:
