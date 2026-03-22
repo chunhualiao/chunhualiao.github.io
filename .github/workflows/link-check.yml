@@ -28,12 +28,13 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: >
-            --base _site
+            --base ${{ github.workspace }}/_site
             --no-progress
             --exclude 'fonts.googleapis.com'
             --exclude 'fonts.gstatic.com'
             --exclude 'cdn.jsdelivr.net'
             --exclude 'scholar.google.com'
+            --exclude 'web.cs.uh.edu'
             --accept 200,403
             --include-fragments
             _site/
