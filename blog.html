@@ -19,7 +19,7 @@ title: "Blog"
   <header id="site-header" role="banner">
     <nav class="nav-container" aria-label="Main navigation">
       <a class="nav-logo" href="index.html">Chunhua Liao</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="blog.html" class="nav-active">Blog</a></li>
         <li><a href="topics.html">Topics</a></li>
@@ -44,9 +44,9 @@ title: "Blog"
           {% if post.category == 'tech' %}{% assign tech_count = tech_count | plus: 1 %}{% else %}{% assign thoughts_count = thoughts_count | plus: 1 %}{% endif %}
         {% endfor %}
         <div class="blog-filter-bar" role="group" aria-label="Filter posts by category">
-          <button class="filter-btn active" data-filter="all">All <span class="filter-count">{{ site.posts.size }}</span></button>
-          <button class="filter-btn" data-filter="tech">Tech &amp; AI <span class="filter-count">{{ tech_count }}</span></button>
-          <button class="filter-btn" data-filter="thoughts">Life &amp; Thoughts <span class="filter-count">{{ thoughts_count }}</span></button>
+          <button type="button" class="filter-btn active" data-filter="all">All <span class="filter-count">{{ site.posts.size }}</span></button>
+          <button type="button" class="filter-btn" data-filter="tech">Tech &amp; AI <span class="filter-count">{{ tech_count }}</span></button>
+          <button type="button" class="filter-btn" data-filter="thoughts">Life &amp; Thoughts <span class="filter-count">{{ thoughts_count }}</span></button>
         </div>
         <div class="post-grid" id="postGrid">
           {% for post in site.posts %}
