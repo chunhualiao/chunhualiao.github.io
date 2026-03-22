@@ -2,7 +2,7 @@
 title: "The Wisdom Stack: Why AI Agents Are Finally Making Timeless Principles Actually Work"
 date: 2026-03-22
 slug: the-wisdom-stack-why-ai-agents-are-finally-making-timeless-principles-actually-w
-cover_image: "/assets/images/covers/the-wisdom-stack-why-ai-agents-are-finally-making-timeless-principles-actually-w.webp"
+cover_image: "/assets/images/covers/the-wisdom-stack-why-ai-agents-are-finally-making-timeless-principles-actually-w.png"
 category: thoughts
 tags: ["AI", "agents", "principles", "productivity", "OpenClaw", "wisdom"]
 description: "The problem was never knowing good principles. It was applying them consistently. AI agents change that equation — not just for individuals, but for nonprofits, communities, and any organization that "
