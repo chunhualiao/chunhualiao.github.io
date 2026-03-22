@@ -1,7 +1,7 @@
 # Jekyll / GitHub Pages config
 title: "Chunhua Liao"
 description: "Blog and personal site of Dr. Chunhua Liao — AI, compilers, and the messy future of humans working with machines."
-url: ""
+url: "https://chunhualiao.github.io"
 baseurl: ""
 
 # Permalink: match existing /blog/{slug}.html URLs
