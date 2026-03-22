@@ -29,7 +29,6 @@ jobs:
         with:
           args: >
             --no-progress
-            --exclude-mail
             --exclude 'fonts.googleapis.com'
             --exclude 'fonts.gstatic.com'
             --exclude 'cdn.jsdelivr.net'
