@@ -152,4 +152,4 @@ We just needed to remember to bring it with us.
 
 ---
 
-*Chunhua Liao is a computer scientist at Lawrence Livermore National Laboratory working on AI and compiler research. He also runs AI-powered agent infrastructure for community governance and personal productivity.*
+*Chunhua Liao runs AI-powered agent infrastructure for community governance and personal productivity.*
