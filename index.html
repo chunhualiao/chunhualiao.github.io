@@ -105,18 +105,15 @@ layout: none
     <section id="topics" class="section-dark" aria-labelledby="topics-heading">
       <div class="container">
         <h2 id="topics-heading" class="section-title">Explore by Topic</h2>
-        <p class="section-subtitle">{{ site.posts.size }} articles across 5 themes spanning 6+ years of thinking.</p>
+        <p class="section-subtitle">{{ site.posts.size }} articles across {{ site.data.topics.size }} themes spanning 6+ years of thinking.</p>
 
         <div class="topics-showcase">
-          {% assign themes = "ai,governance,innovation,thinking,society" | split: "," %}
-          {% assign icons = "🤖,🏛️,💡,🧠,🌏" | split: "," %}
-          {% assign labels = "AI & Intelligence,Governance & Independence,Innovation & Entrepreneurship,Thinking & Life Strategy,Society & Culture" | split: "," %}
-          {% for theme in themes %}
-          {% assign posts = site.posts | where: "theme", theme %}
-          <a href="topics.html#theme-{{ theme }}" class="topic-showcase-card">
-            <span class="topic-showcase-icon">{{ icons[forloop.index0] }}</span>
+          {% for topic in site.data.topics %}
+          {% assign posts = site.posts | where: "theme", topic.theme_filter %}
+          <a href="topics.html#{{ topic.anchor }}" class="topic-showcase-card">
+            <span class="topic-showcase-icon">{{ topic.emoji }}</span>
             <div>
-              <h3>{{ labels[forloop.index0] }}</h3>
+              <h3>{{ topic.display }}</h3>
               <p>{{ posts.size }} articles</p>
             </div>
           </a>

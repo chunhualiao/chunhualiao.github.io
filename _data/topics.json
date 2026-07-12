@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "ai-agents",
+    "display": "AI Agents",
+    "emoji": "🤖",
+    "theme_filter": "ai-agents",
+    "anchor": "theme-ai-agents",
+    "section_class": "section-light",
+    "description": "Multi-agent architectures, agent safety, OpenClaw usage, and the real-world engineering challenges of running AI systems at home and at work. The recurring question: <strong>how do you design AI agents that are powerful but not dangerous—partners rather than autocrats?</strong>"
+  },
+  {
+    "slug": "ai",
+    "display": "AI & Intelligence",
+    "emoji": "🧬",
+    "theme_filter": "ai",
+    "anchor": "theme-ai",
+    "section_class": "section-dark",
+    "description": "From first-principles intelligence theory (2019) to understanding why the AI field succeeds where others fail. The thread: <strong>intelligence is a system of interacting modules—goal-setting, modeling, decision-making, execution—that can be analyzed, designed, and improved.</strong>"
+  },
+  {
+    "slug": "governance",
+    "display": "Governance & Independence",
+    "emoji": "🏛️",
+    "theme_filter": "governance",
+    "anchor": "theme-governance",
+    "section_class": "section-light",
+    "description": "Constitutional design from first principles. Financial independence as a measurable quantity. AI governance through the lens of ancient power structures. The thread: <strong>good governance creates structural constraints that make powerful entities behave correctly—whether they are emperors, AI agents, or governments.</strong>"
+  },
+  {
+    "slug": "innovation",
+    "display": "Innovation & Entrepreneurship",
+    "emoji": "💡",
+    "theme_filter": "innovation",
+    "anchor": "theme-innovation",
+    "section_class": "section-dark",
+    "description": "Systematic frameworks for creating new things. Why equality mindset produces more innovation than hierarchy. Ideas shared freely because execution is where value lives. The foundation: <strong>innovation is not mysterious—it follows discoverable rules, and anyone with the right mindset can apply them.</strong>"
+  },
+  {
+    "slug": "life-strategy",
+    "display": "Thinking & Life Strategy",
+    "emoji": "🧠",
+    "theme_filter": "thinking",
+    "anchor": "theme-thinking",
+    "section_class": "section-light",
+    "description": "Critical thinking frameworks, inversion thinking, and the five things actually worth focusing on in a life. Charlie Munger's approach applied: <strong>catalog the common fatal errors first, then design a life that systematically avoids them.</strong>"
+  },
+  {
+    "slug": "society",
+    "display": "Society & Culture",
+    "emoji": "🌏",
+    "theme_filter": "society",
+    "anchor": "theme-society",
+    "section_class": "section-dark",
+    "description": "Systemic analysis of career dynamics, healthcare economics, geopolitics, and cultural patterns. The recurring finding: <strong>incumbent systems are optimized for insiders, not the people they claim to serve—and the data usually proves it.</strong>"
+  }
+]

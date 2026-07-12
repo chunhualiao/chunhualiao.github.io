@@ -38,30 +38,30 @@ title: "Blog"
     </section>
     <section class="section-light blog-listing-section">
       <div class="container">
-        {% assign tech_count = 0 %}
-        {% assign thoughts_count = 0 %}
-        {% for post in site.posts %}
-          {% if post.category == 'tech' %}{% assign tech_count = tech_count | plus: 1 %}{% else %}{% assign thoughts_count = thoughts_count | plus: 1 %}{% endif %}
-        {% endfor %}
-        <div class="blog-filter-bar" role="group" aria-label="Filter posts by category">
+        <div class="blog-filter-bar" role="group" aria-label="Filter posts by topic">
           <button type="button" class="filter-btn active" data-filter="all">All <span class="filter-count">{{ site.posts.size }}</span></button>
-          <button type="button" class="filter-btn" data-filter="tech">Tech &amp; AI <span class="filter-count">{{ tech_count }}</span></button>
-          <button type="button" class="filter-btn" data-filter="thoughts">Life &amp; Thoughts <span class="filter-count">{{ thoughts_count }}</span></button>
+          {% for topic in site.data.topics %}
+          {% assign topic_count = site.posts | where: "theme", topic.theme_filter | size %}
+          <button type="button" class="filter-btn" data-filter="{{ topic.theme_filter }}">{{ topic.display }} <span class="filter-count">{{ topic_count }}</span></button>
+          {% endfor %}
         </div>
         <div class="post-grid" id="postGrid">
           {% for post in site.posts %}
-          <article class="post-card" data-category="{{ post.category | default: 'thoughts' }}">
+          {% assign post_theme = post.theme | default: 'unclassified' %}
+          {% assign topic_display = post_theme %}
+          {% for topic in site.data.topics %}
+            {% if topic.theme_filter == post_theme %}
+              {% assign topic_display = topic.display %}
+            {% endif %}
+          {% endfor %}
+          <article class="post-card" data-theme="{{ post_theme }}">
             <a href="{{ post.url | relative_url }}" class="post-card-link">
               {% if post.cover_image %}
               <img src="{{ post.cover_image | relative_url }}" alt="" class="post-card-cover" loading="lazy" />
               {% endif %}
               <div class="post-card-meta">
                 <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date">{{ post.date | date: "%B %-d, %Y" }}</time>
-                {% if post.category == 'tech' %}
-                <span class="category-badge cat-tech">Tech & AI</span>
-                {% else %}
-                <span class="category-badge cat-thoughts">Life & Thoughts</span>
-                {% endif %}
+                <span class="category-badge cat-topic">{{ topic_display }}</span>
               </div>
               <h2 class="post-card-title">{{ post.title }}</h2>
               <p class="post-card-desc">{{ post.description | default: post.excerpt | strip_html | truncate: 200 }}</p>
@@ -97,7 +97,7 @@ title: "Blog"
         btns.forEach(function(b){b.classList.remove("active");});
         btn.classList.add("active");
         var f=btn.dataset.filter; var n=0;
-        cards.forEach(function(c){var s=f==="all"||c.dataset.category===f; c.style.display=s?"":"none"; if(s)n++;});
+        cards.forEach(function(c){var s=f==="all"||c.dataset.theme===f; c.style.display=s?"":"none"; if(s)n++;});
         noMsg.style.display=n===0?"":"none";
       });
     });

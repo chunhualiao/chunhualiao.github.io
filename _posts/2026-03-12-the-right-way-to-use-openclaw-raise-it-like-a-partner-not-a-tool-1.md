@@ -4,7 +4,7 @@ date: 2026-03-12
 slug: the-right-way-to-use-openclaw-raise-it-like-a-partner-not-a-tool-1
 cover_image: "/assets/images/covers/the-right-way-to-use-openclaw-raise-it-like-a-partner-not-a-tool-1.png"
 category: tech
-theme: ai
+theme: ai-agents
 tags: [ai agents, openclaw, automation]
 description: "The Right Way to Use OpenClaw: Raise It Like a Partner, Not a Tool
 Most people underuse OpenClaw because they treat it like a smart utility; the real upside begins when you train it like a long-term p"

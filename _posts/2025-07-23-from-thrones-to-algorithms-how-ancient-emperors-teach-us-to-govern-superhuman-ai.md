@@ -4,7 +4,7 @@ date: 2025-07-23
 slug: from-thrones-to-algorithms-how-ancient-emperors-teach-us-to-govern-superhuman-ai
 cover_image: "/assets/images/covers/from-thrones-to-algorithms-how-ancient-emperors-teach-us-to-govern-superhuman-ai.jpeg"
 category: tech
-theme: ai
+theme: governance
 tags: [AI, Governance, emperor]
 description: "Introduction: A Timeless Dilemma
 Imagine you are an emperor in ancient times—not the strongest warrior, nor the wisest philosopher. Yet, the fate of a vast empire rests on your shoulders. Surrounding "
