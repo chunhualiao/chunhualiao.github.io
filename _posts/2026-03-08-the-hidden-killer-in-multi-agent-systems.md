@@ -4,7 +4,7 @@ date: 2026-03-08
 slug: the-hidden-killer-in-multi-agent-systems
 cover_image: "/assets/images/covers/the-hidden-killer-in-multi-agent-systems.png"
 category: tech
-theme: ai
+theme: ai-agents
 tags: []
 description: "The Hidden Killer in Multi-Agent Systems: When Your AI Starts Filtering Like Middle Management
 The Incident That Changed How I Think About Agent Architectures

@@ -10,13 +10,16 @@
     <section class="post-header-section">
       <div class="container post-header-inner">
         <a href="{{ '/blog.html' | relative_url }}" class="back-to-blog">&larr; Back to Blog</a>
+        {% assign page_theme = page.theme | default: 'unclassified' %}
+        {% assign topic_display = page_theme %}
+        {% for topic in site.data.topics %}
+          {% if topic.theme_filter == page_theme %}
+            {% assign topic_display = topic.display %}
+          {% endif %}
+        {% endfor %}
         <div class="post-header-meta">
           <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="post-date">{{ page.date | date: "%B %d, %Y" }}</time>
-          {% if page.category == 'tech' %}
-          <span class="category-badge cat-tech">Tech & AI</span>
-          {% else %}
-          <span class="category-badge cat-thoughts">Life & Thoughts</span>
-          {% endif %}
+          <span class="category-badge cat-topic">{{ topic_display }}</span>
         </div>
         <h1 class="post-title">{{ page.title }}</h1>
         {% if page.cover_image %}

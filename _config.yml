@@ -25,6 +25,7 @@ exclude:
   - vendor
   - node_modules
   - .git
+  - docs
 
 # Keep existing folders
 include:

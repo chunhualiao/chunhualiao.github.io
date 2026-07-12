@@ -1,0 +1,32 @@
+name: Jekyll Build
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build --destination _site
+
+      - name: Verify primary pages
+        run: |
+          test -f _site/index.html
+          test -f _site/blog.html
+          test -f _site/topics.html
+          test ! -e _site/docs/topic-taxonomy-design.md

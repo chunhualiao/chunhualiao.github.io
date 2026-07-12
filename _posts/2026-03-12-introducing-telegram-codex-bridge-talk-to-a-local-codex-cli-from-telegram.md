@@ -4,7 +4,7 @@ date: 2026-03-12
 slug: introducing-telegram-codex-bridge-talk-to-a-local-codex-cli-from-telegram
 cover_image: "/assets/images/covers/introducing-telegram-codex-bridge-talk-to-a-local-codex-cli-from-telegram.png"
 category: tech
-theme: ai
+theme: ai-agents
 tags: []
 description: "Sometimes I want to say “Codex, do the thing on my machine” while I’m away from my desk, on my phone, in a taxi, or between meetings. That was the whole reason I built telegram-codex-bridge: I wanted "
 original_url: "https://chunhualiao.hashnode.dev/introducing-telegram-codex-bridge-talk-to-a-local-codex-cli-from-telegram"

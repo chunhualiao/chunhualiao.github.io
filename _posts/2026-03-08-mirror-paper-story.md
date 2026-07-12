@@ -4,7 +4,7 @@ date: 2026-03-08
 slug: mirror-paper-story
 cover_image: "/assets/images/covers/mirror-paper-story.png"
 category: tech
-theme: ai
+theme: ai-agents
 tags: []
 description: "The Mirror Test: A Story of AI Writing About AI
 How I Used an AI Agent System to Write a Research Paper on Agent Self-Awareness — and What I Learned When the Paper Looked Back

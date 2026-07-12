@@ -4,7 +4,7 @@ date: 2026-03-21
 slug: you-wouldnt-push-directly-to-main-so-why-are-you-doing-it-to-your-ai-gateway
 cover_image: "https://i.imgur.com/eKzLwDi.jpeg"
 category: thoughts
-theme: ai-infrastructure
+theme: ai-agents
 tags: [AI, CI/CD, DevOps, Gateway, OpenClaw, Infrastructure]
 description: "What decades of software engineering taught me about running reliable AI agent infrastructure. Lessons from managing multiple AI gateways and why they need the same discipline as production code."
 original_url: "https://chunhualiao.hashnode.dev/you-wouldn-t-push-directly-to-main-so-why-are-you-doing-it-to-your-ai-gateway"

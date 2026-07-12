@@ -1582,6 +1582,7 @@ a.research-card-link:hover .research-card .learn-more {
 }
 .cat-tech     { background: #dbeafe; color: #1d6fa4; }
 .cat-thoughts { background: #fef3c7; color: #92400e; }
+.cat-topic    { background: #ede9fe; color: #5b21b6; }
 
 /* ── Tag pills ─────────────────────────────────────────────────── */
 .post-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
